@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "QuiosqueApresentacao"
+    }
+  },
+  "defaultProject": "QuiosqueApresentacao",
+  "cli": {
+    "analytics": false
+  }
 }
