@@ -1,0 +1,22 @@
+# QUIOSQUE MANAGER
+
+
+
+### FLUXO DO PROCESSO
+
+
+
+###### IDENTIFICAÇÃO
+
+###### ATENDIMENTO
+
+###### FECHAMENTO
+
+###### RECEBIMENTO
+
+###### CONFIRMAÇÃO
+
+###### PAGAMENTO
+
+###### ATENDIMENTO
+
