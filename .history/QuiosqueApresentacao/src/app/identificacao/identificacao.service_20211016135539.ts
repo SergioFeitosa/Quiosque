@@ -101,7 +101,7 @@ const PRODUTOS: Produto[] = [
     category: 'refeicao',
     name: 'Camarão frito',
     code: 'XLF-1212',
-    price: 18.00,
+    price: 1.7,
     imageUrl: '/assets/images/cli.png',
     preparationTime: '45 min',
     rating: 1.7,
