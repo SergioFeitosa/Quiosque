@@ -6,6 +6,7 @@ import { Produto } from './produto';
 })
 
 export class IdentificacaoService {
+  constructor()
   retrieveAll(): Produto[] {
     return PRODUTOS;
   }

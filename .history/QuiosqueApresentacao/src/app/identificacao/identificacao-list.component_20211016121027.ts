@@ -15,6 +15,5 @@ export class IdentificacaoListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.produtos = this.identificacaoService.retrieveAll();
   }
 }

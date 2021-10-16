@@ -6,6 +6,7 @@ import { Produto } from './produto';
 })
 
 export class IdentificacaoService {
+  constructor(private logger: Logger)
   retrieveAll(): Produto[] {
     return PRODUTOS;
   }

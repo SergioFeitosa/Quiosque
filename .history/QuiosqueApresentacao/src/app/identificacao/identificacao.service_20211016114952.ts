@@ -2,13 +2,10 @@ import { Injectable } from '@angular/core';
 import { Produto } from './produto';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 
-export class IdentificacaoService {
-  retrieveAll(): Produto[] {
-    return PRODUTOS;
-  }
+export class IdentificacaoService() {
 }
 
 const PRODUTOS: Produto[] = [

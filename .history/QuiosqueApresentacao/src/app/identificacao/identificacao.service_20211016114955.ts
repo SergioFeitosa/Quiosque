@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Produto } from './produto';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 
 export class IdentificacaoService {

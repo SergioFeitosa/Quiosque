@@ -1,4 +1,3 @@
-import { IdentificacaoService } from './identificacao.service';
 import { Produto } from './produto';
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -15,6 +14,5 @@ export class IdentificacaoListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.produtos = this.identificacaoService.retrieveAll();
   }
 }
