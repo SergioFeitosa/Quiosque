@@ -29,8 +29,7 @@
       <td>{{ produto.category }} </td>
       <td>{{ produto.name }} </td>
       <td>{{ produto.price }} </td>
-      <td>{{ produto.preparationTime }} </td>
-      <td>{{ produto.code  | lowercase | replace: '-': ' '}} </td>
+      <td>{{ produto.preparationTime | uppercase | replace: '-': ' '}} </td>
       <td>{{ produto.releaseDate | date: 'dd/MM/yyyy' }} </td>
       <td> <app-star [rating]="produto.rating"></app-star></td>
       <td></td>

@@ -1,5 +1,4 @@
-import { ReplacePipe } from './pipe/replace.pipe';
-
+import { ReplacePipe } from './../../../.history/QuiosqueApresentacao/src/app/pipe/replace.pipe_20211016170311';
 import { StarComponent } from './star/star.component';
 import { IdentificacaoListComponent } from './identificacao/identificacao-list.component';
 import { FormsModule } from '@angular/forms';

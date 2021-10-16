@@ -1,5 +1,3 @@
-import { ReplacePipe } from './pipe/replace.pipe';
-
 import { StarComponent } from './star/star.component';
 import { IdentificacaoListComponent } from './identificacao/identificacao-list.component';
 import { FormsModule } from '@angular/forms';
@@ -13,8 +11,7 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     IdentificacaoListComponent,
-    StarComponent,
-    ReplacePipe
+    StarComponent
   ],
   imports: [
     BrowserModule,

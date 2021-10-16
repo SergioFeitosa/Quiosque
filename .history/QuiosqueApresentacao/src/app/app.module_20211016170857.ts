@@ -1,4 +1,3 @@
-import { ReplacePipe } from './pipe/replace.pipe';
 
 import { StarComponent } from './star/star.component';
 import { IdentificacaoListComponent } from './identificacao/identificacao-list.component';
