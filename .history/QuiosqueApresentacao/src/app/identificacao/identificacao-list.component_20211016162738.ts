@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class IdentificacaoListComponent implements OnInit {
 
-  filteredProdutos: Produto[] = [];
+  filteredProdutos: 
   // tslint:disable-next-line:variable-name
   _produtos: Produto[] = [];
 
@@ -21,7 +21,6 @@ export class IdentificacaoListComponent implements OnInit {
 
   ngOnInit(): void {
     this._produtos = this.identificacaoService.retrieveAll();
-    this.filteredProdutos = this._produtos;
   }
 
   // tslint:disable-next-line:typedef
@@ -31,9 +30,6 @@ export class IdentificacaoListComponent implements OnInit {
 
   set filter(value: string) {
     this._filterBy = value;
-
-    this.filteredProdutos =
-    this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
 }

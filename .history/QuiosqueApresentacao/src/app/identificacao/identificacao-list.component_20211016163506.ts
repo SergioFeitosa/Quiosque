@@ -33,7 +33,7 @@ export class IdentificacaoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredProdutos =
-    this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) >-1);
   }
 
 }

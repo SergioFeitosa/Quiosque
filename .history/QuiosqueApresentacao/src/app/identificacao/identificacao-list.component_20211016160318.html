@@ -1,12 +1,11 @@
-<h2> Quiosque NuButikin </h2>
+<h2> Identificacao List Html </h2>
 
 <div class='form-group row'>
 
   <label class='col-sm-2 col-form-label'>Filter By:</label>
 
-  <div class='col-sm-10'>
-    <input [(ngModel)]='filter' class='form-control'>
-  </div>
+  
+
 
 </div>
 <table class="table table-striped">
@@ -22,7 +21,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor='let produto of filteredProdutos' >
+    <tr *ngFor='let produto of produtos' >
       <td><img [src]= 'produto.imageUrl' width="40" height="40"> </td>
       <td>{{ produto.category }} </td>
       <td>{{ produto.name }} </td>
