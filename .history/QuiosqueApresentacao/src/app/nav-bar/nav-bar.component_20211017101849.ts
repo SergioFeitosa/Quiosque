@@ -1,0 +1,5 @@
+
+@Componet
+export class NavBarComponent {
+
+}

@@ -1,0 +1,8 @@
+
+@Component ({
+  
+
+})
+export class NavBarComponent {
+
+}
