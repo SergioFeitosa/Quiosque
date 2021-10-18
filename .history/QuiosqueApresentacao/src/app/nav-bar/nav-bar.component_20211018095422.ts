@@ -9,6 +9,5 @@ import { Produto } from '../identificacao/produto';
 })
 export class NavBarComponent {
 
-  telefone: number;
-
+  
 }
