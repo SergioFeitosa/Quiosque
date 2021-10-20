@@ -1,0 +1,31 @@
+<div class="row">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="col-sm-4">
+      <a [routerLink]=["/cardapioPrincipal'] class="navbar-brand">Quiosque NuButikin</a>
+    </div>
+    <div class='row col-sm-3'>
+      <div class='col-sm-5'>
+        <input [(ngModel)]='telefone' class='form-control id="floatingInput"' placeholder="Telefone">
+      </div>
+      <div class='col-sm-2'>
+        <span class="input-group-append">
+          <button (click)="validarTelefone()" class="btn" style='color:aqua' type="button">
+            <i class="fa fa-arrow-circle-right fa-lg"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+    <div [className]="buttonHide ? 'row col-sm-3 d-none' : 'row col-sm-3 d-all'">
+      <div class='col-sm-3'>
+        <input [(ngModel)]='codigo' class='form-control id="floatingInput"' placeholder="Código">
+      </div>
+      <div class='col-sm-2'>
+        <span class="input-group-append">
+          <button (click)="validarCodigo()" class="btn" style='color:aqua' type="button">
+            <i class="fa fa-arrow-circle-right fa-lg"></i>
+          </button>
+        </span>
+      </div>
+    </div>
+  </nav>
+</div>

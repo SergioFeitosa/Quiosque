@@ -1,0 +1,34 @@
+<div class='form-group row'>
+
+  <label class='col-sm-2 col-form-label'>Filter By:</label>
+
+  <div class='col-sm-10'>
+    <input [(ngModel)]='filter' class='form-control'>
+  </div>
+
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> Imagem</th>
+      <th> Nome</th>
+      <th> Preço</th>
+      <th> Tempo Preparação</th>
+      <th> Avaliação</th>
+      <td> Descrição</td>
+      <th> Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let produto of filteredProdutos' >
+      <td><img [src]= 'produto.imageUrl' width="100" height="100"> </td>
+      <td>{{ produto.name }} </td>
+      <td>{{ produto.price }} </td>
+      <td>{{ produto.preparationTime }} </td>
+      <td> <app-star [rating]="produto.rating"></app-star></td>
+      <td>{{ produto.descpreparationTime }} </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
