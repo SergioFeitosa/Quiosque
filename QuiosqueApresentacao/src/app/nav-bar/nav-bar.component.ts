@@ -1,9 +1,7 @@
-import { Component, Injectable, OnInit } from '@angular/core';
 import { CardapioPrincipalComponent } from '../cardapioprincipal/cardapio-principal.component';
+import { NavBarService } from './nav-bar.service';
+import { Component, Injectable, OnInit } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
 
 @Component({
   selector: 'app-nav-bar',
@@ -17,9 +15,8 @@ export class NavBarComponent implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
   buttonHide: boolean = true;
 
-  constructor(private cardapioPrincipalComponent: CardapioPrincipalComponent
-  ) {
-  }
+  constructor(private cardapioPrincipalComponent: CardapioPrincipalComponent,
+			  private navBarService : NavBarService){}
 
   ngOnInit(): void {
 
@@ -44,6 +41,13 @@ export class NavBarComponent implements OnInit {
       // tslint:disable-next-line:semicolon
       this.cardapioPrincipalComponent.updateClassDisabled();
     }
+
+  }
+
+  enviarCodigo(): void {
+    //const telefone = this.navForm.get('telefone').value;
+    const codigoGerado = Math.random() * this.telefone;
+    this.navBarService.enviarCodigo(this.telefone.toString(), codigoGerado.toString());
 
   }
 
