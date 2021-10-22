@@ -20,14 +20,22 @@
     </thead>
     <tbody>
       <tr *ngFor='let pedido of filteredPedidos'>
-        <td> <img src='/assets/images/cioba-frito.jpg' width="100" height="100"> </td>
+        <td>
+          <img src='/assets/images/cioba-frito.jpg' class="figure-img img-fluid rounded" alt="..." width="100" height="100">
+        </td>
         <td>{{ pedido.observacao }} </td>
         <td>{{ pedido.isencao }} </td>
         <td>{{ pedido.releaseTime }} </td>
-        <td> <button [routerLink]="['/atendentecls']">
+        <td>
+          <button [routerLink]="['/entrega']">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
+              height="100">
+          </button>
+          <button [routerLink]="['/entrega']">
             <img src='/assets/images/garcon.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
               height="100">
-          </button></td>
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
