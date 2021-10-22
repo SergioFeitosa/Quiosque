@@ -1,0 +1,15 @@
+a.disabled {
+    pointer-events: none;
+    /* for "disabled" effect */
+    opacity: 0.5;
+    background: #CCC;
+  }
+
+  .login{
+    background-image: url('../image/trib.jpg');
+    background-size: 100%;
+    border-radius: 15px;
+    height: 260px;
+    padding-right: 10px;
+    margin-right: 5px;
+}

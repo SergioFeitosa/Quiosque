@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row">
+    <div class="row" style='background-image: url("../../assets/images/botao-pedido2.jpg");'>
+      <div class='row col-sm-12 mb-1'>
+        <div class='col-sm-2'>
+          <input [(ngModel)]='telefone' class='form-control id="floatingInput"' placeholder="Telefone">
+        </div>
+        <div class='col-sm-2'>
+          <span class="input-group-append">
+            <button (click)="validarTelefone()" class="btn" style='color:aqua' type="button">
+              <i class="fa fa-arrow-circle-right fa-lg"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class='row col-sm-12'>
+        <div class='col-sm-2'>
+          <input [(ngModel)]='codigo' class='form-control id="floatingInput"' placeholder="Código">
+        </div>
+        <div class='col-sm-2'>
+          <span class="input-group-append">
+            <button (click)="validarCodigo()" class="btn" style='color:aqua' type="button">
+              <i class="fa fa-arrow-circle-right fa-lg"></i>
+            </button>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <span>
+        <p>&nbsp;</p>
+      </span>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','pratododia']" id='desabilitado1' class='btn' disabled>
+            <img src='/assets/images/pratododia.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Prato do dia</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','pratoregional']" id='desabilitado2' class='btn' disabled>
+            <img src='/assets/images/baiao-dois-1.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Pratos Regionais</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','pratoespecial']" id='desabilitado3' class='btn' disabled>
+            <img src='/assets/images/pratoespecial.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Pratos especiais</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','porcoes']" id='desabilitado4' class='btn' disabled>
+            <img src='/assets/images/porcoes.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Porções</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','porcoesespeciais']" id='desabilitado5' class='btn' disabled>
+            <img src='/assets/images/porcoesespeciais.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Porções especiais</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','salada']" id='desabilitado6' class='btn' disabled>
+            <img src='/assets/images/salada.png' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Saladas</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','saladaespecial']" id='desabilitado7' class='btn' disabled>
+            <img src='/assets/images/saladaespecial.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Saladas especiais</figcaption>
+        </figure>
+      </div>
+      <div class="col-sm-6">
+        <figure class="figure">
+          <button [routerLink]="['/produto','bebida']" id='desabilitado8' class='btn' disabled>
+            <img src='/assets/images/bebidas.jpg' class="figure-img img-fluid rounded" alt="..." width="500"
+              height="140">
+          </button>
+          <figcaption class="figure-caption">Bebidas</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
