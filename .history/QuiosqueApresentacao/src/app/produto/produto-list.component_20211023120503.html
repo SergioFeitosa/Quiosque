@@ -1,0 +1,106 @@
+<div class='form-group row'>
+
+  <label class='col-sm-2 col-form-label'>Filter By:</label>
+
+  <div class='col-sm-10'>
+    <input [(ngModel)]='filter' class='form-control'>
+  </div>
+
+</div>
+
+<div class='table-responsive'>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th> Imagem</th>
+        <th> Nome</th>
+        <th> Preço</th>
+        <th> Tempo Preparação</th>
+        <th> Avaliação</th>
+        <th class="text-center"> Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let produto of filteredProdutos'>
+        <td>
+          <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td>{{ produto.name }} </td>
+        <td>{{ produto.price }} </td>
+        <td>{{ produto.preparationTime }} </td>
+        <td>
+          <app-star [rating]="produto.rating"></app-star>
+        </td>
+        <td class="text-center">
+          <button (click)="openPopup( produto.id )">
+            <img src='/assets/images/botao-detalhes.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="100"
+              height="50">
+          </button>
+          <button [routerLink]="['/entrega']">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="100"
+              height="50">
+          </button>
+          <button [routerLink]="['/entrega']">
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+              rounded" alt="..." width="100"
+              height="50">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalhes do Produto</h4>
+      </div>
+      <label for="produtoName">Click me</label>
+      <input type="text" id="User" name="Name" />
+
+
+      <div class="modal-body" id="produtoName">
+        {{ produtoName }}
+      </div>
+      <div class="modal-body">
+        <img [src]='produtoImageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="100"
+            height="70">
+      </div>
+      <div class="modal-body">
+        <p>O prato é acompanhado de arroz, farofa, salada, pirão de peixe e
+          fritas.</p>
+
+      </div>
+      <div class="modal-body">
+        <p>Os ingredientes encontrados na refeição são:</p>
+        <ul>
+          <li>alho</li>
+          <li>cebola</li>
+          <li>coentro</li>
+          <li>maionese</li>
+          <li>manjericão</li>
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
