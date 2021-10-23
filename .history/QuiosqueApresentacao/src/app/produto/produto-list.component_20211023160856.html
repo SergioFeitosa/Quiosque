@@ -41,7 +41,12 @@
               height="50">
           </button>
           <button [routerLink]="['/entrega']">
-            <img src='/assets/images/cozinheiro.jpg'  class="figure-img img-fluid
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="100"
+              height="50">
+          </button>
+          <button [routerLink]="['/entrega']">
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="100"
               height="50">
           </button>
@@ -60,13 +65,13 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Detalhes do Produto</h4>
-        <button type="button" class="btn btn-danger"
-          (click)="closePopup()">
-          Fechar
-        </button>
       </div>
-      <div class="modal-body row">
-        Avaliação: <app-star [rating]="produtoAvaliacao"></app-star>
+      <button type="button" class="btn btn-danger"
+      (click)="closePopup()">
+      Fechar
+    </button>
+  <div class="modal-body row">
+        Avaliação:&nbsp;&nbsp;&nbsp; <app-star [rating]="produtoAvaliacao"></app-star>
       </div>
       <div class="modal-body row">
         <img [src]='produtoImageUrl' class="figure-img img-fluid rounded"
@@ -96,6 +101,7 @@
           <li>maionese</li>
           <li>manjericão</li>
         </ul>
+
       </div>
     </div>
   </div>
