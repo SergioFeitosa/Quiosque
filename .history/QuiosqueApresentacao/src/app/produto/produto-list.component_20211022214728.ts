@@ -55,5 +55,4 @@ export class ProdutoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closePopup() {
     this.displayStyle = 'none';
-    console.log('passei pelo close');
   }}

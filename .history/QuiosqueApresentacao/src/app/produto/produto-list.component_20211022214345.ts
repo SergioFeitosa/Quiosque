@@ -43,17 +43,11 @@ export class ProdutoListComponent implements OnInit {
     this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
-  // tslint:disable-next-line:quotemark
-  // tslint:disable-next-line:member-ordering
-  displayStyle = 'none';
+  displayStyle = "none";
 
-  // tslint:disable-next-line:typedef
   openPopup() {
-    this.displayStyle = 'block';
-    console.log('passei pelo open');
+    this.displayStyle = "block";
   }
-  // tslint:disable-next-line:typedef
   closePopup() {
-    this.displayStyle = 'none';
-    console.log('passei pelo close');
+    this.displayStyle = "none";
   }}

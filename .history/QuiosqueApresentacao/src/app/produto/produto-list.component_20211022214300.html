@@ -35,7 +35,7 @@
           <app-star [rating]="produto.rating"></app-star>
         </td>
         <td class="text-center">
-          <button  (click)="openPopup()">
+          <button  (click)="modal.toggle()">
             <img src='/assets/images/botao-detalhes.jpg' class="figure-img
               img-fluid rounded" alt="..." width="100"
               height="50">
@@ -72,7 +72,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger"
-                (click)= "closePopup()">
+                (click)="closePopup()">
           Close
         </button>
       </div>
