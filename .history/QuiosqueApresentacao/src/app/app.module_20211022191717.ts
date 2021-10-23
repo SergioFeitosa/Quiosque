@@ -1,4 +1,4 @@
-import { ModalModule } from './modal/modal.module';
+import { ConfirmDialogModule } from './confirm-dialog/confirm-dialog.module';
 import { FechamentoListComponent } from './fechamento/fechamento-list.component';
 import { EntregaListComponent } from './entrega/entrega-list.component';
 import { PedidoListComponent } from './pedido/pedido-list.component';
@@ -35,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ModalModule,
+    ConfirmDialogModule,
     RouterModule.forRoot([
       {
         path: '', redirectTo: 'cardapioPrincipal', pathMatch: 'full'

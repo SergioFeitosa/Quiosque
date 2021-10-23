@@ -1,3 +1,4 @@
+import { ConfirmDialogService } from './../confirm-dialog/confirm-dialog.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from './produto.service';
 import { Produto } from './produto';
@@ -19,8 +20,8 @@ export class ProdutoListComponent implements OnInit {
   _filterBy: string;
 
   constructor(private produtoService: ProdutoService,
-              private activatedRoute: ActivatedRoute
-             ){
+              private activatedRoute: ActivatedRoute,
+              private confirmDialogService: ConfirmDialogService   ){
 
   }
 
@@ -44,7 +45,21 @@ export class ProdutoListComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  exibe() {
-    console.log('teste');
+  showDialog(): void {
+    this.confirmDialogService.confirmThis('Are you sure to delete?', console.log('cliquei');
+    }, function() {
+      console.log('nao');
+    })
   }
+
+  // tslint:disable-next-line:align
+  // tslint:disable-next-line:no-unused-expression
+showDialogYes(): void {
+    console.log('teste');
+  };
+
 }
+function showDialogYes() {
+  throw new Error('Function not implemented.');
+}
+

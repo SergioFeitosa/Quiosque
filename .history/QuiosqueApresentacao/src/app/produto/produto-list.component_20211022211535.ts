@@ -43,7 +43,6 @@ export class ProdutoListComponent implements OnInit {
     this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
-  // tslint:disable-next-line:typedef
   exibe() {
     console.log('teste');
   }

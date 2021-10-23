@@ -1,3 +1,4 @@
+import { ConfirmDialogService } from './../confirm-dialog/confirm-dialog.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from './produto.service';
 import { Produto } from './produto';
@@ -20,7 +21,7 @@ export class ProdutoListComponent implements OnInit {
 
   constructor(private produtoService: ProdutoService,
               private activatedRoute: ActivatedRoute
-             ){
+                 ){
 
   }
 
@@ -41,10 +42,5 @@ export class ProdutoListComponent implements OnInit {
 
     this.filteredProdutos =
     this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-  }
-
-  // tslint:disable-next-line:typedef
-  exibe() {
-    console.log('teste');
   }
 }

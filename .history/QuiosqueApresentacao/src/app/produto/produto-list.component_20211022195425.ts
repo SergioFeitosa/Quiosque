@@ -1,3 +1,4 @@
+import { ConfirmDialogService } from './../confirm-dialog/confirm-dialog.service';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from './produto.service';
 import { Produto } from './produto';
@@ -19,8 +20,8 @@ export class ProdutoListComponent implements OnInit {
   _filterBy: string;
 
   constructor(private produtoService: ProdutoService,
-              private activatedRoute: ActivatedRoute
-             ){
+              private activatedRoute: ActivatedRoute,
+              private confirmDialogService: ConfirmDialogService   ){
 
   }
 
@@ -43,8 +44,29 @@ export class ProdutoListComponent implements OnInit {
     this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
-  // tslint:disable-next-line:typedef
-  exibe() {
-    console.log('teste');
+  validarTelefone(): void {
+
+    if (this.telefone > 0) {
+      environment.telefone = this.telefone;
+      console.log('guardei o telefone');
+      this.enviarCodigo();
+    }
+
   }
+
+  // tslint:disable-next-line:typedef
+  showDialog(): void {
+    console.log('passei pelo show')
+  }
+
+  // tslint:disable-next-line:align
+  // tslint:disable-next-line:no-unused-expression
+showDialogYes(); void {
+    console.log('teste');
+  };
+
 }
+function showDialogYes() {
+  throw new Error('Function not implemented.');
+}
+

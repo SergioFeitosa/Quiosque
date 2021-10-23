@@ -1,4 +1,3 @@
-import { ModalModule } from './modal/modal.module';
 import { FechamentoListComponent } from './fechamento/fechamento-list.component';
 import { EntregaListComponent } from './entrega/entrega-list.component';
 import { PedidoListComponent } from './pedido/pedido-list.component';

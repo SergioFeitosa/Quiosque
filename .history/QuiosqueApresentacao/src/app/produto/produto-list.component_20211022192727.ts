@@ -1,3 +1,4 @@
+import { ConfirmDialogService } from './../../../../.history/QuiosqueApresentacao/src/app/confirm-dialog/confirm-dialog.service_20200912081913';
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from './produto.service';
 import { Produto } from './produto';
@@ -19,8 +20,8 @@ export class ProdutoListComponent implements OnInit {
   _filterBy: string;
 
   constructor(private produtoService: ProdutoService,
-              private activatedRoute: ActivatedRoute
-             ){
+              private activatedRoute: ActivatedRoute,
+              private confirmDialogService: ConfirmDialogService   ){
 
   }
 
@@ -43,8 +44,4 @@ export class ProdutoListComponent implements OnInit {
     this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
-  // tslint:disable-next-line:typedef
-  exibe() {
-    console.log('teste');
-  }
 }
