@@ -29,6 +29,8 @@ export class CardapioPrincipalComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log('carregando telefone ' + environment.telefone);
+    console.log('carregando codigo ' + environment.codigo);
     if (environment.telefone > 0 && environment.codigo > 0) {
       this.telefone = environment.telefone;
       this.codigo = environment.codigo;

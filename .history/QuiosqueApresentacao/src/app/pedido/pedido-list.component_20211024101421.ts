@@ -28,7 +28,6 @@ export class PedidoListComponent implements OnInit {
     this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
     this.pedidoService.read().subscribe(pedidos => {
       this.pedidos = pedidos;
-      this.filteredPedidos = this.pedidos;
     });
   }
 

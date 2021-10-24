@@ -39,5 +39,15 @@ export class PedidoService {
   }
 
 
+  read(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(this.baseUrl);
+
+  }
+
+  readById(produtoId: number): Observable<Produto> {
+    const url = `${this.baseUrl}/${produtoId}`;
+    return this.http.get<Produto>(url);
+  }
+
 }
 

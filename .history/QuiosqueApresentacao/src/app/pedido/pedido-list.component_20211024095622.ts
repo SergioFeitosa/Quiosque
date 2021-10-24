@@ -28,8 +28,8 @@ export class PedidoListComponent implements OnInit {
     this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
     this.pedidoService.read().subscribe(pedidos => {
       this.pedidos = pedidos;
-      this.filteredPedidos = this.pedidos;
     });
+    this.filteredPedidos = this.ppedidos;
   }
 
   // tslint:disable-next-line:typedef
@@ -41,7 +41,7 @@ export class PedidoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredPedidos =
-    this.pedidos.filter((pedido: Pedido) => pedido.pedidoId.toString().indexOf(this._filterBy.toString()) > -1);
+    this._pedidos.filter((pedido: Pedido) => pedido.pedidoId.toString().indexOf(this._filterBy.toString()) > -1);
   }
 
 }

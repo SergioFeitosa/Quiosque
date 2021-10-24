@@ -12,7 +12,7 @@ export class PedidoListComponent implements OnInit {
   _categoryId: string;
 
   filteredPedidos: Pedido[] = [];
-  pedidos: Pedido[] = [];
+  filteredPedidos: Pedido[] = [];
   // tslint:disable-next-line:variable-name
   _pedidos: Pedido[] = [];
 
@@ -27,9 +27,9 @@ export class PedidoListComponent implements OnInit {
   ngOnInit(): void {
     this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
     this.pedidoService.read().subscribe(pedidos => {
-      this.pedidos = pedidos;
-      this.filteredPedidos = this.pedidos;
+      this._pedidos = pedidos;
     });
+    this.filteredPedidos = this._pedidos;
   }
 
   // tslint:disable-next-line:typedef
@@ -41,7 +41,7 @@ export class PedidoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredPedidos =
-    this.pedidos.filter((pedido: Pedido) => pedido.pedidoId.toString().indexOf(this._filterBy.toString()) > -1);
+    this._pedidos.filter((pedido: Pedido) => pedido.pedidoId.toString().indexOf(this._filterBy.toString()) > -1);
   }
 
 }
