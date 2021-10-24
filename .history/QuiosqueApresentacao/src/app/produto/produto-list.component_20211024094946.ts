@@ -82,6 +82,7 @@ export class ProdutoListComponent implements OnInit {
 
     });
 
+
     this.displayStyle = 'block';
   }
 

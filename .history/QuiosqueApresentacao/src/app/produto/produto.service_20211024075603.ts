@@ -34,8 +34,8 @@ export class ProdutoService {
   }
 
   read(): Observable<Produto[]> {
+    console.log('entrei service produto ' + this.http.get<Produto[]>(this.baseUrl).l);
     return this.http.get<Produto[]>(this.baseUrl);
-
   }
 
   readById(produtoId: number): Observable<Produto> {

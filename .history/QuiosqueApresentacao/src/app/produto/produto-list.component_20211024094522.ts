@@ -34,7 +34,7 @@ export class ProdutoListComponent implements OnInit {
   _filterBy: string;
 
   constructor(private produtoService: ProdutoService,
-              private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute
   ) {
 
   }
@@ -71,16 +71,17 @@ export class ProdutoListComponent implements OnInit {
   openPopup(produtoId: number): void {
 
     // tslint:disable-next-line:no-unused-expression
-    this.produtoService.readById(produtoId).subscribe(product => {
-      this.produto = product;
+    this.produtoService.readById(produtoId).subscribe(produto => {
+      this.produto = produto;
+      console.log(produto.name);
       this.produtoName = this.produto.name;
-      this.produtoPreco = this.produto.price;
-      this.produtoImageUrl = this.produto.imageUrl;
-      this.produtoTempoPreparacao = this.produto.preparationTime;
-      this.produtoAvaliacao = this.produto.rating;
-      this.produtoDescricao = this.produto.description;
-
     });
+
+    this.produtoPreco = this.produto.price;
+    this.produtoImageUrl = this.produto.imageUrl;
+    this.produtoTempoPreparacao = this.produto.preparationTime;
+    this.produtoAvaliacao = this.produto.rating;
+    this.produtoDescricao = this.produto.description;
 
     this.displayStyle = 'block';
   }

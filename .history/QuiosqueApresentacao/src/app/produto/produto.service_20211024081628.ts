@@ -34,6 +34,7 @@ export class ProdutoService {
   }
 
   read(): Observable<Produto[]> {
+    console.log('servico ' +  )
     return this.http.get<Produto[]>(this.baseUrl);
 
   }

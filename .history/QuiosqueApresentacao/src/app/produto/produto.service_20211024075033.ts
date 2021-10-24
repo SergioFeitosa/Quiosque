@@ -34,8 +34,8 @@ export class ProdutoService {
   }
 
   read(): Observable<Produto[]> {
+    cojnsole.log('entrei service produto ');
     return this.http.get<Produto[]>(this.baseUrl);
-
   }
 
   readById(produtoId: number): Observable<Produto> {

@@ -73,14 +73,15 @@ export class ProdutoListComponent implements OnInit {
     // tslint:disable-next-line:no-unused-expression
     this.produtoService.readById(produtoId).subscribe(product => {
       this.produto = product;
-      this.produtoName = this.produto.name;
-      this.produtoPreco = this.produto.price;
-      this.produtoImageUrl = this.produto.imageUrl;
-      this.produtoTempoPreparacao = this.produto.preparationTime;
-      this.produtoAvaliacao = this.produto.rating;
-      this.produtoDescricao = this.produto.description;
 
     });
+
+    this.produtoName = this.produto.name;
+    this.produtoPreco = produto.price;
+    this.produtoImageUrl = produto.imageUrl;
+    this.produtoTempoPreparacao = produto.preparationTime;
+    this.produtoAvaliacao = produto.rating;
+    this.produtoDescricao = produto.description;
 
     this.displayStyle = 'block';
   }

@@ -35,7 +35,7 @@ export class ProdutoListComponent implements OnInit {
 
   constructor(private produtoService: ProdutoService,
               private activatedRoute: ActivatedRoute
-  ) {
+             ){
 
   }
 
@@ -45,9 +45,9 @@ export class ProdutoListComponent implements OnInit {
 
     this.produtoService.read().subscribe(products => {
       this.produtos = products.filter((produto: Produto) =>
-        produto.category.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
+            produto.category.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
       this.filteredProdutos = this.produtos;
-    });
+         });
 
   }
 
@@ -60,7 +60,7 @@ export class ProdutoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredProdutos =
-      this.produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    this.produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
   // tslint:disable-next-line:quotemark
@@ -70,17 +70,19 @@ export class ProdutoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   openPopup(produtoId: number): void {
 
-    // tslint:disable-next-line:no-unused-expression
-    this.produtoService.readById(produtoId).subscribe(product => {
-      this.produto = product;
-      this.produtoName = this.produto.name;
-      this.produtoPreco = this.produto.price;
-      this.produtoImageUrl = this.produto.imageUrl;
-      this.produtoTempoPreparacao = this.produto.preparationTime;
-      this.produtoAvaliacao = this.produto.rating;
-      this.produtoDescricao = this.produto.description;
+    console.log('entrei ' + produtoId);
 
-    });
+    // tslint:disable-next-line:no-unused-expression
+    this.produtoService.readById(produtoId).subscribe(produto => { this.produto = produto; console.log(produto.name); });
+
+    console.log('nome ' + this.produto.name);
+
+    this.produtoName = this.produto.name;
+    this.produtoImageUrl = this.produto.imageUrl;
+    this.produtoDescricao = this.produto.description;
+    this.produtoPreco = this.produto.price;
+    this.produtoTempoPreparacao = this.produto.preparationTime;
+    this.produtoAvaliacao = this.produto.rating;
 
     this.displayStyle = 'block';
   }
@@ -88,5 +90,4 @@ export class ProdutoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closePopup() {
     this.displayStyle = 'none';
-  }
-}
+  }}

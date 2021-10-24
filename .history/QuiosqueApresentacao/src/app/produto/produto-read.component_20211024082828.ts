@@ -28,7 +28,7 @@ export class ProdutoReadComponent implements OnInit {
   produtos: Produto[];
 
   constructor(private produtoService: ProdutoService,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit(): void {
 

@@ -36,15 +36,14 @@ export class ProdutoReadComponent implements OnInit {
 
   Leitura(): void {
     this.produtoService.read().subscribe(produtos => {
-      this.produtos = produtos;
-      console.log('produtos ');
-    });
+    this.produtos = produtos;
+    console.log('produtos ');
   }
 
 createProduto(): void {
-      this.produtoService.create(this.produto).subscribe(() => {
-        this.produtoService.showMessage('Produto Criaado');
-        this.router.navigate(['/produtos']);
-      });
-    }
+    this.produtoService.create(this.produto).subscribe(() => {
+      this.produtoService.showMessage('Produto Criaado');
+      this.router.navigate(['/produtos']);
+    });
+  }
 }

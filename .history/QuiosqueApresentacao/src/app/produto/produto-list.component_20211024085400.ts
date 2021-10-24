@@ -23,32 +23,40 @@ export class ProdutoListComponent implements OnInit {
   // tslint:disable-next-line:variable-name
   produto: Produto;
 
-  produtos: Produto[] = [];
-
   filteredProdutos: Produto[] = [];
   // tslint:disable-next-line:variable-name
   _produtos: Produto[] = [];
   // tslint:disable-next-line:variable-name
+  _produto: Produto;
 
   // tslint:disable-next-line:variable-name
   _filterBy: string;
 
   constructor(private produtoService: ProdutoService,
               private activatedRoute: ActivatedRoute
-  ) {
+             ){
 
   }
 
   ngOnInit(): void {
 
+    // this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
+    // this.produtoService.read().subscribe(products => {
+    //  this.filteredProdutos = products;
+    //  console.log('produto-list ccc' + this.filteredProdutos);
+    // });
+
+
+
     this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
 
+    console.log('categoria ' + this._categoryId
+
     this.produtoService.read().subscribe(products => {
-      this.produtos = products.filter((produto: Produto) =>
-        produto.category.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
-      this.filteredProdutos = this.produtos;
+      this._produtos = products.filter((produto: Produto) => produto.category.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
     });
 
+    this.filteredProdutos = this._produtos;
   }
 
   // tslint:disable-next-line:typedef
@@ -60,7 +68,7 @@ export class ProdutoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredProdutos =
-      this.produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    this._produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
   // tslint:disable-next-line:quotemark
@@ -69,18 +77,17 @@ export class ProdutoListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   openPopup(produtoId: number): void {
-
     // tslint:disable-next-line:no-unused-expression
-    this.produtoService.readById(produtoId).subscribe(product => {
-      this.produto = product;
-      this.produtoName = this.produto.name;
-      this.produtoPreco = this.produto.price;
-      this.produtoImageUrl = this.produto.imageUrl;
-      this.produtoTempoPreparacao = this.produto.preparationTime;
-      this.produtoAvaliacao = this.produto.rating;
-      this.produtoDescricao = this.produto.description;
+    this.produtoService.readById(produtoId).subscribe(produto => { this._produto = produto; });
 
-    });
+
+    this._produto.name = this.produto.name;
+    this.produtoImageUrl = this.produto.imageUrl;
+    this.produtoDescricao = this.produto.description;
+    this.produtoPreco = this.produto.price;
+    this.produtoTempoPreparacao = this.produto.preparationTime;
+    this.produtoAvaliacao = this.produto.rating;
+
 
     this.displayStyle = 'block';
   }
@@ -88,5 +95,5 @@ export class ProdutoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closePopup() {
     this.displayStyle = 'none';
-  }
-}
+    console.log('passei pelo close');
+  }}

@@ -28,7 +28,7 @@ export class ProdutoReadComponent implements OnInit {
   produtos: Produto[];
 
   constructor(private produtoService: ProdutoService,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit(): void {
 
@@ -39,7 +39,7 @@ export class ProdutoReadComponent implements OnInit {
       this.produtos = produtos;
       console.log('produtos ');
     });
-  }
+  };
 
 createProduto(): void {
       this.produtoService.create(this.produto).subscribe(() => {

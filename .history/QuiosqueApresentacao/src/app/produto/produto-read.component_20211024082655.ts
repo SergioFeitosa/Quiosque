@@ -31,20 +31,12 @@ export class ProdutoReadComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
-
   }
-
-  Leitura(): void {
-    this.produtoService.read().subscribe(produtos => {
-      this.produtos = produtos;
-      console.log('produtos ');
+  console.log('produto-list ' + this.products);
+  console.log('produto-list ' + this.products);
+    this.produtoService.create(this.produto).subscribe(() => {
+      this.produtoService.showMessage('Produto Criaado');
+      this.router.navigate(['/produtos']);
     });
   }
-
-createProduto(): void {
-      this.produtoService.create(this.produto).subscribe(() => {
-        this.produtoService.showMessage('Produto Criaado');
-        this.router.navigate(['/produtos']);
-      });
-    }
 }
