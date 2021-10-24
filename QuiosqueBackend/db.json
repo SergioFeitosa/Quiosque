@@ -1,5 +1,5 @@
-    {
-    "products": [
+{
+  "products": [
     {
       "id": 1,
       "category": "pratododia",
@@ -252,11 +252,12 @@
       "releaseDate": "November 2, 2019",
       "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
     },
-    { "id": 22,
+    {
+      "id": 22,
       "category": "bebida",
       "name": "coca cola",
       "code": "100100",
-      "price": 70.00,
+      "price": 70,
       "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
       "preparationTime": "45 min",
       "rating": 5,
@@ -264,88 +265,50 @@
       "description": "refrigerante de cola  "
     }
   ],
-  
-    "pedidos": [
+  "pedidos": [
     {
-      "pedidoId": 9825512560001,
-      "produtoId": 1,
-      "observacao": "bem passado",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-      },
-    {
-      "pedidoId": 9825512560001,
-      "produtoId": 2,
-      "observacao": "sem pimenta",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
+      "produtoId": 0,
+      "telefone": 0,
+      "local": "teste",
+      "observacao": "teste",
+      "isencao": true,
+      "releaseDate": "teste",
+      "releaseTime": "teste",
+      "pedidoId": 0,
+      "id": 1
     },
     {
-      "pedidoId": 9825512560001,
+      "produtoId": 1,
+      "telefone": 0,
+      "local": "teste",
+      "observacao": "teste",
+      "isencao": true,
+      "releaseDate": "teste",
+      "releaseTime": "teste",
+      "pedidoId": 0,
+      "id": 2
+    },
+    {
       "produtoId": 3,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
+      "telefone": 0,
+      "local": "teste",
+      "observacao": "teste",
+      "isencao": true,
+      "releaseDate": "teste",
+      "releaseTime": "teste",
+      "pedidoId": 0,
+      "id": 3
     },
     {
-      "pedidoId": 9825512560001,
-      "produtoId": 4,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-    },
-    {
-      "pedidoId": 9825512560002,
-      "produtoId": 1,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-    },
-    {
-      "pedidoId": 9825512560002,
-      "produtoId": 6,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-    },
-    {
-      "pedidoId": 9825512560002,
       "produtoId": 7,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-    },
-    {
-      "pedidoId": 9825512560003,
-      "produtoId": 8,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-    },
-    {
-      "pedidoId": 9825512560004,
-      "produtoId": 9,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
-    },
-    {
-      "pedidoId": 9825512560004,
-      "produtoId": 10,
-      "observacao": "",
-      "isencao": false,
-      "releaseDate": "21/10/2021",
-      "releaseTime": "10:20"
+      "telefone": 0,
+      "local": "teste",
+      "observacao": "teste",
+      "isencao": true,
+      "releaseDate": "teste",
+      "releaseTime": "teste",
+      "pedidoId": 0,
+      "id": 4
     }
   ]
-  
 }
