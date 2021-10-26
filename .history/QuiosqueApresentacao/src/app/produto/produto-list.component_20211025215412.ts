@@ -127,4 +127,5 @@ export class ProdutoListComponent implements OnInit {
       }
     );
   }
+
 }

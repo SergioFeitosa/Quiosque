@@ -30,7 +30,6 @@ export class ProdutoListComponent implements OnInit {
   order: Pedido = {
     produtoId: 0,
     produtoImageUrl: '',
-    produtoTempoPreparacao: '',
     telefone: environment.telefone,
     local: 'teste',
     observacao: 'teste',
@@ -113,8 +112,7 @@ export class ProdutoListComponent implements OnInit {
   pedidoCreate(produtoId: number): void {
 
     this.order.produtoId = produtoId;
-    this.order.produtoImageUrl = this.produtoImageUrl;
-    this.order.produtoTempoPreparacao = this.produtoTempoPreparacao;
+    this.order.produtoImageUrl = this.produto.imageUrl;
     this.order.telefone = environment.telefone;
     this.order.local = environment.local;
     this.order.observacao = 'teste';
@@ -127,4 +125,5 @@ export class ProdutoListComponent implements OnInit {
       }
     );
   }
+
 }

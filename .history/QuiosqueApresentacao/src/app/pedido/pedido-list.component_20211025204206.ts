@@ -38,10 +38,10 @@ export class PedidoListComponent implements OnInit {
     code: '',
     price: 0,
     imageUrl: '',
-    preparationTime: '',
+    preparationTime: ''"45 min",
     rating: 5,
-    releaseDate: '',
-    description: ''
+    releaseDate: "November 2, 2019",
+    description: "refrigerante de cola  "
 };
   // tslint:disable-next-line:variable-name
   _pedidos: Pedido[] = [];

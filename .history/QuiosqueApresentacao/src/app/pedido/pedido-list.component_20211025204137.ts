@@ -33,15 +33,15 @@ export class PedidoListComponent implements OnInit {
   // tslint:disable-next-line:variable-name
   produto: Produto = {
     id: 22,
-    category: '',
-    name: '',
-    code: '',
-    price: 0,
-    imageUrl: '',
-    preparationTime: '',
+    category: ''1bebida"'',
+    name: "coca cola",
+    code: "100100",
+    price: 70,
+    imageUrl: "/quiosque/assets/images/cocacola-lata350ml.jpg",
+    preparationTime: "45 min",
     rating: 5,
-    releaseDate: '',
-    description: ''
+    releaseDate: "November 2, 2019",
+    description: "refrigerante de cola  "
 };
   // tslint:disable-next-line:variable-name
   _pedidos: Pedido[] = [];

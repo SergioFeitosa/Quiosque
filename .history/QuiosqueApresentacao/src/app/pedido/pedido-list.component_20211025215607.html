@@ -11,7 +11,7 @@
   <table class="table table-bordered table-striped">
   <thead>
       <tr>
-        <th> Imagem</th>
+        <th> produtoId</th>
         <th> telefone</th>
         <th> local</th>
         <th> observacao</th>
@@ -24,7 +24,7 @@
       <tr *ngFor='let pedido of filteredPedidos'>
         <td>
           <div class="modal-body row">
-            <img [src]= 'pedido.produtoImageUrl' class="figure-img img-fluid rounded"
+            <img [src]='{{ pedido.telefone }}' class="figure-img img-fluid rounded"
               alt="..."
               width="400"
               height="400">

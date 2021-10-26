@@ -11,7 +11,7 @@
   <table class="table table-bordered table-striped">
   <thead>
       <tr>
-        <th> Imagem</th>
+        <th> produtoId</th>
         <th> telefone</th>
         <th> local</th>
         <th> observacao</th>
@@ -22,13 +22,14 @@
     </thead>
     <tbody>
       <tr *ngFor='let pedido of filteredPedidos'>
+        <div class="modal-body row">
+          <img [src]='produtoImageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="400"
+            height="400">
+        </div>
         <td>
-          <div class="modal-body row">
-            <img [src]= 'pedido.produtoImageUrl' class="figure-img img-fluid rounded"
-              alt="..."
-              width="400"
-              height="400">
-          </div>
+          <img src='/quiosque/assets/images/cioba-frito.jpg' class="figure-img img-fluid rounded" alt="..." width="100" height="100">
         </td>
         <td>{{ pedido.telefone }} </td>
         <td>{{ pedido.local }} </td>

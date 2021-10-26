@@ -1,4 +1,3 @@
-import { Produto } from './../produto/produto';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
 import { PedidoService } from './pedido.service';
@@ -32,17 +31,17 @@ export class PedidoListComponent implements OnInit {
   };
   // tslint:disable-next-line:variable-name
   produto: Produto = {
-    id: 22,
-    category: '',
-    name: '',
-    code: '',
-    price: 0,
-    imageUrl: '',
-    preparationTime: '',
-    rating: 5,
-    releaseDate: '',
-    description: ''
-};
+    produtoId: 0,
+    telefone: environment.telefone,
+    local: 'teste',
+    observacao: 'teste',
+    isencao: true,
+    releaseDate: 'teste',
+    releaseTime: 'teste',
+    entregaTime: 'teste',
+    pedidoId: 0,
+    entregaId: 0
+  };
   // tslint:disable-next-line:variable-name
   _pedidos: Pedido[] = [];
 

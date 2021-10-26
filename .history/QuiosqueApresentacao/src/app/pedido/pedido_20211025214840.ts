@@ -1,11 +1,10 @@
 export interface Pedido {
 
   pedidoId: number;
-  produtoId: number;
-  produtoImageUrl: string;
-  produtoTempoPreparacao: string;
+  produtoImageUrl: string
   telefone: number;
   local: string;
+  produtoId: number;
   observacao: string;
   isencao: boolean;
   releaseDate: string;

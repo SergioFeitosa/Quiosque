@@ -266,28 +266,7 @@
     }
   ],
   "pedidos": [
-    {
-      "produtoId": 1,
-      "telefone": "213",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste",
-      "pedidoId": 0,
-      "id": 1
-    },
-    {
-      "produtoId": 22,
-      "telefone": "213",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste",
-      "pedidoId": 0,
-      "id": 2
-    }
   ],
-  "entregas": []
+  "entregas": [
+  ]
 }

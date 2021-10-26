@@ -41,7 +41,7 @@ export class PedidoListComponent implements OnInit {
     preparationTime: '',
     rating: 5,
     releaseDate: '',
-    description: ''
+    description: "refrigerante de cola  "
 };
   // tslint:disable-next-line:variable-name
   _pedidos: Pedido[] = [];

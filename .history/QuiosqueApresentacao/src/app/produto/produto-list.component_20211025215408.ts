@@ -30,7 +30,7 @@ export class ProdutoListComponent implements OnInit {
   order: Pedido = {
     produtoId: 0,
     produtoImageUrl: '',
-    produtoTempoPreparacao: '',
+    produtoTempoPreparacao: ''
     telefone: environment.telefone,
     local: 'teste',
     observacao: 'teste',
@@ -127,4 +127,5 @@ export class ProdutoListComponent implements OnInit {
       }
     );
   }
+
 }

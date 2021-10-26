@@ -37,11 +37,11 @@ export class PedidoListComponent implements OnInit {
     name: '',
     code: '',
     price: 0,
-    imageUrl: '',
-    preparationTime: '',
+    imageUrl: '"/quiosque/assets/images/cocacola-lata350ml.jpg",
+    preparationTime: "45 min",
     rating: 5,
-    releaseDate: '',
-    description: ''
+    releaseDate: "November 2, 2019",
+    description: "refrigerante de cola  "
 };
   // tslint:disable-next-line:variable-name
   _pedidos: Pedido[] = [];
