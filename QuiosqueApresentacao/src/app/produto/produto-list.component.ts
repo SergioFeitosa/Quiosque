@@ -28,6 +28,7 @@ export class ProdutoListComponent implements OnInit {
 
   // tslint:disable-next-line:variable-name
   order: Pedido = {
+    id: 0,
     produtoId: 0,
     produtoImageUrl: '',
     produtoTempoPreparacao: '',
@@ -37,7 +38,6 @@ export class ProdutoListComponent implements OnInit {
     isencao: true,
     releaseDate: 'teste',
     releaseTime: 'teste',
-    pedidoId: 0
   };
 
   produtos: Produto[] = [];

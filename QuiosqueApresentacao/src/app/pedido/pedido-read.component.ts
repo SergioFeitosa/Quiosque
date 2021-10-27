@@ -11,7 +11,7 @@ import { Pedido } from './pedido';
 export class PedidoReadComponent implements OnInit {
 
   pedido: Pedido = {
-    pedidoId: 9825512569999,
+    id: 9825512569999,
     produtoId: 1,
     produtoImageUrl: '',
     produtoTempoPreparacao: '',

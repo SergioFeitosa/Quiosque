@@ -1,0 +1,95 @@
+<div class="row">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="col-sm-3">
+      <a [routerLink]="['/cardapioPrincipal']" class="navbar-brand">Quiosque
+        NuButikin</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
+            class="nav-link">Cardapio</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/pedido']" routerLinkActive="active"
+            class="nav-link">Pedido</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a [routerLink]="['/entrega']" routerLinkActive="active"
+            class="nav-link">Entrega</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a (click)="openPopup()"
+            class="nav-link">Minha Conta</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Minha Conta</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <thead>
+        <tr>
+          <th> </th>
+          <th> descricao</th>
+          <th> qtde</th>
+          <th> valor unitário</th>
+          <th> valor total prod </th>
+          <th> valor final</th>
+          <th class="text-center"> Ações </th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor='let conta of contas'>
+          <td>
+            <img [src]='conta.imageUrl' class="figure-img img-fluid
+              rounded"
+              alt="..."
+              width="40"
+              height="40">
+          </td>
+          <td>{{ conta.descricao }} &nbsp;&nbsp;</td>
+          <td>{{ conta.quantidade }} &nbsp;&nbsp;</td>
+          <td>{{ conta.valorProdutoUnitario }} &nbsp;&nbsp;</td>
+          <td>{{ conta.valorProdutoTotal }} &nbsp;&nbsp;</td>
+          <td>{{ conta.valorTotal }} &nbsp;&nbsp;</td>
+          <td class="text-center">
+            <button (click)="fechamento( pedido.id )">
+              <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+                rounded" alt="..." width="20"
+                height="20">
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </div>
+  </div>
+</div>
