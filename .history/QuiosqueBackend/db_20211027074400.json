@@ -263,79 +263,10 @@
       "rating": 5,
       "releaseDate": "November 2, 2019",
       "description": "refrigerante de cola  "
-    }
-  ],
+    }  ],
   "pedidos": [
-    {
-      "produtoId": 17,
-      "produtoImageUrl": "/assets/images/alcatra-aparmegiana.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste",
-      "pedidoId": 0,
-      "id": 1
-    },
-    {
-      "produtoId": 22,
-      "produtoImageUrl": "/assets/images/cocacola-lata350ml.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste",
-      "pedidoId": 0,
-      "id": 2
-    },
-    {
-      "produtoId": 1,
-      "produtoImageUrl": "/assets/images/cioba-frito.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "2",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste",
-      "pedidoId": 0,
-      "id": 3
-    }
+
   ],
   "entregas": [
-    {
-      "produtoId": 0,
-      "produtoImageUrl": "/assets/images/alcatra-aparmegiana.jpg",
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "teste",
-      "entregaTime": "teste",
-      "pedidoId": 1,
-      "id": 1
-    },
-    {
-      "produtoId": 0,
-      "produtoImageUrl": "/assets/images/cocacola-lata350ml.jpg",
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "teste",
-      "entregaTime": "teste",
-      "pedidoId": 2,
-      "id": 2
-    },
-    {
-      "produtoId": 0,
-      "produtoImageUrl": "/assets/images/cioba-frito.jpg",
-      "telefone": "2",
-      "local": "mesa001",
-      "observacao": "teste",
-      "entregaTime": "teste",
-      "pedidoId": 3,
-      "id": 3
-    }
   ]
 }

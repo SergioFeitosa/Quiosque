@@ -11,10 +11,6 @@ export class NavBarComponent implements OnInit {
   telefone: number;
   codigo: number;
 
-  // tslint:disable-next-line:quotemark
-  // tslint:disable-next-line:member-ordering
-  displayStyle = 'none';
-
   constructor(private navBarService: NavBarService){}
 
   ngOnInit(): void {

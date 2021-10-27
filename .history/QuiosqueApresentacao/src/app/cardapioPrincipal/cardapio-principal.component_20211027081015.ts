@@ -9,6 +9,9 @@ import { environment } from 'src/environments/environment';
 
 export class CardapioPrincipalComponent implements OnInit {
 
+  // tslint:disable-next-line:quotemark
+  // tslint:disable-next-line:member-ordering
+  displayStyle = 'none';
 
   // tslint:disable-next-line:no-inferrable-types
   buttonDisabled: boolean;

@@ -73,7 +73,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
         path: 'entrega', component: EntregaListComponent
       },
       {
-        path: 'conta', component: ContaListComponent
+        path: 'entrega', component: EntregaListComponent
       },
       {
         path: 'fechamento', component: FechamentoListComponent

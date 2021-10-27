@@ -113,3 +113,47 @@
     </div>
   </div>
 
+  <div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalhes do Produto</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <div class="modal-body row">
+        Avaliação:
+      </div>
+      <div class="modal-body row">
+      </div>
+      <div class="modal-body row">
+      </div>
+      <div class="modal-body row">
+        Descrição:&nbsp;&nbsp;&nbsp; {{ produtoDescricao }}
+      </div>
+      <div class="modal-body row">
+        Preço:&nbsp;&nbsp;&nbsp; {{ produtoPreco }}
+      </div>
+      <div class="modal-body row">
+        Tempo de Preparação:&nbsp;&nbsp;&nbsp; {{ produtoTempoPreparacao }}
+      </div>
+
+      <div class="modal-body">
+        <p>Os ingredientes encontrados na refeição são:</p>
+        <ul>
+          <li>alho</li>
+          <li>cebola</li>
+          <li>coentro</li>
+          <li>maionese</li>
+          <li>manjericão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

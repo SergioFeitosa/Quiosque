@@ -9,6 +9,9 @@ import { environment } from 'src/environments/environment';
 
 export class CardapioPrincipalComponent implements OnInit {
 
+      // tslint:disable-next-line:quotemark
+  // tslint:disable-next-line:member-ordering
+  displayStyle = 'none';
 
   // tslint:disable-next-line:no-inferrable-types
   buttonDisabled: boolean;
@@ -24,6 +27,7 @@ export class CardapioPrincipalComponent implements OnInit {
   element8: HTMLElement;
 
   constructor(private cardapioPrincipalService: CardapioPrincipalService) {
+    this.buttonDisabled = false;
   }
 
 
@@ -84,6 +88,4 @@ export class CardapioPrincipalComponent implements OnInit {
     const codigoGerado = Math.random() * this.telefone;
     this.cardapioPrincipalService.enviarCodigo(this.telefone.toString(), codigoGerado.toString());
   }
-
-
 }

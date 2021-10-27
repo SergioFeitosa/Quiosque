@@ -1,4 +1,3 @@
-import { ContaListComponent } from './conta/conta-list.component';
 import { ProdutoCreateComponent } from './produto/produto-create.component';
 import { ProdutoReadComponent } from './produto/produto-read.component';
 import { PedidoReadComponent } from './pedido/pedido-read.component';
@@ -41,7 +40,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     PedidoReadComponent,
     EntregaListComponent,
     FechamentoListComponent,
-    ContaListComponent
+    ContaListComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,9 +70,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
       },
       {
         path: 'entrega', component: EntregaListComponent
-      },
-      {
-        path: 'conta', component: ContaListComponent
       },
       {
         path: 'fechamento', component: FechamentoListComponent
