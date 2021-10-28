@@ -267,55 +267,16 @@
   ],
   "pedidos": [
     {
-      "id": 1
-    },
-    {
-      "id": 2,
-      "produtoId": 8,
-      "produtoImageUrl": "/assets/images/camarao-bobo.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "321",
-      "local": "mesa001",
-      "observacao": "com pimenta e sal",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste"
-    },
-    {
-      "id": 3,
-      "produtoId": 9,
-      "produtoImageUrl": "/assets/images/tilapia-fileempanado.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "321",
-      "local": "mesa001",
-      "observacao": "peixe sem espinho",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste"
-    },
-    {
-      "id": 4,
-      "produtoId": 21,
-      "produtoImageUrl": "/assets/images/saladaespecial-media.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "321",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste"
-    },
-    {
-      "id": 5,
+      "id": 1,
       "produtoId": 22,
       "produtoImageUrl": "/assets/images/cocacola-lata350ml.jpg",
       "produtoTempoPreparacao": "45 min",
-      "telefone": "321",
+      "telefone": "123",
       "local": "mesa001",
-      "observacao": "observação",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste"
+      "observacao": "com gelo e limão",
+      "isencao": false,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "entrega": true
     }
   ],
   "entregas": [
@@ -324,20 +285,12 @@
       "pedidoId": 1,
       "produtoId": 0,
       "produtoImageUrl": "/assets/images/cocacola-lata350ml.jpg",
-      "telefone": "321",
+      "telefone": "123",
       "local": "mesa001",
-      "observacao": "observação",
-      "entregaTime": "teste"
-    },
-    {
-      "id": 2,
-      "pedidoId": 2,
-      "produtoId": 0,
-      "produtoImageUrl": "/assets/images/camarao-bobo.jpg",
-      "telefone": "321",
-      "local": "mesa001",
-      "observacao": "observação8",
-      "entregaTime": "teste"
+      "observacao": "com gelo e limão",
+      "isencao": false,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "entregaDate": "2021-10-28T20:39:20.101Z"
     }
   ]
 }
