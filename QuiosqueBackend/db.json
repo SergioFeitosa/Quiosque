@@ -267,16 +267,7 @@
   ],
   "pedidos": [
     {
-      "id": 1,
-      "produtoId": 22,
-      "produtoImageUrl": "/assets/images/cocacola-lata350ml.jpg",
-      "produtoTempoPreparacao": "45 min",
-      "telefone": "321",
-      "local": "mesa001",
-      "observacao": "teste",
-      "isencao": true,
-      "releaseDate": "teste",
-      "releaseTime": "teste"
+      "id": 1
     },
     {
       "id": 2,
@@ -285,7 +276,7 @@
       "produtoTempoPreparacao": "45 min",
       "telefone": "321",
       "local": "mesa001",
-      "observacao": "teste",
+      "observacao": "com pimenta e sal",
       "isencao": true,
       "releaseDate": "teste",
       "releaseTime": "teste"
@@ -297,7 +288,7 @@
       "produtoTempoPreparacao": "45 min",
       "telefone": "321",
       "local": "mesa001",
-      "observacao": "teste",
+      "observacao": "peixe sem espinho",
       "isencao": true,
       "releaseDate": "teste",
       "releaseTime": "teste"
@@ -321,7 +312,7 @@
       "produtoTempoPreparacao": "45 min",
       "telefone": "321",
       "local": "mesa001",
-      "observacao": "teste",
+      "observacao": "observação",
       "isencao": true,
       "releaseDate": "teste",
       "releaseTime": "teste"
@@ -335,7 +326,17 @@
       "produtoImageUrl": "/assets/images/cocacola-lata350ml.jpg",
       "telefone": "321",
       "local": "mesa001",
-      "observacao": "teste",
+      "observacao": "observação",
+      "entregaTime": "teste"
+    },
+    {
+      "id": 2,
+      "pedidoId": 2,
+      "produtoId": 0,
+      "produtoImageUrl": "/assets/images/camarao-bobo.jpg",
+      "telefone": "321",
+      "local": "mesa001",
+      "observacao": "observação8",
       "entregaTime": "teste"
     }
   ]

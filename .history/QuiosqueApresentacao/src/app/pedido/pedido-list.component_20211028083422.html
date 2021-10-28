@@ -1,0 +1,80 @@
+<div class='form-group row'>
+
+  <label class='col-sm-2 col-form-label'>Filter By:</label>
+
+  <div class='col-sm-10'>
+    <input [(ngModel)]='filter' class='form-control'>
+  </div>
+
+</div>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+        <th> Imagem</th>
+        <th> telefone</th>
+        <th> local</th>
+        <th> observacao</th>
+        <th> isencao</th>
+        <th> hora</th>
+        <th class="text-center"> Ações </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let pedido of filteredPedidos'>
+        <td>
+            <img [src]='pedido.produtoImageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td>{{ pedido.telefone }} </td>
+        <td>{{ pedido.local }} </td>
+        <td><a (click)="openPopup()" class="nav-link">{{ pedido.observacao }}</a> </td>
+        <td>{{ pedido.isencao }} </td>
+        <td>{{ pedido.releaseTime }} </td>
+        <td  class="text-center">
+          <button [routerLink]="['/entrega']">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
+              height="100">
+          </button>
+          <button (click)="entregaCreate( pedido.id )">
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
+              height="100">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalhes do Produto</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <div class="modal-body row">
+        Avaliação: <app-star [rating]="produtoAvaliacao"></app-star>
+      </div>
+      <div class="modal-body row">
+        <img [src]='produtoImageUrl' class="figure-img img-fluid rounded"
+          alt="..."
+          width="400"
+          height="400">
+      </div>
+      <div class="modal-body row">
+        <label>Nome: </label>
+        <input [(ngModel)]="pedidoObservacao" type="text">
+      </div>
+    </div>
+  </div>
+</div>
