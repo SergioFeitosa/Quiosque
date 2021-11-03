@@ -16,7 +16,7 @@ import { Produto } from '../produto/produto';
 export class NavBarComponent implements OnInit {
 
   navbarOpen = false;
-
+  
   filteredPedidos: Pedido[] = [];
   pedidos: Pedido[] = [];
   pedido: Pedido;
@@ -105,9 +105,6 @@ export class NavBarComponent implements OnInit {
     this.displayStyle = 'none';
   }
 
-// tslint:disable-next-line:typedef
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
-  }
+
 }
 
