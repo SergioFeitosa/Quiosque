@@ -98,7 +98,8 @@ export class ProdutoListComponent implements OnInit {
 
       this.carrinhoService.create(this.carrinho).subscribe(() => {
         this.carrinhoService.showMessage('Produto colocado no carrinho');
-      });
+      }
+      );
     });
 
   }

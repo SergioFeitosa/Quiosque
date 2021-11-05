@@ -96,9 +96,12 @@ export class ProdutoListComponent implements OnInit {
       this.carrinho.isencao = false;
       this.carrinho.releaseDate = new Date();
 
+      console.log('create c2 ' + this.carrinho.releaseDate);
+
       this.carrinhoService.create(this.carrinho).subscribe(() => {
         this.carrinhoService.showMessage('Produto colocado no carrinho');
-      });
+      }
+      );
     });
 
   }

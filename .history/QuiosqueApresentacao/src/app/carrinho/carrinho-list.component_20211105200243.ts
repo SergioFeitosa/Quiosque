@@ -47,7 +47,7 @@ export class CarrinhoListComponent implements OnInit {
     this.carrinhoService.read().subscribe(carrinhos => {
       this.carrinhos = carrinhos;
       this.filteredCarrinhos = this.carrinhos.filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-                                             .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+                  .filter((pedido: Pedido) => pedido.entrega !== true);
 
       });
   }

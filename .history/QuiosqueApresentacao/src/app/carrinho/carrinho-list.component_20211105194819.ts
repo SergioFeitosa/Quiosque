@@ -46,9 +46,7 @@ export class CarrinhoListComponent implements OnInit {
 
     this.carrinhoService.read().subscribe(carrinhos => {
       this.carrinhos = carrinhos;
-      this.filteredCarrinhos = this.carrinhos.filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-                                             .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
-
+      this.filteredCarrinhos = this.carrinhos.filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone);
       });
   }
 
@@ -70,24 +68,17 @@ export class CarrinhoListComponent implements OnInit {
     this.carrinhoService.readById(carrinhoId).subscribe(carrinho => {
       this.carrinho = carrinho;
 
-      if (this.carrinho.enviadoPedido !== true) {
+      this.pedido.produto = this.carrinho.produto;
+      this.pedido.telefone = this.carrinho.telefone;
+      this.pedido.local = this.carrinho.local;
+      this.pedido.observacao = this.carrinho.observacao;
+      this.pedido.isencao = this.carrinho.isencao;
+      this.pedido.releaseDate = this.carrinho.releaseDate;
+      this.pedido.entrega = false;
 
-        this.carrinho.enviadoPedido = true;
-        this.atualizarCarrinho(carrinho);
-
-
-        this.pedido.produto = this.carrinho.produto;
-        this.pedido.telefone = this.carrinho.telefone;
-        this.pedido.local = this.carrinho.local;
-        this.pedido.observacao = this.carrinho.observacao;
-        this.pedido.isencao = this.carrinho.isencao;
-        this.pedido.releaseDate = this.carrinho.releaseDate;
-        this.pedido.entrega = false;
-
-        this.pedidoService.create(this.pedido).subscribe(() => {
-          this.pedidoService.showMessage('Pedido solicitado');
-        });
-      }
+      this.pedidoService.create(this.pedido).subscribe(() => {
+        this.pedidoService.showMessage('Pedido solicitado');
+      });
     });
   }
 

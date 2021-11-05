@@ -8,6 +8,6 @@ export interface Carrinho {
   observacao: string;
   isencao: boolean;
   releaseDate: Date;
-  enviadoPedido: boolean;
+  
   produto: Produto;
 }
