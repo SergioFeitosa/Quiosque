@@ -1,0 +1,102 @@
+<div class='form-group row'>
+
+  <label class='col-sm-2 col-form-label'>Filter By:</label>
+
+  <div class='col-sm-10'>
+    <input [(ngModel)]='filter' class='form-control'>
+  </div>
+
+</div>
+
+<div class='table-responsive'>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th> Imagem</th>
+        <th> Nome</th>
+        <th> Preço</th>
+        <th> Tempo Preparação</th>
+        <th> Avaliação</th>
+        <th class="text-center"> Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let produto of filteredProdutos'>
+        <td>
+          <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td>{{ produto.name }} </td>
+        <td>{{ produto.price }} </td>
+        <td>{{ produto.preparationTime }} </td>
+        <td>
+          <app-star [rating]="produto.rating"></app-star>
+        </td>
+        <td class="text-center">
+          <button (click)="openPopup( produto.id )">
+            <img src='/assets/images/botao-detalhes.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="100"
+              height="50">
+          </button>
+          <button (click)="carrinhoCreate( produto.id )">
+            <img src='/assets/images/carrinho.jpg'  class="figure-img img-fluid
+              rounded" alt="..." width="100"
+              height="50">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalhes do Produto</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <div class="modal-body row">
+        Avaliação: <app-star [rating]="produto.rating"></app-star>
+      </div>
+      <div class="modal-body row">
+        <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+          alt="..."
+          width="400"
+          height="400">
+      </div>
+      <div class="modal-body row">
+        Nome:&nbsp;&nbsp;&nbsp; {{ produto.name }}
+      </div>
+      <div class="modal-body row">
+        Descrição:&nbsp;&nbsp;&nbsp; {{ produto.fDescricao }}
+      </div>
+      <div class="modal-body row">
+        Preço:&nbsp;&nbsp;&nbsp; {{ produtoPreco }}
+      </div>
+      <div class="modal-body row">
+        Tempo de Preparação:&nbsp;&nbsp;&nbsp; {{ produtoTempoPreparacao }}
+      </div>
+
+      <div class="modal-body">
+        <p>Os ingredientes encontrados na refeição são:</p>
+        <ul>
+          <li>alho</li>
+          <li>cebola</li>
+          <li>coentro</li>
+          <li>maionese</li>
+          <li>manjericão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

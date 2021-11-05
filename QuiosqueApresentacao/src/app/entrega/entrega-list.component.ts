@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { EntregaService } from './entrega.service';
 import { Entrega } from './entrega';
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../produto/produto';
+import { Pedido } from '../pedido/pedido';
+import { PedidoService } from '../pedido/pedido.service';
 @Component({
   templateUrl: './entrega-list.component.html',
 })
@@ -14,7 +17,10 @@ export class EntregaListComponent implements OnInit {
 
   filteredEntregas: Entrega[] = [];
   entregas: Entrega[] = [];
-  entrega: Entrega;
+
+  pedido = {} as  Pedido;
+  produto = {} as  Produto;
+  entrega = {} as  Entrega;
   // tslint:disable-next-line:variable-name
   _entregas: Entrega[] = [];
 
@@ -22,6 +28,7 @@ export class EntregaListComponent implements OnInit {
   _filterBy: string;
 
   constructor(private entregaService: EntregaService,
+              private pedidoService: PedidoService,
               private activatedRoute: ActivatedRoute ){
 
   }
@@ -30,7 +37,7 @@ export class EntregaListComponent implements OnInit {
 
     this.entregaService.read().subscribe(entregas => {
       this.entregas = entregas;
-      this.filteredEntregas = this.entregas.filter((entrega: Entrega) => entrega.telefone === environment.telefone);
+      this.filteredEntregas = this.entregas.filter((entrega: Entrega) => entrega.pedido.telefone === environment.telefone);
     });
   }
 
@@ -43,21 +50,22 @@ export class EntregaListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredEntregas =
-    this.entregas.filter((entrega: Entrega) => entrega.telefone.toString().indexOf(this._filterBy.toString()) > -1);
+    this.entregas.filter((entrega: Entrega) => entrega.pedido.telefone.toString().indexOf(this._filterBy.toString()) > -1);
   }
 
   entregaCreate(pedidoId: number): void {
 
-    this.entrega.pedidoId = pedidoId;
-    this.entrega.telefone = environment.telefone;
-    this.entrega.local = environment.local;
-    this.entrega.observacao = 'teste';
-    this.entrega.isencao = true;
-    this.entrega.releaseDate = new Date();
+    // tslint:disable-next-line:no-unused-expression
+    this.pedidoService.readById(pedidoId).subscribe(pedido => {
+      this.pedido = pedido;
+
+    });
+
+    this.entrega.pedido = this.pedido;
     this.entrega.entregaDate = new Date();
 
     this.entregaService.create(this.entrega).subscribe(() => {
-        this.entregaService.showMessage('Entrega solicitado');
+        this.entregaService.showMessage('Entrega solicitada');
       }
     );
   }

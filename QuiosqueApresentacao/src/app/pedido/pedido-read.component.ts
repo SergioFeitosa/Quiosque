@@ -10,20 +10,9 @@ import { Pedido } from './pedido';
 
 export class PedidoReadComponent implements OnInit {
 
-  pedido: Pedido = {
-    id: 9825512569999,
-    produtoId: 1,
-    produtoImageUrl: '',
-    produtoTempoPreparacao: '',
-    telefone: 1,
-    local: '1',
-    observacao: 'bem passado',
-    isencao: false,
-    releaseDate:  new Date(),
-    entrega: false
-  };
+  pedido = {} as Pedido;
 
-  pedidos: Pedido[];
+  pedidos: Pedido[] = [];
 
   constructor(private pedidoService: PedidoService,
               private router: Router) { }

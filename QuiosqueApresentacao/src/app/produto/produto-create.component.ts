@@ -10,19 +10,8 @@ import { Produto } from './produto';
 
 export class ProdutoCreateComponent implements OnInit {
 
-  produto: Produto = {
-    id: 30,
-    category: '1111',
-    name: 'Arroz com feijão',
-    imageUrl: 'string;',
-    price: 1,
-    code: '123',
-    preparationTime: '45 min',
-    rating: 5,
-    releaseDate:  new Date(),
-    description: 'arroz com feijao nordestino'
-  };
 
+  produto = {} as Produto;
 
   constructor(private produtoService: ProdutoService,
               private router: Router) { }
