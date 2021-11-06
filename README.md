@@ -40,3 +40,38 @@
  - Enviar recibo para o sistema de finanças
  
 
+    @media (min-height: 576px) {
+        .cols {
+            columns: 2 200px;
+        }
+    }
+
+    @media (min-height: 768px) {
+        .cols {
+            columns: 3 200px;
+        }
+    }
+
+    @media (min-height: 992px) {
+        .cols {
+            columns: 4 200px;
+        }
+    }
+<div class="container">
+    <div class="cols">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+        <div>G</div>
+        <div>H</div>
+        <div>I</div>
+        <div>J</div>
+        <div>K</div>
+        <div>L</div>
+        <div>M</div>
+        <div>N</div>
+    </div>
+</div>

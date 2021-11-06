@@ -8,7 +8,7 @@ import { Pedido } from '../pedido/pedido';
 import { PedidoService } from '../pedido/pedido.service';
 @Component({
   templateUrl: './entrega-list.component.html',
-  styleUrls: ['./entrega-list.component.css']
+  styleUrls: ['./app.component.css']
 
 })
 

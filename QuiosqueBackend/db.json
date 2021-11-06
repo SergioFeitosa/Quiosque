@@ -338,7 +338,8 @@
       "observacao": "sem pimenta",
       "isencao": false,
       "releaseDate": "2021-11-06T10:42:59.825Z",
-      "id": 3
+      "id": 3,
+      "enviadoPedido": true
     },
     {
       "produto": {
@@ -445,6 +446,27 @@
       "releaseDate": "2021-11-06T10:43:05.391Z",
       "entrega": true,
       "id": 3
+    },
+    {
+      "produto": {
+        "id": 3,
+        "category": "pratododia",
+        "name": "Baião de dois",
+        "code": "XLF-1212",
+        "price": 37.99,
+        "imageUrl": "/assets/images/baiaodedois2.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.2,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "sem pimenta",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:42:59.825Z",
+      "entrega": false,
+      "id": 4
     }
   ],
   "entregas": [
@@ -470,7 +492,7 @@
         "entrega": true,
         "id": 1
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-06T10:55:46.095Z",
       "id": 1
     },
     {
@@ -495,7 +517,7 @@
         "entrega": true,
         "id": 2
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-06T10:55:48.624Z",
       "id": 2
     },
     {
@@ -520,7 +542,7 @@
         "entrega": true,
         "id": 3
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-06T10:55:49.895Z",
       "id": 3
     }
   ]

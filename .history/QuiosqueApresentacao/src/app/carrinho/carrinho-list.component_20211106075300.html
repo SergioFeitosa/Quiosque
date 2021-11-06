@@ -22,30 +22,30 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let pedido of filteredPedidos'>
+      <tr *ngFor='let carrinho of filteredCarrinhos'>
         <td>
-            <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid rounded"
+            <img [src]='carrinho.produto.imageUrl' class="figure-img img-fluid rounded"
             alt="..."
             width="100"
             height="70">
         </td>
-        <td>{{ pedido.produto.name }} </td>
-        <td>{{ pedido.telefone }} </td>
-        <td>{{ pedido.local }} </td>
+        <td>{{ carrinho.produto.name }} </td>
+        <td>{{ carrinho.telefone }} </td>
+        <td>{{ carrinho.local }} </td>
 
-        <td><input [(ngModel)]="pedido.observacao" type="text"  style='color: red'
-              (blur)="atualizarPedido(pedido)" class="nav-link">
+        <td><input [(ngModel)]="carrinho.observacao" type="text" style='color: red'}"
+            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
         </td>
 
-        <td>{{ pedido.isencao }} </td>
-        <td>{{ pedido.releaseDate | date:'hh:mm:ss'}} </td>
+        <td>{{ carrinho.isencao }} </td>
+        <td>{{ carrinho.releaseDate | date:'hh:mm:ss'}} </td>
         <td  class="text-center">
-          <button routerLink = "/pedido/delete/{{ pedido.id }}">
+          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
               height="100">
           </button>
-          <button (click)="entregaCreate( pedido.id )">
-            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
+          <button (click)="pedidoCreate( carrinho.id );">
+            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="100"
               height="100">
           </button>
         </td>
