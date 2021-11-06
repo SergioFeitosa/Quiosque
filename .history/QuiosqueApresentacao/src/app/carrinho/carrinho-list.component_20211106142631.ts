@@ -87,7 +87,7 @@ export class CarrinhoListComponent implements OnInit {
         this.pedido.observacao = this.carrinho.observacao;
         this.pedido.isencao = this.carrinho.isencao;
         this.pedido.releaseDate = this.carrinho.releaseDate;
-        this.pedido.enviadoEntrega = false;
+        this.pedido.enviadoEntregaentrega = false;
 
         this.pedidoService.create(this.pedido).subscribe(() => {
           this.pedidoService.showMessage('Pedido solicitado');
