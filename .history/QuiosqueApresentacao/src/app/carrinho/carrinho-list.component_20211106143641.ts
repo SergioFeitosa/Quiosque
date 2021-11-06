@@ -100,4 +100,5 @@ export class CarrinhoListComponent implements OnInit {
   atualizarCarrinho(carrinho: Carrinho) {
     this.carrinhoService.update(carrinho);
   }
+
 }

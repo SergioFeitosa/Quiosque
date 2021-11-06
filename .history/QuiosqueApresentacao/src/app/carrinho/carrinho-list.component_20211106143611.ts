@@ -98,6 +98,9 @@ export class CarrinhoListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   atualizarCarrinho(carrinho: Carrinho) {
-    this.carrinhoService.update(carrinho);
+    this.carrinhoService.update(carrinho).subscribe(() => {
+      this.carrinhoService.showMessage('Carrinho Atualizado');
+    });
   }
+
 }

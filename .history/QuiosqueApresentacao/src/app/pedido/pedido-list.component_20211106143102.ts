@@ -94,7 +94,9 @@ export class PedidoListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   atualizarPedido(pedido: Pedido) {
-    this.pedidoService.update(pedido);
+    this.pedidoService.update(pedido).subscribe({
+      this.pedidoService.showMessage('Pedido Atualizado');
+    });
   }
 
 }

@@ -383,7 +383,8 @@
       "isencao": false,
       "releaseDate": "2021-11-06T15:01:02.941Z",
       "entrega": true,
-      "id": 1
+      "id": 1,
+      "enviadoEntrega": true
     },
     {
       "produto": {
@@ -404,7 +405,8 @@
       "isencao": false,
       "releaseDate": "2021-11-06T15:01:05.855Z",
       "entrega": true,
-      "id": 2
+      "id": 2,
+      "enviadoEntrega": true
     },
     {
       "produto": {
@@ -425,7 +427,8 @@
       "isencao": false,
       "releaseDate": "2021-11-06T15:01:22.571Z",
       "entrega": true,
-      "id": 3
+      "id": 3,
+      "enviadoEntrega": true
     },
     {
       "produto": {
@@ -446,7 +449,8 @@
       "isencao": false,
       "releaseDate": "2021-11-06T15:01:23.847Z",
       "entrega": true,
-      "id": 4
+      "id": 4,
+      "enviadoEntrega": true
     }
   ],
   "entregas": [
@@ -549,6 +553,110 @@
       },
       "entregaDate": "2021-11-06T15:05:37.294Z",
       "id": 4
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T15:01:02.941Z",
+        "entrega": true,
+        "id": 1,
+        "enviadoEntrega": true
+      },
+      "entregaDate": null,
+      "id": 5
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 2,
+          "category": "pratododia",
+          "name": "File de pescada amarela",
+          "code": "XLF-1212",
+          "price": 22.99,
+          "imageUrl": "/assets/images/pescadaamarela.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "SEM ESPINHAS",
+        "isencao": false,
+        "releaseDate": "2021-11-06T15:01:05.855Z",
+        "entrega": true,
+        "id": 2,
+        "enviadoEntrega": true
+      },
+      "entregaDate": null,
+      "id": 6
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 22,
+          "category": "bebida",
+          "name": "coca cola",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "refrigerante de cola  "
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "COM GELO E LIMÃO",
+        "isencao": false,
+        "releaseDate": "2021-11-06T15:01:22.571Z",
+        "entrega": true,
+        "id": 3,
+        "enviadoEntrega": true
+      },
+      "entregaDate": null,
+      "id": 7
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 23,
+          "category": "bebida",
+          "name": "cerveja",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cerveja.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "cevada  "
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T15:01:23.847Z",
+        "entrega": true,
+        "id": 4,
+        "enviadoEntrega": true
+      },
+      "entregaDate": null,
+      "id": 8
     }
   ]
 }
