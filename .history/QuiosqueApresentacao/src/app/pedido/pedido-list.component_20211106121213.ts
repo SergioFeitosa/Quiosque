@@ -76,9 +76,9 @@ export class PedidoListComponent implements OnInit {
     this.pedidoService.readById(pedidoId).subscribe(pedido => {
       this.pedido = pedido;
 
-      if (this.pedido.enviadoEntrega !== true) {
+      if (this.pedido.entrega !== true) {
 
-        this.pedido.enviadoEntrega = true;
+        this.pedido.entrega = true;
         this.atualizarPedido(pedido);
 
         this.entrega.pedido = pedido;
