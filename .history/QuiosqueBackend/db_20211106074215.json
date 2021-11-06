@@ -278,109 +278,6 @@
     }
   ],
   "carrinhos": [
-    {
-      "produto": {
-        "id": 1,
-        "category": "pratododia",
-        "name": "Peixe cioba",
-        "code": "XLF-1212",
-        "price": 12.99,
-        "imageUrl": "/assets/images/cioba-frito.jpg",
-        "preparationTime": "45 min",
-        "rating": 1,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "sem espinhos",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:42:57.619Z",
-      "id": 1,
-      "enviadoPedido": true
-    },
-    {
-      "produto": {
-        "id": 2,
-        "category": "pratododia",
-        "name": "File de pescada amarela",
-        "code": "XLF-1212",
-        "price": 22.99,
-        "imageUrl": "/assets/images/pescadaamarela.jpg",
-        "preparationTime": "45 min",
-        "rating": 1.1,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "sem limão",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:42:58.786Z",
-      "id": 2,
-      "enviadoPedido": true
-    },
-    {
-      "produto": {
-        "id": 3,
-        "category": "pratododia",
-        "name": "Baião de dois",
-        "code": "XLF-1212",
-        "price": 37.99,
-        "imageUrl": "/assets/images/baiaodedois2.jpg",
-        "preparationTime": "45 min",
-        "rating": 1.2,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "sem pimenta",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:42:59.825Z",
-      "id": 3
-    },
-    {
-      "produto": {
-        "id": 22,
-        "category": "bebida",
-        "name": "coca cola",
-        "code": "100100",
-        "price": 170,
-        "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
-        "preparationTime": "45 min",
-        "rating": 5,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "refrigerante de cola  "
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "com limão e gelo",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:43:04.534Z",
-      "id": 4
-    },
-    {
-      "produto": {
-        "id": 23,
-        "category": "bebida",
-        "name": "cerveja",
-        "code": "100100",
-        "price": 170,
-        "imageUrl": "/assets/images/cerveja.jpg",
-        "preparationTime": "45 min",
-        "rating": 5,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "cevada  "
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "super gelada",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:43:05.391Z",
-      "id": 5,
-      "enviadoPedido": true
-    }
   ],
   "pedidos": [
     {
@@ -398,9 +295,9 @@
       },
       "telefone": "1",
       "local": "mesa001",
-      "observacao": "sem espinhos",
+      "observacao": "o1",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:42:57.619Z",
+      "releaseDate": "2021-11-05T22:41:31.974Z",
       "entrega": true,
       "id": 1
     },
@@ -419,11 +316,95 @@
       },
       "telefone": "1",
       "local": "mesa001",
-      "observacao": "sem limão",
+      "observacao": "p2",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:42:58.786Z",
+      "releaseDate": "2021-11-05T22:41:32.812Z",
       "entrega": true,
       "id": 2
+    },
+    {
+      "produto": {
+        "id": 3,
+        "category": "pratododia",
+        "name": "Baião de dois",
+        "code": "XLF-1212",
+        "price": 37.99,
+        "imageUrl": "/assets/images/baiaodedois2.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.2,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "p3",
+      "isencao": false,
+      "releaseDate": "2021-11-05T22:41:33.627Z",
+      "entrega": true,
+      "id": 3
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "o1",
+      "isencao": false,
+      "releaseDate": "2021-11-05T22:41:31.974Z",
+      "entrega": true,
+      "id": 4
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "o1",
+      "isencao": false,
+      "releaseDate": "2021-11-05T22:41:31.974Z",
+      "entrega": false,
+      "id": 5
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "2",
+      "local": "mesa001",
+      "observacao": "sem pimenta",
+      "isencao": false,
+      "releaseDate": "2021-11-05T22:47:18.147Z",
+      "entrega": true,
+      "id": 6
     },
     {
       "produto": {
@@ -438,13 +419,160 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "cevada  "
       },
-      "telefone": "1",
+      "telefone": "2",
       "local": "mesa001",
-      "observacao": "super gelada",
+      "observacao": "balde com gelo",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:43:05.391Z",
+      "releaseDate": "2021-11-05T22:54:16.276Z",
       "entrega": true,
-      "id": 3
+      "id": 7
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "4",
+      "local": "mesa001",
+      "observacao": "1",
+      "isencao": false,
+      "releaseDate": "2021-11-05T23:03:45.871Z",
+      "entrega": true,
+      "id": 8
+    },
+    {
+      "produto": {
+        "id": 2,
+        "category": "pratododia",
+        "name": "File de pescada amarela",
+        "code": "XLF-1212",
+        "price": 22.99,
+        "imageUrl": "/assets/images/pescadaamarela.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "4",
+      "local": "mesa001",
+      "observacao": "2",
+      "isencao": false,
+      "releaseDate": "2021-11-05T23:03:46.417Z",
+      "entrega": true,
+      "id": 9
+    },
+    {
+      "produto": {
+        "id": 3,
+        "category": "pratododia",
+        "name": "Baião de dois",
+        "code": "XLF-1212",
+        "price": 37.99,
+        "imageUrl": "/assets/images/baiaodedois2.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.2,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "4",
+      "local": "mesa001",
+      "observacao": "3",
+      "isencao": false,
+      "releaseDate": "2021-11-05T23:03:46.985Z",
+      "entrega": true,
+      "id": 10
+    },
+    {
+      "produto": {
+        "id": 23,
+        "category": "bebida",
+        "name": "cerveja",
+        "code": "100100",
+        "price": 170,
+        "imageUrl": "/assets/images/cerveja.jpg",
+        "preparationTime": "45 min",
+        "rating": 5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "cevada  "
+      },
+      "telefone": "4",
+      "local": "mesa001",
+      "observacao": "2222",
+      "isencao": false,
+      "releaseDate": "2021-11-05T23:04:37.999Z",
+      "entrega": true,
+      "id": 11
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": 0,
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:24:03.038Z",
+      "entrega": true,
+      "id": 12
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": 0,
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:37:42.799Z",
+      "entrega": true,
+      "id": 13
+    },
+    {
+      "produto": {
+        "id": 2,
+        "category": "pratododia",
+        "name": "File de pescada amarela",
+        "code": "XLF-1212",
+        "price": 22.99,
+        "imageUrl": "/assets/images/pescadaamarela.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": 0,
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:37:46.398Z",
+      "entrega": true,
+      "id": 14
     }
   ],
   "entregas": [
@@ -464,13 +592,13 @@
         },
         "telefone": "1",
         "local": "mesa001",
-        "observacao": "sem espinhos",
+        "observacao": "o1",
         "isencao": false,
-        "releaseDate": "2021-11-06T10:42:57.619Z",
+        "releaseDate": "2021-11-05T22:41:31.974Z",
         "entrega": true,
         "id": 1
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-05T22:48:41.250Z",
       "id": 1
     },
     {
@@ -489,14 +617,89 @@
         },
         "telefone": "1",
         "local": "mesa001",
-        "observacao": "sem limão",
+        "observacao": "p2",
         "isencao": false,
-        "releaseDate": "2021-11-06T10:42:58.786Z",
+        "releaseDate": "2021-11-05T22:41:32.812Z",
         "entrega": true,
         "id": 2
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-05T22:42:29.620Z",
       "id": 2
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 3,
+          "category": "pratododia",
+          "name": "Baião de dois",
+          "code": "XLF-1212",
+          "price": 37.99,
+          "imageUrl": "/assets/images/baiaodedois2.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.2,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "1",
+        "local": "mesa001",
+        "observacao": "p3",
+        "isencao": false,
+        "releaseDate": "2021-11-05T22:41:33.627Z",
+        "entrega": true,
+        "id": 3
+      },
+      "entregaDate": "2021-11-05T22:42:30.482Z",
+      "id": 3
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "1",
+        "local": "mesa001",
+        "observacao": "o1",
+        "isencao": false,
+        "releaseDate": "2021-11-05T22:41:31.974Z",
+        "entrega": true,
+        "id": 4
+      },
+      "entregaDate": "2021-11-05T22:48:43.135Z",
+      "id": 4
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "2",
+        "local": "mesa001",
+        "observacao": "sem pimenta",
+        "isencao": false,
+        "releaseDate": "2021-11-05T22:47:18.147Z",
+        "entrega": true,
+        "id": 6
+      },
+      "entregaDate": "2021-11-05T22:54:51.967Z",
+      "id": 5
     },
     {
       "pedido": {
@@ -512,16 +715,191 @@
           "releaseDate": "2021-10-28T20:38:48.703Z",
           "description": "cevada  "
         },
-        "telefone": "1",
+        "telefone": "2",
         "local": "mesa001",
-        "observacao": "super gelada",
+        "observacao": "balde com gelo",
         "isencao": false,
-        "releaseDate": "2021-11-06T10:43:05.391Z",
+        "releaseDate": "2021-11-05T22:54:16.276Z",
         "entrega": true,
-        "id": 3
+        "id": 7
       },
-      "entregaDate": null,
-      "id": 3
+      "entregaDate": "2021-11-05T22:54:52.682Z",
+      "id": 6
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "4",
+        "local": "mesa001",
+        "observacao": "1",
+        "isencao": false,
+        "releaseDate": "2021-11-05T23:03:45.871Z",
+        "entrega": true,
+        "id": 8
+      },
+      "entregaDate": "2021-11-05T23:04:12.794Z",
+      "id": 7
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 2,
+          "category": "pratododia",
+          "name": "File de pescada amarela",
+          "code": "XLF-1212",
+          "price": 22.99,
+          "imageUrl": "/assets/images/pescadaamarela.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "4",
+        "local": "mesa001",
+        "observacao": "2",
+        "isencao": false,
+        "releaseDate": "2021-11-05T23:03:46.417Z",
+        "entrega": true,
+        "id": 9
+      },
+      "entregaDate": "2021-11-05T23:04:13.505Z",
+      "id": 8
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 3,
+          "category": "pratododia",
+          "name": "Baião de dois",
+          "code": "XLF-1212",
+          "price": 37.99,
+          "imageUrl": "/assets/images/baiaodedois2.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.2,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "4",
+        "local": "mesa001",
+        "observacao": "3",
+        "isencao": false,
+        "releaseDate": "2021-11-05T23:03:46.985Z",
+        "entrega": true,
+        "id": 10
+      },
+      "entregaDate": "2021-11-05T23:04:14.144Z",
+      "id": 9
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 23,
+          "category": "bebida",
+          "name": "cerveja",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cerveja.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "cevada  "
+        },
+        "telefone": "4",
+        "local": "mesa001",
+        "observacao": "2222",
+        "isencao": false,
+        "releaseDate": "2021-11-05T23:04:37.999Z",
+        "entrega": true,
+        "id": 11
+      },
+      "entregaDate": "2021-11-05T23:04:52.891Z",
+      "id": 10
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": 0,
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T10:24:03.038Z",
+        "entrega": true,
+        "id": 12
+      },
+      "entregaDate": "2021-11-06T10:39:58.928Z",
+      "id": 11
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": 0,
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T10:37:42.799Z",
+        "entrega": true,
+        "id": 13
+      },
+      "entregaDate": "2021-11-06T10:40:00.443Z",
+      "id": 12
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 2,
+          "category": "pratododia",
+          "name": "File de pescada amarela",
+          "code": "XLF-1212",
+          "price": 22.99,
+          "imageUrl": "/assets/images/pescadaamarela.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": 0,
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T10:37:46.398Z",
+        "entrega": true,
+        "id": 14
+      },
+      "entregaDate": "2021-11-06T10:40:02.689Z",
+      "id": 13
     }
   ]
 }
