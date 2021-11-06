@@ -291,11 +291,11 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "sem espinhos",
+      "observacao": "",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:42:57.619Z",
+      "releaseDate": "2021-11-06T15:01:02.941Z",
       "id": 1,
       "enviadoPedido": true
     },
@@ -312,33 +312,12 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "sem limão",
+      "observacao": "SEM ESPINHAS",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:42:58.786Z",
+      "releaseDate": "2021-11-06T15:01:05.855Z",
       "id": 2,
-      "enviadoPedido": true
-    },
-    {
-      "produto": {
-        "id": 3,
-        "category": "pratododia",
-        "name": "Baião de dois",
-        "code": "XLF-1212",
-        "price": 37.99,
-        "imageUrl": "/assets/images/baiaodedois2.jpg",
-        "preparationTime": "45 min",
-        "rating": 1.2,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "sem pimenta",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:42:59.825Z",
-      "id": 3,
       "enviadoPedido": true
     },
     {
@@ -354,12 +333,13 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "refrigerante de cola  "
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "com limão e gelo",
+      "observacao": "COM GELO E LIMÃO",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:43:04.534Z",
-      "id": 4
+      "releaseDate": "2021-11-06T15:01:22.571Z",
+      "id": 3,
+      "enviadoPedido": true
     },
     {
       "produto": {
@@ -374,12 +354,12 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "cevada  "
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "super gelada",
+      "observacao": "",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:43:05.391Z",
-      "id": 5,
+      "releaseDate": "2021-11-06T15:01:23.847Z",
+      "id": 4,
       "enviadoPedido": true
     }
   ],
@@ -397,11 +377,11 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "sem espinhos",
+      "observacao": "",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:42:57.619Z",
+      "releaseDate": "2021-11-06T15:01:02.941Z",
       "entrega": true,
       "id": 1
     },
@@ -418,13 +398,34 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "sem limão",
+      "observacao": "SEM ESPINHAS",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:42:58.786Z",
+      "releaseDate": "2021-11-06T15:01:05.855Z",
       "entrega": true,
       "id": 2
+    },
+    {
+      "produto": {
+        "id": 22,
+        "category": "bebida",
+        "name": "coca cola",
+        "code": "100100",
+        "price": 170,
+        "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
+        "preparationTime": "45 min",
+        "rating": 5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "refrigerante de cola  "
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "COM GELO E LIMÃO",
+      "isencao": false,
+      "releaseDate": "2021-11-06T15:01:22.571Z",
+      "entrega": true,
+      "id": 3
     },
     {
       "produto": {
@@ -439,33 +440,12 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "cevada  "
       },
-      "telefone": "1",
+      "telefone": "11982551256",
       "local": "mesa001",
-      "observacao": "super gelada",
+      "observacao": "",
       "isencao": false,
-      "releaseDate": "2021-11-06T10:43:05.391Z",
+      "releaseDate": "2021-11-06T15:01:23.847Z",
       "entrega": true,
-      "id": 3
-    },
-    {
-      "produto": {
-        "id": 3,
-        "category": "pratododia",
-        "name": "Baião de dois",
-        "code": "XLF-1212",
-        "price": 37.99,
-        "imageUrl": "/assets/images/baiaodedois2.jpg",
-        "preparationTime": "45 min",
-        "rating": 1.2,
-        "releaseDate": "2021-10-28T20:38:48.703Z",
-        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
-      },
-      "telefone": "1",
-      "local": "mesa001",
-      "observacao": "sem pimenta",
-      "isencao": false,
-      "releaseDate": "2021-11-06T10:42:59.825Z",
-      "entrega": false,
       "id": 4
     }
   ],
@@ -484,15 +464,15 @@
           "releaseDate": "2021-10-28T20:38:48.703Z",
           "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
         },
-        "telefone": "1",
+        "telefone": "11982551256",
         "local": "mesa001",
-        "observacao": "sem espinhos",
+        "observacao": "",
         "isencao": false,
-        "releaseDate": "2021-11-06T10:42:57.619Z",
+        "releaseDate": "2021-11-06T15:01:02.941Z",
         "entrega": true,
         "id": 1
       },
-      "entregaDate": "2021-11-06T10:55:46.095Z",
+      "entregaDate": "2021-11-06T15:04:50.504Z",
       "id": 1
     },
     {
@@ -509,16 +489,41 @@
           "releaseDate": "2021-10-28T20:38:48.703Z",
           "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
         },
-        "telefone": "1",
+        "telefone": "11982551256",
         "local": "mesa001",
-        "observacao": "sem limão",
+        "observacao": "SEM ESPINHAS",
         "isencao": false,
-        "releaseDate": "2021-11-06T10:42:58.786Z",
+        "releaseDate": "2021-11-06T15:01:05.855Z",
         "entrega": true,
         "id": 2
       },
-      "entregaDate": "2021-11-06T10:55:48.624Z",
+      "entregaDate": "2021-11-06T15:04:53.790Z",
       "id": 2
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 22,
+          "category": "bebida",
+          "name": "coca cola",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "refrigerante de cola  "
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "COM GELO E LIMÃO",
+        "isencao": false,
+        "releaseDate": "2021-11-06T15:01:22.571Z",
+        "entrega": true,
+        "id": 3
+      },
+      "entregaDate": "2021-11-06T15:04:56.322Z",
+      "id": 3
     },
     {
       "pedido": {
@@ -534,16 +539,16 @@
           "releaseDate": "2021-10-28T20:38:48.703Z",
           "description": "cevada  "
         },
-        "telefone": "1",
+        "telefone": "11982551256",
         "local": "mesa001",
-        "observacao": "super gelada",
+        "observacao": "",
         "isencao": false,
-        "releaseDate": "2021-11-06T10:43:05.391Z",
+        "releaseDate": "2021-11-06T15:01:23.847Z",
         "entrega": true,
-        "id": 3
+        "id": 4
       },
-      "entregaDate": "2021-11-06T10:55:49.895Z",
-      "id": 3
+      "entregaDate": "2021-11-06T15:05:37.294Z",
+      "id": 4
     }
   ]
 }

@@ -1,0 +1,1043 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "pratododia",
+      "name": "Peixe cioba",
+      "code": "XLF-1212",
+      "price": 12.99,
+      "imageUrl": "/assets/images/cioba-frito.jpg",
+      "preparationTime": "45 min",
+      "rating": 1,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 2,
+      "category": "pratododia",
+      "name": "File de pescada amarela",
+      "code": "XLF-1212",
+      "price": 22.99,
+      "imageUrl": "/assets/images/pescadaamarela.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.1,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 3,
+      "category": "pratododia",
+      "name": "Baião de dois",
+      "code": "XLF-1212",
+      "price": 37.99,
+      "imageUrl": "/assets/images/baiaodedois2.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.2,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 4,
+      "category": "pratododia",
+      "name": "Rubacão",
+      "code": "XLF-1212",
+      "price": 22.5,
+      "imageUrl": "/assets/images/rubacao.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.3,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 5,
+      "category": "pratododia",
+      "name": "Espaguete",
+      "code": "XLF-1212",
+      "price": 72.99,
+      "imageUrl": "/assets/images/espaguete-abolonhesa.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.4,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 6,
+      "category": "pratododia",
+      "name": "Carne de sol com macaxeira",
+      "code": "XLF-1212",
+      "price": 26.99,
+      "imageUrl": "/assets/images/carnedesol-commacaxeira.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.5,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 7,
+      "category": "pratododia",
+      "name": "Carne de sol com queijo coalho",
+      "code": "XLF-1212",
+      "price": 56.99,
+      "imageUrl": "/assets/images/carnedesol-comqueijocoalho.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.6,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 8,
+      "category": "pratoregional",
+      "name": "Bobó de Camarão",
+      "code": "XLF-1212",
+      "price": 18,
+      "imageUrl": "/assets/images/camarao-bobo.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.7,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Prato preparado com camarão e mandioca e tempero nordestino"
+    },
+    {
+      "id": 9,
+      "category": "pratoregional",
+      "name": "Filé de tilápia empanado",
+      "code": "XLF-1212",
+      "price": 112.99,
+      "imageUrl": "/assets/images/tilapia-fileempanado.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.8,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 10,
+      "category": "pratoespecial",
+      "name": "Filé de tilápia ao molho de camarão",
+      "code": "XLF-1212",
+      "price": 172.99,
+      "imageUrl": "/assets/images/tilapia-aomolhodecamarao.jpg",
+      "preparationTime": "45 min",
+      "rating": 1.9,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 11,
+      "category": "pratoespecial",
+      "name": "Filé de tilápia com alcaparras",
+      "code": "XLF-1212",
+      "price": 122,
+      "imageUrl": "/assets/images/tilapia-aomolhodealcaparras.jpg",
+      "preparationTime": "45 min",
+      "rating": 2,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 12,
+      "category": "pratoespecial",
+      "name": "Carne de sol na nata",
+      "code": "XLF-1212",
+      "price": 212.99,
+      "imageUrl": "/assets/images/carnedesol-comnata.jpg",
+      "preparationTime": "45 min",
+      "rating": 2.5,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 13,
+      "category": "pratoespecial",
+      "name": "Brócolis com batatas gratinadas",
+      "code": "XLF-1212",
+      "price": 312.99,
+      "imageUrl": "/assets/images/brocolis-combatatagratinada.jpg",
+      "preparationTime": "45 min",
+      "rating": 3,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 14,
+      "category": "porcoes",
+      "name": "Berinjela recheada",
+      "code": "XLF-1212",
+      "price": 912.99,
+      "imageUrl": "/assets/images/berinjela-recheada.jpg",
+      "preparationTime": "45 min",
+      "rating": 3.5,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 15,
+      "category": "porcoes",
+      "name": "Alcatra ao molho de alcaparras",
+      "code": "XLF-1212",
+      "price": 612.99,
+      "imageUrl": "/assets/images/alcatra-commolhodealcaparras.jpg",
+      "preparationTime": "45 min",
+      "rating": 4,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 16,
+      "category": "porcoesespeciais",
+      "name": "Alcatra a milanesa",
+      "code": "XLF-1212",
+      "price": 212.99,
+      "imageUrl": "/assets/images/alcatra-amilanesa.jpg",
+      "preparationTime": "45 min",
+      "rating": 4.4,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 17,
+      "category": "porcoesespeciais",
+      "name": "Alcatra a parmegiana",
+      "code": "XLF-1212",
+      "price": 82.99,
+      "imageUrl": "/assets/images/alcatra-aparmegiana.jpg",
+      "preparationTime": "45 min",
+      "rating": 4.5,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 18,
+      "category": "porcoesespeciais",
+      "name": "File de frango a parmegiana",
+      "code": "XLF-1212",
+      "price": 92.99,
+      "imageUrl": "/assets/images/filedefrango-aparmegiana.jpg",
+      "preparationTime": "45 min",
+      "rating": 4.6,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 19,
+      "category": "porcoesespeciais",
+      "name": "File de frango com alcaparras",
+      "code": "XLF-1212",
+      "price": 52.99,
+      "imageUrl": "/assets/images/filedefrango-commolhodealcaparras.jpg",
+      "preparationTime": "45 min",
+      "rating": 4.7,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 20,
+      "category": "salada",
+      "name": "Salada especial tamanho pequeno",
+      "code": "XLF-1212",
+      "price": 92.99,
+      "imageUrl": "/assets/images/saladaespecial-pequena.jpg",
+      "preparationTime": "45 min",
+      "rating": 4.8,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 21,
+      "category": "saladaespecial",
+      "name": "Salada especial tamanho médio",
+      "code": "XLF-1212",
+      "price": 120.99,
+      "imageUrl": "/assets/images/saladaespecial-media.jpg",
+      "preparationTime": "45 min",
+      "rating": 4.9,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+    },
+    {
+      "id": 22,
+      "category": "bebida",
+      "name": "coca cola",
+      "code": "100100",
+      "price": 170,
+      "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
+      "preparationTime": "45 min",
+      "rating": 5,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "refrigerante de cola  "
+    },
+    {
+      "id": 23,
+      "category": "bebida",
+      "name": "cerveja",
+      "code": "100100",
+      "price": 170,
+      "imageUrl": "/assets/images/cerveja.jpg",
+      "preparationTime": "45 min",
+      "rating": 5,
+      "releaseDate": "2021-10-28T20:38:48.703Z",
+      "description": "cevada  "
+    }
+  ],
+  "carrinhos": [
+  ],
+  "pedidos": [
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "sem espinhos",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:42:57.619Z",
+      "entrega": true,
+      "id": 1
+    },
+    {
+      "produto": {
+        "id": 2,
+        "category": "pratododia",
+        "name": "File de pescada amarela",
+        "code": "XLF-1212",
+        "price": 22.99,
+        "imageUrl": "/assets/images/pescadaamarela.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "sem limão",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:42:58.786Z",
+      "entrega": true,
+      "id": 2
+    },
+    {
+      "produto": {
+        "id": 23,
+        "category": "bebida",
+        "name": "cerveja",
+        "code": "100100",
+        "price": 170,
+        "imageUrl": "/assets/images/cerveja.jpg",
+        "preparationTime": "45 min",
+        "rating": 5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "cevada  "
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "super gelada",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:43:05.391Z",
+      "entrega": true,
+      "id": 3
+    },
+    {
+      "produto": {
+        "id": 3,
+        "category": "pratododia",
+        "name": "Baião de dois",
+        "code": "XLF-1212",
+        "price": 37.99,
+        "imageUrl": "/assets/images/baiaodedois2.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.2,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "1",
+      "local": "mesa001",
+      "observacao": "sem pimenta",
+      "isencao": false,
+      "releaseDate": "2021-11-06T10:42:59.825Z",
+      "entrega": false,
+      "id": 4
+    },
+    {
+      "produto": {
+        "id": 12,
+        "category": "pratoespecial",
+        "name": "Carne de sol na nata",
+        "code": "XLF-1212",
+        "price": 212.99,
+        "imageUrl": "/assets/images/carnedesol-comnata.jpg",
+        "preparationTime": "45 min",
+        "rating": 2.5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "sem sal",
+      "isencao": false,
+      "releaseDate": "2021-11-06T13:28:12.739Z",
+      "entrega": true,
+      "id": 5
+    },
+    {
+      "produto": {
+        "id": 10,
+        "category": "pratoespecial",
+        "name": "Filé de tilápia ao molho de camarão",
+        "code": "XLF-1212",
+        "price": 172.99,
+        "imageUrl": "/assets/images/tilapia-aomolhodecamarao.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.9,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "sem espinho",
+      "isencao": false,
+      "releaseDate": "2021-11-06T13:28:14.099Z",
+      "entrega": true,
+      "id": 6
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T13:52:58.783Z",
+      "entrega": true,
+      "id": 7
+    },
+    {
+      "produto": {
+        "id": 4,
+        "category": "pratododia",
+        "name": "Rubacão",
+        "code": "XLF-1212",
+        "price": 22.5,
+        "imageUrl": "/assets/images/rubacao.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.3,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T13:53:01.058Z",
+      "entrega": true,
+      "id": 8
+    },
+    {
+      "produto": {
+        "id": 2,
+        "category": "pratododia",
+        "name": "File de pescada amarela",
+        "code": "XLF-1212",
+        "price": 22.99,
+        "imageUrl": "/assets/images/pescadaamarela.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T13:52:59.554Z",
+      "entrega": true,
+      "id": 9
+    },
+    {
+      "produto": {
+        "id": 3,
+        "category": "pratododia",
+        "name": "Baião de dois",
+        "code": "XLF-1212",
+        "price": 37.99,
+        "imageUrl": "/assets/images/baiaodedois2.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.2,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T13:53:00.316Z",
+      "entrega": true,
+      "id": 10
+    },
+    {
+      "produto": {
+        "id": 16,
+        "category": "porcoesespeciais",
+        "name": "Alcatra a milanesa",
+        "code": "XLF-1212",
+        "price": 212.99,
+        "imageUrl": "/assets/images/alcatra-amilanesa.jpg",
+        "preparationTime": "45 min",
+        "rating": 4.4,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:47:46.981Z",
+      "entrega": true,
+      "id": 11
+    },
+    {
+      "produto": {
+        "id": 23,
+        "category": "bebida",
+        "name": "cerveja",
+        "code": "100100",
+        "price": 170,
+        "imageUrl": "/assets/images/cerveja.jpg",
+        "preparationTime": "45 min",
+        "rating": 5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "cevada  "
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:47:55.319Z",
+      "entrega": true,
+      "id": 12
+    },
+    {
+      "produto": {
+        "id": 17,
+        "category": "porcoesespeciais",
+        "name": "Alcatra a parmegiana",
+        "code": "XLF-1212",
+        "price": 82.99,
+        "imageUrl": "/assets/images/alcatra-aparmegiana.jpg",
+        "preparationTime": "45 min",
+        "rating": 4.5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:47:47.810Z",
+      "entrega": true,
+      "id": 13
+    },
+    {
+      "produto": {
+        "id": 18,
+        "category": "porcoesespeciais",
+        "name": "File de frango a parmegiana",
+        "code": "XLF-1212",
+        "price": 92.99,
+        "imageUrl": "/assets/images/filedefrango-aparmegiana.jpg",
+        "preparationTime": "45 min",
+        "rating": 4.6,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:47:48.490Z",
+      "entrega": true,
+      "id": 14
+    },
+    {
+      "produto": {
+        "id": 19,
+        "category": "porcoesespeciais",
+        "name": "File de frango com alcaparras",
+        "code": "XLF-1212",
+        "price": 52.99,
+        "imageUrl": "/assets/images/filedefrango-commolhodealcaparras.jpg",
+        "preparationTime": "45 min",
+        "rating": 4.7,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:47:49.337Z",
+      "entrega": true,
+      "id": 15
+    },
+    {
+      "produto": {
+        "id": 22,
+        "category": "bebida",
+        "name": "coca cola",
+        "code": "100100",
+        "price": 170,
+        "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
+        "preparationTime": "45 min",
+        "rating": 5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "refrigerante de cola  "
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:47:54.601Z",
+      "entrega": true,
+      "id": 16
+    },
+    {
+      "produto": {
+        "id": 20,
+        "category": "salada",
+        "name": "Salada especial tamanho pequeno",
+        "code": "XLF-1212",
+        "price": 92.99,
+        "imageUrl": "/assets/images/saladaespecial-pequena.jpg",
+        "preparationTime": "45 min",
+        "rating": 4.8,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "observacao": "SEM VINAGRE",
+      "isencao": false,
+      "releaseDate": "2021-11-06T14:56:39.810Z",
+      "entrega": true,
+      "id": 17
+    }
+  ],
+  "entregas": [
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "1",
+        "local": "mesa001",
+        "observacao": "sem espinhos",
+        "isencao": false,
+        "releaseDate": "2021-11-06T10:42:57.619Z",
+        "entrega": true,
+        "id": 1
+      },
+      "entregaDate": "2021-11-06T10:55:46.095Z",
+      "id": 1
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 2,
+          "category": "pratododia",
+          "name": "File de pescada amarela",
+          "code": "XLF-1212",
+          "price": 22.99,
+          "imageUrl": "/assets/images/pescadaamarela.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "1",
+        "local": "mesa001",
+        "observacao": "sem limão",
+        "isencao": false,
+        "releaseDate": "2021-11-06T10:42:58.786Z",
+        "entrega": true,
+        "id": 2
+      },
+      "entregaDate": "2021-11-06T10:55:48.624Z",
+      "id": 2
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 23,
+          "category": "bebida",
+          "name": "cerveja",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cerveja.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "cevada  "
+        },
+        "telefone": "1",
+        "local": "mesa001",
+        "observacao": "super gelada",
+        "isencao": false,
+        "releaseDate": "2021-11-06T10:43:05.391Z",
+        "entrega": true,
+        "id": 3
+      },
+      "entregaDate": "2021-11-06T10:55:49.895Z",
+      "id": 3
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 12,
+          "category": "pratoespecial",
+          "name": "Carne de sol na nata",
+          "code": "XLF-1212",
+          "price": 212.99,
+          "imageUrl": "/assets/images/carnedesol-comnata.jpg",
+          "preparationTime": "45 min",
+          "rating": 2.5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "sem sal",
+        "isencao": false,
+        "releaseDate": "2021-11-06T13:28:12.739Z",
+        "entrega": true,
+        "id": 5
+      },
+      "entregaDate": "2021-11-06T14:54:48.628Z",
+      "id": 4
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 10,
+          "category": "pratoespecial",
+          "name": "Filé de tilápia ao molho de camarão",
+          "code": "XLF-1212",
+          "price": 172.99,
+          "imageUrl": "/assets/images/tilapia-aomolhodecamarao.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.9,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "sem espinho",
+        "isencao": false,
+        "releaseDate": "2021-11-06T13:28:14.099Z",
+        "entrega": true,
+        "id": 6
+      },
+      "entregaDate": "2021-11-06T14:54:49.412Z",
+      "id": 5
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T13:52:58.783Z",
+        "entrega": true,
+        "id": 7
+      },
+      "entregaDate": "2021-11-06T14:54:50.239Z",
+      "id": 6
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 4,
+          "category": "pratododia",
+          "name": "Rubacão",
+          "code": "XLF-1212",
+          "price": 22.5,
+          "imageUrl": "/assets/images/rubacao.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.3,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T13:53:01.058Z",
+        "entrega": true,
+        "id": 8
+      },
+      "entregaDate": "2021-11-06T14:54:52.226Z",
+      "id": 7
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 2,
+          "category": "pratododia",
+          "name": "File de pescada amarela",
+          "code": "XLF-1212",
+          "price": 22.99,
+          "imageUrl": "/assets/images/pescadaamarela.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T13:52:59.554Z",
+        "entrega": true,
+        "id": 9
+      },
+      "entregaDate": "2021-11-06T14:55:00.528Z",
+      "id": 8
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 17,
+          "category": "porcoesespeciais",
+          "name": "Alcatra a parmegiana",
+          "code": "XLF-1212",
+          "price": 82.99,
+          "imageUrl": "/assets/images/alcatra-aparmegiana.jpg",
+          "preparationTime": "45 min",
+          "rating": 4.5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:47:47.810Z",
+        "entrega": true,
+        "id": 13
+      },
+      "entregaDate": "2021-11-06T14:54:56.495Z",
+      "id": 9
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 18,
+          "category": "porcoesespeciais",
+          "name": "File de frango a parmegiana",
+          "code": "XLF-1212",
+          "price": 92.99,
+          "imageUrl": "/assets/images/filedefrango-aparmegiana.jpg",
+          "preparationTime": "45 min",
+          "rating": 4.6,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:47:48.490Z",
+        "entrega": true,
+        "id": 14
+      },
+      "entregaDate": "2021-11-06T14:54:54.289Z",
+      "id": 10
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 19,
+          "category": "porcoesespeciais",
+          "name": "File de frango com alcaparras",
+          "code": "XLF-1212",
+          "price": 52.99,
+          "imageUrl": "/assets/images/filedefrango-commolhodealcaparras.jpg",
+          "preparationTime": "45 min",
+          "rating": 4.7,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:47:49.337Z",
+        "entrega": true,
+        "id": 15
+      },
+      "entregaDate": "2021-11-06T14:55:13.146Z",
+      "id": 11
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 22,
+          "category": "bebida",
+          "name": "coca cola",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cocacola-lata350ml.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "refrigerante de cola  "
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:47:54.601Z",
+        "entrega": true,
+        "id": 16
+      },
+      "entregaDate": "2021-11-06T14:55:15.382Z",
+      "id": 12
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 3,
+          "category": "pratododia",
+          "name": "Baião de dois",
+          "code": "XLF-1212",
+          "price": 37.99,
+          "imageUrl": "/assets/images/baiaodedois2.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.2,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T13:53:00.316Z",
+        "entrega": true,
+        "id": 10
+      },
+      "entregaDate": "2021-11-06T14:55:06.667Z",
+      "id": 13
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 16,
+          "category": "porcoesespeciais",
+          "name": "Alcatra a milanesa",
+          "code": "XLF-1212",
+          "price": 212.99,
+          "imageUrl": "/assets/images/alcatra-amilanesa.jpg",
+          "preparationTime": "45 min",
+          "rating": 4.4,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:47:46.981Z",
+        "entrega": true,
+        "id": 11
+      },
+      "entregaDate": "2021-11-06T14:55:02.834Z",
+      "id": 14
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 23,
+          "category": "bebida",
+          "name": "cerveja",
+          "code": "100100",
+          "price": 170,
+          "imageUrl": "/assets/images/cerveja.jpg",
+          "preparationTime": "45 min",
+          "rating": 5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "cevada  "
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:47:55.319Z",
+        "entrega": true,
+        "id": 12
+      },
+      "entregaDate": "2021-11-06T14:55:04.738Z",
+      "id": 15
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 20,
+          "category": "salada",
+          "name": "Salada especial tamanho pequeno",
+          "code": "XLF-1212",
+          "price": 92.99,
+          "imageUrl": "/assets/images/saladaespecial-pequena.jpg",
+          "preparationTime": "45 min",
+          "rating": 4.8,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "mesa001",
+        "observacao": "SEM VINAGRE",
+        "isencao": false,
+        "releaseDate": "2021-11-06T14:56:39.810Z",
+        "entrega": true,
+        "id": 17
+      },
+      "entregaDate": "2021-11-06T14:57:07.752Z",
+      "id": 16
+    }
+  ]
+}
