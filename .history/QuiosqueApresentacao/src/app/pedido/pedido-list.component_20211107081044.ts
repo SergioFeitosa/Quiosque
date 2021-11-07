@@ -96,6 +96,6 @@ export class PedidoListComponent implements OnInit {
   atualizarPedido(pedido: Pedido) {
     this.pedidoService.update(pedido).subscribe(() => {
       this.pedidoService.showMessage('Pedido Atualizado');
-    });
-  }
+    });  }
+
 }
