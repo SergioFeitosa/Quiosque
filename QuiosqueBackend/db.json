@@ -547,6 +547,48 @@
       "releaseDate": "2021-11-07T13:15:59.288Z",
       "id": 13,
       "enviadoPedido": true
+    },
+    {
+      "produto": {
+        "id": 6,
+        "category": "pratododia",
+        "name": "Carne de sol com macaxeira",
+        "code": "XLF-1212",
+        "price": 26.99,
+        "imageUrl": "/assets/images/carnedesol-commacaxeira.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "83991377693",
+      "local": "mesa001",
+      "observacao": "sem pimenta",
+      "isencao": false,
+      "releaseDate": "2021-11-07T14:00:53.672Z",
+      "id": 14,
+      "enviadoPedido": true
+    },
+    {
+      "produto": {
+        "id": 7,
+        "category": "pratododia",
+        "name": "Carne de sol com queijo coalho",
+        "code": "XLF-1212",
+        "price": 56.99,
+        "imageUrl": "/assets/images/carnedesol-comqueijocoalho.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.6,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "83991377693",
+      "local": "mesa001",
+      "observacao": "com salada",
+      "isencao": false,
+      "releaseDate": "2021-11-07T14:00:54.518Z",
+      "id": 15,
+      "enviadoPedido": true
     }
   ],
   "pedidos": [
@@ -868,6 +910,48 @@
       "releaseDate": "2021-11-07T13:15:59.288Z",
       "enviadoEntrega": true,
       "id": 15
+    },
+    {
+      "produto": {
+        "id": 7,
+        "category": "pratododia",
+        "name": "Carne de sol com queijo coalho",
+        "code": "XLF-1212",
+        "price": 56.99,
+        "imageUrl": "/assets/images/carnedesol-comqueijocoalho.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.6,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "83991377693",
+      "local": "mesa001",
+      "observacao": "com salada",
+      "isencao": false,
+      "releaseDate": "2021-11-07T14:00:54.518Z",
+      "enviadoEntrega": true,
+      "id": 16
+    },
+    {
+      "produto": {
+        "id": 6,
+        "category": "pratododia",
+        "name": "Carne de sol com macaxeira",
+        "code": "XLF-1212",
+        "price": 26.99,
+        "imageUrl": "/assets/images/carnedesol-commacaxeira.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "83991377693",
+      "local": "mesa001",
+      "observacao": "sem pimenta",
+      "isencao": false,
+      "releaseDate": "2021-11-07T14:00:53.672Z",
+      "enviadoEntrega": true,
+      "id": 17
     }
   ],
   "entregas": [
@@ -1147,7 +1231,7 @@
         "enviadoEntrega": true,
         "id": 14
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-07T14:01:51.873Z",
       "id": 11
     },
     {
@@ -1172,8 +1256,58 @@
         "enviadoEntrega": true,
         "id": 15
       },
-      "entregaDate": null,
+      "entregaDate": "2021-11-07T14:01:53.018Z",
       "id": 12
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 7,
+          "category": "pratododia",
+          "name": "Carne de sol com queijo coalho",
+          "code": "XLF-1212",
+          "price": 56.99,
+          "imageUrl": "/assets/images/carnedesol-comqueijocoalho.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.6,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "83991377693",
+        "local": "mesa001",
+        "observacao": "com salada",
+        "isencao": false,
+        "releaseDate": "2021-11-07T14:00:54.518Z",
+        "enviadoEntrega": true,
+        "id": 16
+      },
+      "entregaDate": "2021-11-07T14:02:29.702Z",
+      "id": 13
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 6,
+          "category": "pratododia",
+          "name": "Carne de sol com macaxeira",
+          "code": "XLF-1212",
+          "price": 26.99,
+          "imageUrl": "/assets/images/carnedesol-commacaxeira.jpg",
+          "preparationTime": "45 min",
+          "rating": 1.5,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "83991377693",
+        "local": "mesa001",
+        "observacao": "sem pimenta",
+        "isencao": false,
+        "releaseDate": "2021-11-07T14:00:53.672Z",
+        "enviadoEntrega": true,
+        "id": 17
+      },
+      "entregaDate": "2021-11-07T14:02:30.934Z",
+      "id": 14
     }
   ]
 }
