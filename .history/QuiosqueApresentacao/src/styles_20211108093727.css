@@ -5,7 +5,8 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.custom-css-class {
-  background-color: rgb(246, 250, 9);
-  color: #3D5AFE;
+::ng-deep .redNoMatch
+{
+  color:white;
+  background: #F44336 !important;
 }

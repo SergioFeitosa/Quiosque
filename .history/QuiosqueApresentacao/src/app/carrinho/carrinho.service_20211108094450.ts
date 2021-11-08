@@ -20,8 +20,7 @@ export class CarrinhoService {
       duration: 3000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
-      panelClass: ['custom-css-class']
-    });
+      panelClass: ['mat-toolbar', 'mat-primary']    });
   }
 
   create(carrinho: Carrinho): Observable<Carrinho>{
