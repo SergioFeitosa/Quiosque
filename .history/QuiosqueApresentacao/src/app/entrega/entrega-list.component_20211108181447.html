@@ -8,106 +8,94 @@
 
 </div>
 <div class="table-responsive desktop">
+
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th> Imagem</th>
-        <th> Quantidade</th>
         <th> Produto</th>
-        <th> telefone</th>
-        <th> local</th>
-        <th> observacao</th>
-        <th> isencao</th>
-        <th> hora</th>
-        <th class="text-center"> Ações </th>
+        <th> Quantidade</th>
+        <th> Nome</th>
+        <th> Observação</th>
+        <th> Telefone</th>
+        <th> Local</th>
+        <th> Isencao</th>
+        <th> Hora Pedido</th>
+        <th> Hora Entrega</th>
+        <th> Ações </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let pedido of filteredPedidos'>
+      <tr *ngFor='let entrega of filteredEntregas' class="cols">
         <td>
-          <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
+          <img [src]='entrega.pedido.produto.imageUrl' class="figure-img
+            img-fluid
             rounded"
             alt="..."
             width="100"
             height="70">
         </td>
-        <td><input [(ngModel)]="pedido.quantidade" type="text" style='color:
-            red; width: 60px'
-            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
-        </td>
-
-        <td>{{ pedido.produto.name }} </td>
-        <td>{{ pedido.telefone }} </td>
-        <td>{{ pedido.local }} </td>
-
-        <td><input [(ngModel)]="pedido.observacao" type="text" style='color:
-            red'
-            (ngModelChange)="atualizarPedido(pedido)" class="nav-link">
-        </td>
-
-        <td>{{ pedido.isencao }} </td>
-        <td>{{ pedido.releaseDate | date:'hh:mm:ss'}} </td>
-        <td class="text-center">
-          <button (click)="openPopup( pedido.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="entregaCreate( pedido.id )">
-            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+        <td style='color: red'>{{ entrega.pedido.quantidade }} </td>
+        <td>{{ entrega.pedido.produto.name }} </td>
+        <td style='color: red'>{{ entrega.pedido.observacao }} </td>
+        <td>{{ entrega.pedido.telefone }} </td>
+        <td>{{ entrega.pedido.local }} </td>
+        <td>{{ entrega.pedido.isencao }} </td>
+        <td>{{ entrega.pedido.releaseDate | date:'hh:mm:ss' }} </td>
+        <td>{{ entrega.entregaDate | date:'hh:mm:ss' }} </td>
+        <td>
+          <button (click)="openPopup( entrega.id )">
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
-        </td>
+          <button routerLink="/entrega/update/{{ entrega.id }}">
+            <img src='/assets/images/guardasol.jpg' class="figure-img img-fluid
+              rounded" alt="..." width="25"
+              height="25">
+          </button></td>
       </tr>
     </tbody>
   </table>
 </div>
-
 <div class="table-responsive mobile">
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
-        <th style='width: 10%'> Imagem</th>
-        <th style='width: 30%'> Nome</th>
-        <th style='width: 10%' class="text-center"> Ações </th>
+        <th> Produto</th>
+        <th> Nome</th>
+        <th> Hora Pedido</th>
+        <th> Hora Entrega</th>
+        <th> Ações </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let pedido of filteredPedidos'>
+      <tr *ngFor='let entrega of filteredEntregas' class="cols">
         <td>
-          <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
+          <img [src]='entrega.pedido.produto.imageUrl' class="figure-img
+            img-fluid
             rounded"
             alt="..."
             width="100"
             height="70">
         </td>
-        <td>{{ pedido.produto.name }} </td>
-        <td class="text-center">
-          <button (click)="openPopup( pedido.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="entregaCreate( pedido.id )">
-            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+        <td>{{ entrega.pedido.produto.name }} </td>
+        <td>{{ entrega.pedido.releaseDate | date:'hh:mm:ss' }} </td>
+        <td>{{ entrega.entregaDate | date:'hh:mm:ss' }} </td>
+        <td>
+          <button (click)="openPopup( entrega.id )">
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
-        </td>
+          <button routerLink="/entrega/update/{{ entrega.id }}">
+            <img src='/assets/images/guardasol.jpg' class="figure-img img-fluid
+              rounded" alt="..." width="25"
+              height="25">
+          </button></td>
       </tr>
     </tbody>
   </table>
 </div>
-
 <div
   class="modal"
   tabindex="-1"
@@ -116,16 +104,14 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Detalhes do Pedido</h4>
+        <h4 class="modal-title">Detalhes da Entrega</h4>
         <button type="button" class="btn btn-danger"
           (click)="closePopup()">
           Fechar
         </button>
       </div>
       <div class="modal-body row">
-        <span style='font-weight: bolder;'>Avaliação:</span>
-        <span><app-star [rating]="produto.rating"></app-star></span>
-
+        Avaliação: <app-star [rating]="produto.rating"></app-star>
       </div>
       <div class="modal-body row">
         <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
@@ -157,7 +143,6 @@
         <span style='font-weight: bolder;'>Tempo de Preparação:</span>
         <span>{{ produto.preparationTime }} </span>
       </div>
-
       <div class="modal-body">
         <p>Os ingredientes encontrados na refeição são:</p>
         <ul>

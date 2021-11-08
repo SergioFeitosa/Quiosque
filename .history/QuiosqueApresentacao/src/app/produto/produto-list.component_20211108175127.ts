@@ -89,9 +89,9 @@ export class ProdutoListComponent implements OnInit {
     this.produtoService.readById(produtoId).subscribe(product => {
       this.produto = product;
       this.carrinho.produto = this.produto;
-      this.carrinho.quantidade = 1;
       this.carrinho.telefone = environment.telefone;
       this.carrinho.local = environment.local;
+      this.carrinho.quantidade = 1;
       this.carrinho.observacao = '';
       this.carrinho.isencao = false;
       this.carrinho.releaseDate = new Date();
