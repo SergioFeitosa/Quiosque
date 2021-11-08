@@ -1,0 +1,168 @@
+<div class='form-group row'>
+
+  <label class='col-sm-2 col-form-label'>Filter By:</label>
+
+  <div class='col-sm-10'>
+    <input [(ngModel)]='filter' class='form-control'>
+  </div>
+
+</div>
+<div class="table-responsive desktop">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th> Imagem</th>
+        <th> Quantidade</th>
+        <th> Produto</th>
+        <th> telefone</th>
+        <th> local</th>
+        <th> observacao</th>
+        <th> isencao</th>
+        <th> hora</th>
+        <th class="text-center"> Ações </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let pedido of filteredPedidos'>
+        <td>
+          <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
+            rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td><input [(ngModel)]="pedido.quantidade" type="text" style='color:
+            red; width: 60px'
+            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+        </td>
+
+        <td>{{ pedido.produto.name }} </td>
+        <td>{{ pedido.telefone }} </td>
+        <td>{{ pedido.local }} </td>
+
+        <td><input [(ngModel)]="pedido.observacao" type="text" style='color:
+            red'
+            (ngModelChange)="atualizarPedido(pedido)" class="nav-link">
+        </td>
+
+        <td>{{ pedido.isencao }} </td>
+        <td>{{ pedido.releaseDate | date:'hh:mm:ss'}} </td>
+        <td class="text-center">
+          <button (click)="openPopup( pedido.id )">
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button routerLink="/pedido/delete/{{ pedido.id }}">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button (click)="entregaCreate( pedido.id )">
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+              rounded" alt="..." width="25"
+              height="25">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-responsive mobile">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th> Imagem</th>
+        <th> Nome</th>
+        <th class="text-center"> Ações </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let pedido of filteredPedidos'>
+        <td>
+          <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
+            rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td>{{ pedido.produto.name }} </td>
+        <td class="text-center">
+          <button (click)="openPopup( pedido.id )">
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button routerLink="/pedido/delete/{{ pedido.id }}">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button (click)="entregaCreate( pedido.id )">
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+              rounded" alt="..." width="25"
+              height="25">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalhes do Pedido</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <div class="modal-body row">
+        Avaliação: <app-star [rating]="produto.rating"></app-star>
+      </div>
+      <div class="modal-body row">
+        <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+          alt="..."
+          width="400"
+          height="400">
+      </div>
+      <div class="modal-body row">
+        Quantidade:&nbsp;&nbsp;&nbsp; <span style='color: red;'>{{ pedido.quantidade }} </span>
+      </div>
+      <div class="modal-body row">
+        Nome:&nbsp;&nbsp;&nbsp; {{ produto.name }}
+      </div>
+      <div class="modal-body row" >
+        Observação:&nbsp;&nbsp;&nbsp; <span >{{ pedido.observacao }} </span>
+      </div>
+      <div class="modal-body row">
+        Observação:&nbsp;&nbsp;&nbsp; {{ pedido.observacao }}
+      </div>
+      <div class="modal-body row">
+        Descrição:&nbsp;&nbsp;&nbsp; {{ produto.description }}
+      </div>
+      <div class="modal-body row">
+        Preço:&nbsp;&nbsp;&nbsp; {{ produto.price }}
+      </div>
+      <div class="modal-body row">
+        Tempo de Preparação:&nbsp;&nbsp;&nbsp; {{ produto.preparationTime }}
+      </div>
+
+      <div class="modal-body">
+        <p>Os ingredientes encontrados na refeição são:</p>
+        <ul>
+          <li>alho</li>
+          <li>cebola</li>
+          <li>coentro</li>
+          <li>maionese</li>
+          <li>manjericão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
