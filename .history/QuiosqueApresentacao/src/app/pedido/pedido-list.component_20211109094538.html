@@ -54,10 +54,11 @@
               rounded" alt="..." width="25"
               height="25">
           </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}" [disabled]=" i > 2 ? null : true">
+          <button routerLink="/pedido/delete/{{ pedido.id }}">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
-              height="25">
+              height="25"
+              [disabled]=" i > 2 ? null : true">
           </button>
           <button (click)="entregaCreate( pedido.id )">
             <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
@@ -80,7 +81,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let pedido of filteredPedidos; let i= index'
+      <tr *ngFor='let pedido of filteredPedidos'
           [ngStyle]="{backgroundColor: i > 2 ? 'transparent' : 'yellow' }">
 
         <td>

@@ -54,7 +54,7 @@
               rounded" alt="..." width="25"
               height="25">
           </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}" [disabled]=" i > 2 ? null : true">
+          <button routerLink="/pedido/delete/{{ pedido.id }}">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
@@ -80,9 +80,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let pedido of filteredPedidos; let i= index'
-          [ngStyle]="{backgroundColor: i > 2 ? 'transparent' : 'yellow' }">
-
+      <tr *ngFor='let pedido of filteredPedidos'>
         <td>
           <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
             rounded"
@@ -97,7 +95,7 @@
               rounded" alt="..." width="25"
               height="25">
           </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}" [disabled]=" i > 2 ? null : true">
+          <button routerLink="/pedido/delete/{{ pedido.id }}">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
