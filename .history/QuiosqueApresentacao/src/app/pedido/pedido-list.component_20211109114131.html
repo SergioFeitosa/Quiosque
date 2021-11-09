@@ -60,11 +60,11 @@
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
-          <button (click)="entregaCreate( pedido.id )"
-                  [disabled]=" (pedido.telefone == '99999999999' || pedido.telefone == '99999999998') ? false : true">
+          <button (click)="entregaCreate( pedido.id )">
             <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
-              height="25">
+              height="25"
+              [disabled]=" (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
           </button>
         </td>
       </tr>
@@ -99,14 +99,12 @@
               rounded" alt="..." width="25"
               height="25">
           </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}"
-                  [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
+          <button routerLink="/pedido/delete/{{ pedido.id }}" [disabled]=" i > 2 ? null : true">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
-          <button (click)="entregaCreate( pedido.id )"
-                  [disabled]=" (pedido.telefone == '99999999999' || pedido.telefone == '99999999998') ? false : true">
+          <button (click)="entregaCreate( pedido.id )">
             <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">

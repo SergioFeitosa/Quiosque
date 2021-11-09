@@ -33,7 +33,7 @@
         <td><input [(ngModel)]="pedido.quantidade" type="text"
                    style='color: red; width: 60px'
                    (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link"
-                   [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
+                   [disabled]=" i > 2 ? null : true">
         </td>
 
         <td>{{ pedido.produto.name }} </td>
@@ -43,7 +43,7 @@
         <td><input [(ngModel)]="pedido.observacao" type="text" style='color:
             red'
             (ngModelChange)="atualizarPedido(pedido)" class="nav-link"
-            [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
+            [disabled]=" i > 2 ? null : true">
           </td>
 
         <td>{{ pedido.isencao }} </td>
@@ -55,13 +55,12 @@
               height="25">
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
-                  [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
+                  [disabled]=" i < 3> && (pedido.telefone == '99999999999' || pedido.telefone == '99999999998') ? null : true">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
-          <button (click)="entregaCreate( pedido.id )"
-                  [disabled]=" (pedido.telefone == '99999999999' || pedido.telefone == '99999999998') ? false : true">
+          <button (click)="entregaCreate( pedido.id )">
             <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
@@ -99,14 +98,12 @@
               rounded" alt="..." width="25"
               height="25">
           </button>
-          <button routerLink="/pedido/delete/{{ pedido.id }}"
-                  [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
+          <button routerLink="/pedido/delete/{{ pedido.id }}" [disabled]=" i > 2 ? null : true">
             <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
-          <button (click)="entregaCreate( pedido.id )"
-                  [disabled]=" (pedido.telefone == '99999999999' || pedido.telefone == '99999999998') ? false : true">
+          <button (click)="entregaCreate( pedido.id )">
             <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
