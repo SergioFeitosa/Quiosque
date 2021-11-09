@@ -20,39 +20,32 @@ export class EntregaListComponent implements OnInit {
   filteredEntregas: Entrega[] = [];
   entregas: Entrega[] = [];
 
-  pedido = {} as Pedido;
-  produto = {} as Produto;
-  entrega = {} as Entrega;
+  pedido = {} as  Pedido;
+  produto = {} as  Produto;
+  entrega = {} as  Entrega;
   // tslint:disable-next-line:variable-name
   _entregas: Entrega[] = [];
 
   // tslint:disable-next-line:variable-name
   _filterBy: string;
 
-  constructor(
-    private entregaService: EntregaService,
-    private pedidoService: PedidoService,
-    private activatedRoute: ActivatedRoute) {
+  constructor(private entregaService: EntregaService,
+              private pedidoService: PedidoService,
+              private activatedRoute: ActivatedRoute ){
 
   }
 
   ngOnInit(): void {
 
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999996) {
-
-      this.entregaService.read().subscribe(entregas => {
-        this.entregas = entregas;
-        this.filteredEntregas = this.entregas;
-
-      });
-    } else {
+    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
 
       this.entregaService.read().subscribe(entregas => {
         this.entregas = entregas;
         this.filteredEntregas = this.entregas.filter((entrega: Entrega) => entrega.pedido.telefone === environment.telefone);
 
       });
-
+    } else {
+      
     }
   }
 
@@ -64,19 +57,11 @@ export class EntregaListComponent implements OnInit {
   set filter(value: string) {
     this._filterBy = value;
 
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999996) {
-      this.filteredEntregas =
-        this.entregas
-          .filter((entrega: Entrega) => entrega.pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    this.filteredEntregas =
+    this.entregas
+      .filter((entrega: Entrega) => entrega.pedido.telefone === environment.telefone)
+      .filter((entrega: Entrega) => entrega.pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
-    } else {
-
-      this.filteredEntregas =
-        this.entregas
-          .filter((entrega: Entrega) => entrega.pedido.telefone === environment.telefone)
-          .filter((entrega: Entrega) => entrega.pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-
-    }
   }
 
 
@@ -113,8 +98,8 @@ export class EntregaListComponent implements OnInit {
     this.entrega.entregaDate = new Date();
 
     this.entregaService.create(this.entrega).subscribe(() => {
-      this.entregaService.showMessage('Entrega solicitada');
-    }
+        this.entregaService.showMessage('Entrega solicitada');
+      }
     );
   }
 

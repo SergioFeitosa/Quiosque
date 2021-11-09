@@ -93,51 +93,51 @@ export class PedidoListComponent implements OnInit {
 
 
 
-  entregaCreate(pedidoId: number): void {
+entregaCreate(pedidoId: number): void {
 
-    // tslint:disable-next-line:no-unused-expression
-    this.pedidoService.readById(pedidoId).subscribe(pedido => {
-      this.pedido = pedido;
+  // tslint:disable-next-line:no-unused-expression
+  this.pedidoService.readById(pedidoId).subscribe(pedido => {
+    this.pedido = pedido;
 
-      if (this.pedido.enviadoEntrega !== true) {
+    if (this.pedido.enviadoEntrega !== true) {
 
-        this.pedido.enviadoEntrega = true;
-        this.atualizarPedido(pedido);
+      this.pedido.enviadoEntrega = true;
+      this.atualizarPedido(pedido);
 
-        this.entrega.pedido = pedido;
-        this.entrega.entregaDate = null;
+      this.entrega.pedido = pedido;
+      this.entrega.entregaDate = null;
 
-        this.entregaService.create(this.entrega).subscribe(() => {
-          this.entregaService.showMessage('Entrega solicitada');
-        }
-        );
+      this.entregaService.create(this.entrega).subscribe(() => {
+        this.entregaService.showMessage('Entrega solicitada');
       }
-    });
-  }
-
-
-  // tslint:disable-next-line:typedef
-  openPopup(pedidoId: number): void {
-    // tslint:disable-next-line:no-unused-expression
-    this.pedidoService.readById(pedidoId).subscribe(pedido => {
-      this.pedido = pedido;
-      this.produto = this.pedido.produto;
-    });
-
-    this.displayStyle = 'block';
-  }
-
-  // tslint:disable-next-line:typedef
-  closePopup() {
-    this.displayStyle = 'none';
-  }
-
-
-
-  // tslint:disable-next-line:typedef
-  atualizarPedido(pedido: Pedido) {
-    this.pedidoService.update(pedido).subscribe(() => {
-      this.pedidoService.showMessage('Pedido Atualizado');
-    });
-  }
+      );
+    }
+  });
 }
+
+
+// tslint:disable-next-line:typedef
+openPopup(pedidoId: number): void {
+  // tslint:disable-next-line:no-unused-expression
+  this.pedidoService.readById(pedidoId).subscribe(pedido => {
+    this.pedido = pedido;
+    this.produto = this.pedido.produto;
+  });
+
+  this.displayStyle = 'block';
+}
+
+// tslint:disable-next-line:typedef
+closePopup() {
+  this.displayStyle = 'none';
+}
+
+
+
+// tslint:disable-next-line:typedef
+atualizarPedido(pedido: Pedido) {
+  this.pedidoService.update(pedido).subscribe(() => {
+    this.pedidoService.showMessage('Pedido Atualizado');
+  });
+}
+  }

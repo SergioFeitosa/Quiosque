@@ -46,24 +46,16 @@ export class PedidoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
+    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997  ) {
 
-      this.pedidoService.read().subscribe(pedidos => {
-        this.pedidos = pedidos;
-        this.filteredPedidos = this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
-      });
+    this.pedidoService.read().subscribe(pedidos => {
+      this.pedidos = pedidos;
+      this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone === environment.telefone)
+        .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
 
-    } else {
-
-      this.pedidoService.read().subscribe(pedidos => {
-        this.pedidos = pedidos;
-        this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone === environment.telefone)
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
-      });
-    }
-
+    });
   }
+}
 
   // tslint:disable-next-line:typedef
   get filter() {
@@ -73,24 +65,12 @@ export class PedidoListComponent implements OnInit {
   set filter(value: string) {
     this._filterBy = value;
 
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
-
-      this.filteredPedidos =
-        this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true)
-          .filter((pedido: Pedido) => pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-
-    } else {
-
-      this.filteredPedidos =
-        this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true)
-          .filter((pedido: Pedido) => pedido.telefone === environment.telefone)
-          .filter((pedido: Pedido) => pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-
-    }
+    this.filteredPedidos =
+      this.pedidos
+        .filter((pedido: Pedido) => pedido.enviadoEntrega !== true)
+        .filter((pedido: Pedido) => pedido.telefone === environment.telefone)
+        .filter((pedido: Pedido) => pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
-
 
 
   entregaCreate(pedidoId: number): void {

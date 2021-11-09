@@ -43,23 +43,22 @@ export class CarrinhoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
-      this.carrinhoService.read().subscribe(carrinhos => {
-        this.carrinhos = carrinhos;
-        this.filteredCarrinhos = this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+    if ( environment.telefone === '99999999999') {
+    this.carrinhoService.read().subscribe(carrinhos => {
+      this.carrinhos = carrinhos;
+      this.filteredCarrinhos = this.carrinhos
+        .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
+        .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
 
-      });
-    } else {
+    });
+  } else {}
+    this.carrinhoService.read().subscribe(carrinhos => {
+      this.carrinhos = carrinhos;
+      this.filteredCarrinhos = this.carrinhos
+        .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
+        .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
 
-      this.carrinhoService.read().subscribe(carrinhos => {
-        this.carrinhos = carrinhos;
-        this.filteredCarrinhos = this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
-
-      });
-    }
+    });
   }
 
   // tslint:disable-next-line:typedef
@@ -70,24 +69,13 @@ export class CarrinhoListComponent implements OnInit {
   set filter(value: string) {
     this._filterBy = value;
     console.log('filtro ' + this._filterBy);
-
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
-
-      this.filteredCarrinhos =
-        this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
-          .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-
-    } else {
-
-      this.filteredCarrinhos =
-        this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
-          .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-          .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-
-        }
+    this.filteredCarrinhos =
+      this.carrinhos
+        .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
+        .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
+        .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
+
   // tslint:disable-next-line:quotemark
   // tslint:disable-next-line:member-ordering
   displayStyle = 'none';

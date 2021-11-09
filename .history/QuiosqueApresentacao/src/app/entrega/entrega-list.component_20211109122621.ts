@@ -29,8 +29,7 @@ export class EntregaListComponent implements OnInit {
   // tslint:disable-next-line:variable-name
   _filterBy: string;
 
-  constructor(
-    private entregaService: EntregaService,
+  constructor(private entregaService: EntregaService,
     private pedidoService: PedidoService,
     private activatedRoute: ActivatedRoute) {
 

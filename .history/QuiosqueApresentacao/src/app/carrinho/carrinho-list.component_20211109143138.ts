@@ -76,17 +76,12 @@ export class CarrinhoListComponent implements OnInit {
       this.filteredCarrinhos =
         this.carrinhos
           .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
-          .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-
-    } else {
-
-      this.filteredCarrinhos =
-        this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
           .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
           .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
-        }
+    } else {
+      
+    }
   }
   // tslint:disable-next-line:quotemark
   // tslint:disable-next-line:member-ordering
