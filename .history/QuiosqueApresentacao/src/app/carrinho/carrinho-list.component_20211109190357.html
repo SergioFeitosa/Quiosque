@@ -1,0 +1,168 @@
+<div class='form-group row'>
+  <label class='col-sm-2 col-form-label'>Filter By:</label>
+  <div class='col-sm-10'>
+    <input [(ngModel)]='filter' class='form-control'>
+  </div>
+</div>
+
+<div class='table-responsive desktop'>
+  <table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+        <th style='width: 5%'> Imagem</th>
+        <th style='width: 5%'> Quantidade</th>
+        <th style='width: 25%'> Produto</th>
+        <th style='width: 10%'> Telefone</th>
+        <th style='width: 5%'> Local</th>
+        <th style='width: 20%'> Observacao</th>
+        <th style='width: 5%'> Isencao</th>
+        <th style='width: 5%'> Hora</th>
+        <th style='width: 20%' class="text-center"> Ações </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let carrinho of filteredCarrinhos'>
+        <td>
+            <img [src]='carrinho.produto.imageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td><input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 20%;  font-size: 14px;'
+          (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+      </td>
+        <td>{{ carrinho.produto.name }} </td>
+        <td>{{ carrinho.telefone }} </td>
+        <td>{{ carrinho.local }} </td>
+
+        <td><input [(ngModel)]="carrinho.observacao" type="text" style='color: red'
+            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+        </td>
+
+        <td>{{ carrinho.isencao }} </td>
+        <td>{{ carrinho.releaseDate | date:'hh:mm:ss'}} </td>
+        <td  class="text-center">
+          <button (click)="openPopup( carrinho.id )">
+            <img src='/assets/images/lupa.jpg' class="figure-img
+              img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button (click)="pedidoCreate( carrinho.id );">
+            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='table-responsive mobile'>
+  <table class="table table-bordered table-striped">
+  <thead>
+      <tr>
+        <th style='width: 10%; font-size: 10px;' > Imagem</th>
+        <th style='width: 10%; font-size: 10px;' > Qtde</th>
+        <th style='width: 30%; font-size: 10px;' > Nome</th>
+        <th style='width: 10%; font-size: 10px;' class="text-center"> Ações </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let carrinho of filteredCarrinhos'>
+        <td  style='width: 10%; font-size: 10px;'>
+            <img [src]='carrinho.produto.imageUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="100"
+            height="70">
+        </td>
+        <td>
+          <input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 60px;  font-size: 10px;'
+            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+        </td>
+        <td style='width: 30%; font-size: 10px;'>{{ carrinho.produto.name }} </td>
+        <td class="text-center"  style='width: 10%; font-size: 10px;'>
+          <button (click)="openPopup( carrinho.id )">
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+          <button (click)="pedidoCreate( carrinho.id );">
+            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+              height="25">
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Detalhes do Produto</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <div class="modal-body row">
+        Avaliação: <app-star [rating]="produto.rating"></app-star>
+
+      </div>
+      <div class="modal-body row">
+        <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+          alt="..."
+          width="400"
+          height="400">
+      </div>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Quantidade:</span>
+        <input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 60px'
+        (blur)="atualizarCarrinho(carrinho)" class="nav-link">      </div>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Nome:</span>
+        <span>{{ produto.name }}</span>
+      </div>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Observação:</span>
+        <span style='color: red;'>{{ carrinho.observacao }} </span>
+      </div>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Descrição:</span>
+        <span> {{ produto.description }} </span>
+      </div>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Preço:</span>
+        <span>{{ produto.price }} </span>
+      </div>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Tempo de Preparação:</span>
+        <span>{{ produto.preparationTime }} </span>
+      </div>
+
+
+      <div class="modal-body">
+        <p>Os ingredientes encontrados na refeição são:</p>
+        <ul>
+          <li>alho</li>
+          <li>cebola</li>
+          <li>coentro</li>
+          <li>maionese</li>
+          <li>manjericão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
