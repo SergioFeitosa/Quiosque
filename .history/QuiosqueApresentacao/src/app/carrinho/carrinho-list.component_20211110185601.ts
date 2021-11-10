@@ -55,7 +55,7 @@ export class CarrinhoListComponent implements OnInit {
           .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
       });
 
-      this.updateSubscription = interval(5000).subscribe(
+      this.updateSubscription = interval(3000).subscribe(
         (val) => {
 
           this.carrinhoService.read().subscribe(carrinhos => {

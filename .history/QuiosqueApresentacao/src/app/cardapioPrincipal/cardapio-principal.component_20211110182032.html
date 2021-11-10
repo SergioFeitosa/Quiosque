@@ -1,4 +1,11 @@
-
+<script src="/releases/angular-input-masks-dependencies.js"></script>
+<script src="/releases/angular-input-masks.br.js"></script>
+<script>
+  angular.module('app', ['ui.utils.masks'])
+    .controller('ctrl', function ctrl($scope) {
+      $scope.initializedPhoneNumber = '3133536767';
+    });
+</script>
 <div class="container">
   <div class="row">
     <div class="row">

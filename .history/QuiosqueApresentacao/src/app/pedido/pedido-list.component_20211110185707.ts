@@ -52,7 +52,6 @@ export class PedidoListComponent implements OnInit {
   ngOnInit(): void {
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
-
       this.pedidoService.read().subscribe(pedidos => {
         this.pedidos = pedidos;
         this.filteredPedidos = this.pedidos

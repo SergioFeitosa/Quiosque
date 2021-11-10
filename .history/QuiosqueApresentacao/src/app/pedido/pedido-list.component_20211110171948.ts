@@ -7,16 +7,11 @@ import { Pedido } from './pedido';
 import { Component, OnInit } from '@angular/core';
 import { Entrega } from '../entrega/entrega';
 import { EntregaService } from '../entrega/entrega.service';
-import { interval, Subscription } from 'rxjs';
-
 @Component({
   templateUrl: './pedido-list.component.html',
 })
 
 export class PedidoListComponent implements OnInit {
-
-  private updateSubscription: Subscription;
-
 
   // tslint:disable-next-line:variable-name
   _categoryId: string;
@@ -53,21 +48,15 @@ export class PedidoListComponent implements OnInit {
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
 
+      this.updateSubscription = interval(3000).subscribe(
+        (val) => {
+
+
       this.pedidoService.read().subscribe(pedidos => {
         this.pedidos = pedidos;
         this.filteredPedidos = this.pedidos
           .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
       });
-
-      this.updateSubscription = interval(5000).subscribe(
-        (val) => {
-
-          this.pedidoService.read().subscribe(pedidos => {
-            this.pedidos = pedidos;
-            this.filteredPedidos = this.pedidos
-              .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
-          });
-        });
 
     } else {
 
@@ -145,12 +134,6 @@ export class PedidoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closePopup() {
     this.displayStyle = 'none';
-    // tslint:disable-next-line:prefer-const
-    let currentUrl = this.router.url;
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = 'reload';
-    this.router.navigate([currentUrl]);
-
   }
 
 

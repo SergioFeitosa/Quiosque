@@ -144,7 +144,7 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Quantidade:</span>
-        <input [(ngModel)]="pedido.quantidade" type="text" style='color: red; width: 50%'  mask='000'
+        <input [(ngModel)]="pedido.quantidade" type="text" style='color: red; width: 60px'
         (blur)="atualizarPedido(pedido)" class="nav-link">
       </div>
       <div class="modal-body row">
@@ -153,8 +153,7 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Observação:</span>
-        <input [(ngModel)]="pedido.observacao" type="text" style='color: red; width: 100%'
-        (blur)="atualizarPedido(pedido)" class="nav-link">
+        <span style='color: red;'>{{ pedido.observacao }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Descrição:</span>

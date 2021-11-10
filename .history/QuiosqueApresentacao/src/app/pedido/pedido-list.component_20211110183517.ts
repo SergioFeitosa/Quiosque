@@ -53,14 +53,9 @@ export class PedidoListComponent implements OnInit {
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
 
-      this.pedidoService.read().subscribe(pedidos => {
-        this.pedidos = pedidos;
-        this.filteredPedidos = this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
-      });
-
-      this.updateSubscription = interval(5000).subscribe(
+      this.updateSubscription = interval(3000).subscribe(
         (val) => {
+
 
           this.pedidoService.read().subscribe(pedidos => {
             this.pedidos = pedidos;

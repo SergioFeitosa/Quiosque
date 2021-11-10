@@ -49,13 +49,7 @@ export class CarrinhoListComponent implements OnInit {
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
 
-      this.carrinhoService.read().subscribe(carrinhos => {
-        this.carrinhos = carrinhos;
-        this.filteredCarrinhos = this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
-      });
-
-      this.updateSubscription = interval(5000).subscribe(
+      this.updateSubscription = interval(3000).subscribe(
         (val) => {
 
           this.carrinhoService.read().subscribe(carrinhos => {
@@ -119,11 +113,6 @@ export class CarrinhoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closePopup() {
     this.displayStyle = 'none';
-    // tslint:disable-next-line:prefer-const
-    let currentUrl = this.router.url;
-    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.router.onSameUrlNavigation = 'reload';
-    this.router.navigate([currentUrl]);
 
   }
 
