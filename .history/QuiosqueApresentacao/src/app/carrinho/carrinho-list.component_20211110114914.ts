@@ -49,7 +49,7 @@ export class CarrinhoListComponent implements OnInit {
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
 
-      this.updateSubscription = interval(3000).subscribe(
+      this.updateSubscription = interval(1000).subscribe(
         (val) => {
           console.log('passei pelo subsc');
 
@@ -58,7 +58,7 @@ export class CarrinhoListComponent implements OnInit {
             this.filteredCarrinhos = this.carrinhos
               .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
           });
-      });
+               });
     } else {
 
       this.carrinhoService.read().subscribe(carrinhos => {
@@ -67,7 +67,7 @@ export class CarrinhoListComponent implements OnInit {
           .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
           .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
 
-      });
+      }
     }
   }
 

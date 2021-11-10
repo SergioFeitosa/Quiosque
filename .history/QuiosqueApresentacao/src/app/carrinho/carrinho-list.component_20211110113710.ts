@@ -47,28 +47,28 @@ export class CarrinhoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
+    this.updateSubscription = interval(1000).subscribe(
+      (val) => {
 
-      this.updateSubscription = interval(3000).subscribe(
-        (val) => {
-          console.log('passei pelo subsc');
 
+        if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
           this.carrinhoService.read().subscribe(carrinhos => {
             this.carrinhos = carrinhos;
             this.filteredCarrinhos = this.carrinhos
               .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+
           });
-      });
-    } else {
+        } else {
 
-      this.carrinhoService.read().subscribe(carrinhos => {
-        this.carrinhos = carrinhos;
-        this.filteredCarrinhos = this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+          this.carrinhoService.read().subscribe(carrinhos => {
+            this.carrinhos = carrinhos;
+            this.filteredCarrinhos = this.carrinhos
+              .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
+              .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
 
-      });
-    }
+          });
+        }
+      }
   }
 
   // tslint:disable-next-line:typedef

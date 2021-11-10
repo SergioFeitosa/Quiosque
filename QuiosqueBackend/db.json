@@ -1123,13 +1123,14 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Prato preparado com camarão e mandioca e tempero nordestino"
       },
-      "quantidade": "11",
+      "quantidade": "1",
       "telefone": "11982551256",
       "local": "mesa001",
       "observacao": "",
       "isencao": false,
       "releaseDate": "2021-11-09T15:02:21.830Z",
-      "id": 40
+      "id": 40,
+      "enviadoPedido": true
     },
     {
       "produto": {
@@ -1144,7 +1145,7 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "quantidade": "2",
+      "quantidade": "9",
       "telefone": "11982551256",
       "local": "mesa001",
       "observacao": "",
@@ -1228,7 +1229,7 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "quantidade": 1,
+      "quantidade": "12",
       "telefone": "83991377693",
       "local": "mesa001",
       "observacao": "",
@@ -1249,7 +1250,7 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "quantidade": "9999",
+      "quantidade": "6",
       "telefone": 0,
       "local": "mesa001",
       "observacao": "",
@@ -1270,7 +1271,7 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "quantidade": 1,
+      "quantidade": "5",
       "telefone": "11982551256",
       "local": "mesa001",
       "observacao": "",
@@ -1291,7 +1292,7 @@
         "releaseDate": "2021-10-28T20:38:48.703Z",
         "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
       },
-      "quantidade": "6",
+      "quantidade": "7",
       "telefone": "11982551256",
       "local": "mesa001",
       "observacao": "",
@@ -1959,6 +1960,28 @@
       "releaseDate": "2021-11-09T14:37:04.023Z",
       "enviadoEntrega": false,
       "id": 34
+    },
+    {
+      "produto": {
+        "id": 8,
+        "category": "pratoregional",
+        "name": "Bobó de Camarão",
+        "code": "XLF-1212",
+        "price": 18,
+        "imageUrl": "/assets/images/camarao-bobo.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.7,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Prato preparado com camarão e mandioca e tempero nordestino"
+      },
+      "telefone": "11982551256",
+      "local": "mesa001",
+      "quantidade": "1",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-09T15:02:21.830Z",
+      "enviadoEntrega": false,
+      "id": 35
     }
   ],
   "entregas": [
