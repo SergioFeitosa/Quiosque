@@ -12,9 +12,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ProdutoService {
 
   // tslint:disable-next-line:quotemark
-  // baseUrl = "http://localhost:3001/products";
-
-  baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/products';
+  baseUrl = "http://localhost:3001/products";
+  https://springboot-postgresheroku.herokuapp.com/api/v1/products/
 
   constructor(private snackBar: MatSnackBar,
               private http: HttpClient) {
