@@ -35,7 +35,7 @@
           height="70">
         <td><input [(ngModel)]="pedido.quantidade" type="text"
                    style='color: red; width: 60px'
-                   (ngModelChange)="atualizarPedido(pedido)" class="nav-link"
+                   (ngModelChange)="atualizarPedido(carrinho)" class="nav-link"
                    [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
         </td>
 

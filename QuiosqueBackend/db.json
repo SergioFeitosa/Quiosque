@@ -363,7 +363,8 @@
       "observacao": "teste",
       "isencao": false,
       "releaseDate": "2021-11-11T17:00:25.781Z",
-      "id": 4
+      "id": 4,
+      "enviadoPedido": true
     },
     {
       "produto": {
@@ -381,10 +382,11 @@
       "quantidade": "7",
       "telefone": "11982551256",
       "local": "",
-      "observacao": "",
+      "observacao": "testew",
       "isencao": false,
       "releaseDate": "2021-11-11T17:05:52.357Z",
-      "id": 5
+      "id": 5,
+      "enviadoPedido": true
     },
     {
       "produto": {
@@ -405,7 +407,117 @@
       "observacao": "",
       "isencao": false,
       "releaseDate": "2021-11-11T17:05:53.629Z",
-      "id": 6
+      "id": 6,
+      "enviadoPedido": true
+    },
+    {
+      "produto": {
+        "id": 3,
+        "category": "pratododia",
+        "name": "Baião de dois",
+        "code": "XLF-1212",
+        "price": 37.99,
+        "imageUrl": "/assets/images/baiaodedois2.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.2,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "quantidade": 1,
+      "telefone": "11982551256",
+      "local": "",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:56.321Z",
+      "id": 7
+    },
+    {
+      "produto": {
+        "id": 4,
+        "category": "pratododia",
+        "name": "Rubacão",
+        "code": "XLF-1212",
+        "price": 22.5,
+        "imageUrl": "/assets/images/rubacao.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.3,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "quantidade": 1,
+      "telefone": "11982551256",
+      "local": "",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:57.009Z",
+      "id": 8,
+      "enviadoPedido": true
+    },
+    {
+      "produto": {
+        "id": 5,
+        "category": "pratododia",
+        "name": "Espaguete",
+        "code": "XLF-1212",
+        "price": 72.99,
+        "imageUrl": "/assets/images/espaguete-abolonhesa.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.4,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "quantidade": 1,
+      "telefone": "11982551256",
+      "local": "",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:57.619Z",
+      "id": 9,
+      "enviadoPedido": true
+    },
+    {
+      "produto": {
+        "id": 6,
+        "category": "pratododia",
+        "name": "Carne de sol com macaxeira",
+        "code": "XLF-1212",
+        "price": 26.99,
+        "imageUrl": "/assets/images/carnedesol-commacaxeira.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.5,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "quantidade": 1,
+      "telefone": "11982551256",
+      "local": "",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:58.202Z",
+      "id": 10,
+      "enviadoPedido": true
+    },
+    {
+      "produto": {
+        "id": 7,
+        "category": "pratododia",
+        "name": "Carne de sol com queijo coalho",
+        "code": "XLF-1212",
+        "price": 56.99,
+        "imageUrl": "/assets/images/carnedesol-comqueijocoalho.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.6,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "quantidade": 1,
+      "telefone": "11982551256",
+      "local": "",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:58.803Z",
+      "id": 11,
+      "enviadoPedido": true
     }
   ],
   "pedidos": [
@@ -474,6 +586,138 @@
       "releaseDate": "2021-11-11T11:54:26.212Z",
       "enviadoEntrega": false,
       "id": 3
+    },
+    {
+      "produto": {
+        "id": 2,
+        "category": "pratododia",
+        "name": "File de pescada amarela",
+        "code": "XLF-1212",
+        "price": 22.99,
+        "imageUrl": "/assets/images/pescadaamarela.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "",
+      "quantidade": "6",
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T17:05:53.629Z",
+      "enviadoEntrega": false,
+      "id": 4
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "",
+      "quantidade": "7",
+      "observacao": "testew",
+      "isencao": false,
+      "releaseDate": "2021-11-11T17:05:52.357Z",
+      "enviadoEntrega": true,
+      "id": 5
+    },
+    {
+      "produto": {
+        "id": 1,
+        "category": "pratododia",
+        "name": "Peixe cioba",
+        "code": "XLF-1212",
+        "price": 12.99,
+        "imageUrl": "/assets/images/cioba-frito.jpg",
+        "preparationTime": "45 min",
+        "rating": 1,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "",
+      "quantidade": "8",
+      "observacao": "teste",
+      "isencao": false,
+      "releaseDate": "2021-11-11T17:00:25.781Z",
+      "enviadoEntrega": false,
+      "id": 6
+    },
+    {
+      "produto": {
+        "id": 4,
+        "category": "pratododia",
+        "name": "Rubacão",
+        "code": "XLF-1212",
+        "price": 22.5,
+        "imageUrl": "/assets/images/rubacao.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.3,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "",
+      "quantidade": 1,
+      "observacao": "",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:57.009Z",
+      "enviadoEntrega": false,
+      "id": 7
+    },
+    {
+      "produto": {
+        "id": 5,
+        "category": "pratododia",
+        "name": "Espaguete",
+        "code": "XLF-1212",
+        "price": 72.99,
+        "imageUrl": "/assets/images/espaguete-abolonhesa.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.4,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "",
+      "quantidade": "4",
+      "observacao": "sem molho",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:57.619Z",
+      "enviadoEntrega": false,
+      "id": 8
+    },
+    {
+      "produto": {
+        "id": 7,
+        "category": "pratododia",
+        "name": "Carne de sol com queijo coalho",
+        "code": "XLF-1212",
+        "price": 56.99,
+        "imageUrl": "/assets/images/carnedesol-comqueijocoalho.jpg",
+        "preparationTime": "45 min",
+        "rating": 1.6,
+        "releaseDate": "2021-10-28T20:38:48.703Z",
+        "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+      },
+      "telefone": "11982551256",
+      "local": "",
+      "quantidade": "89",
+      "observacao": "sem sal",
+      "isencao": false,
+      "releaseDate": "2021-11-11T18:19:58.803Z",
+      "enviadoEntrega": false,
+      "id": 9
     }
   ],
   "entregas": [
@@ -502,6 +746,32 @@
       },
       "entregaDate": "2021-11-11T12:13:59.498Z",
       "id": 1
+    },
+    {
+      "pedido": {
+        "produto": {
+          "id": 1,
+          "category": "pratododia",
+          "name": "Peixe cioba",
+          "code": "XLF-1212",
+          "price": 12.99,
+          "imageUrl": "/assets/images/cioba-frito.jpg",
+          "preparationTime": "45 min",
+          "rating": 1,
+          "releaseDate": "2021-10-28T20:38:48.703Z",
+          "description": "Peixe abundante no litoral nordestino. O prato atende até 3 pessoas. Acompanhamento: arroz e fritas"
+        },
+        "telefone": "11982551256",
+        "local": "",
+        "quantidade": "7",
+        "observacao": "testew",
+        "isencao": false,
+        "releaseDate": "2021-11-11T17:05:52.357Z",
+        "enviadoEntrega": true,
+        "id": 5
+      },
+      "entregaDate": null,
+      "id": 2
     }
   ]
 }
