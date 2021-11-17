@@ -18,7 +18,7 @@ export class CarrinhoService {
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/carrinhos";
 
-  baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/carrinhos';
+  baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/carts';
 
 
   // tslint:disable-next-line:variable-name

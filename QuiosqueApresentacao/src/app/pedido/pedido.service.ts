@@ -12,7 +12,7 @@ export class PedidoService {
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/pedidos";
 
-  baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/pedidos';
+  baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/orders';
 
   constructor(private snackBar: MatSnackBar,
               private http: HttpClient) {}
