@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Produto } from './produto';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +14,18 @@ export class ProdutoService {
   // baseUrl = "http://localhost:3001/products";
 
   baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/products';
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/x-www-form-urlencoded',
+      // tslint:disable-next-line:object-literal-key-quotes
+      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br/*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+
+    })
+
+  };
 
   constructor(private snackBar: MatSnackBar,
               private http: HttpClient) {
@@ -36,7 +47,7 @@ export class ProdutoService {
   }
 
   read(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(this.baseUrl);
+    return this.http.get<Produto[]>(this.baseUrl, this.httpOptions);
 
   }
 

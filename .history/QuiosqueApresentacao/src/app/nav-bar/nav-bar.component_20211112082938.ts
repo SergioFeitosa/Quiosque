@@ -72,7 +72,7 @@ export class NavBarComponent implements OnInit {
   // tslint:disable-next-line:typedef
   openPopup(): void {
 
-    console.log('passei pelo open');
+    console.log()
 
     this.pedidoService.read().subscribe(pedidos => {
       this.pedidos = pedidos;

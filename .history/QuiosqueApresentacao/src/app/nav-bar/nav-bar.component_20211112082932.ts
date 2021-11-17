@@ -72,8 +72,8 @@ export class NavBarComponent implements OnInit {
   // tslint:disable-next-line:typedef
   openPopup(): void {
 
-    console.log('passei pelo open');
 
+    
     this.pedidoService.read().subscribe(pedidos => {
       this.pedidos = pedidos;
       this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone === environment.telefone);
