@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Produto } from './produto';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -17,12 +18,11 @@ export class ProdutoService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':  'application/x-www-form-urlencoded',
-      // tslint:disable-next-line:object-literal-key-quotes
-      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br/*',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
 
+      // tslint:disable-next-line:object-literal-key-quotes
+      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
     })
 
   };

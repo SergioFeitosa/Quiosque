@@ -281,7 +281,7 @@
     {
       "produto": {
         "id": 1,
-        "category": "pratododia",
+        "category": "pratododia", 
         "name": "Peixe cioba",
         "code": "XLF-1212",
         "price": 12.99,

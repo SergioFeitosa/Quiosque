@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Carrinho } from './carrinho';
 import { MatSnackBar} from '@angular/material/snack-bar';
@@ -20,7 +20,16 @@ export class CarrinhoService {
 
   baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/carts';
 
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/x-www-form-urlencoded',
+      // tslint:disable-next-line:object-literal-key-quotes
+      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br/*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
 
+    })
+  };
   // tslint:disable-next-line:variable-name
   private _listners = new Subject<any>();
 
@@ -34,7 +43,7 @@ export class CarrinhoService {
   }
 
   create(carrinho: Carrinho): Observable<Carrinho>{
-    return this.http.post<Carrinho>(this.baseUrl, carrinho);
+    return this.http.post<Carrinho>(this.baseUrl, carrinho, this.httpOptions);
 
   }
 
@@ -45,7 +54,7 @@ export class CarrinhoService {
   }
 
   read(): Observable<Carrinho[]> {
-    return this.http.get<Carrinho[]>(this.baseUrl);
+    return this.http.get<Carrinho[]>(this.baseUrl, this.httpOptions);
 
   }
 
