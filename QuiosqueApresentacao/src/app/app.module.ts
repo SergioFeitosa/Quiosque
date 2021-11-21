@@ -70,63 +70,6 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ModalModule,
     MatSnackBarModule,
     NgxMaskModule.forRoot(),
-    RouterModule.forRoot([
-      {
-        path: '', redirectTo: 'cardapioPrincipal', pathMatch: 'full'
-      },
-      {
-        path: 'cardapioPrincipal', component: CardapioPrincipalComponent
-      },
-      {
-        path: 'produto/:categoryId', component: ProdutoListComponent
-      },
-      {
-        path: 'carrinho', component: CarrinhoListComponent
-      },
-      {
-        path: 'carrinho/:id', component: CarrinhoListComponent
-      },
-      {
-        path: 'carrinho/telefone/:telefone', component: CarrinhoListComponent
-      },
-      {
-        path: 'carrinho/update/:id', component: CarrinhoUpdateComponent
-      },
-      {
-        path: 'carrinho/delete/:id', component: CarrinhoDeleteComponent
-      },
-      {
-        path: 'pedido', component: PedidoListComponent
-      },
-      {
-        path: 'pedido/:id', component: PedidoListComponent
-      },
-      {
-        path: 'pedido/telefone/:telefone', component: PedidoListComponent
-      },
-      {
-        path: 'pedido/update/:id', component: PedidoUpdateComponent
-      },
-      {
-        path: 'pedido/delete/:id', component: PedidoDeleteComponent
-      },
-      {
-        path: 'entrega', component: EntregaListComponent
-      },
-      {
-        path: 'entrega/update/:id', component: EntregaUpdateComponent
-      },
-      {
-        path: 'conta', component: ContaListComponent
-      },
-      {
-        path: 'fechamento', component: FechamentoListComponent
-      },
-      {
-        path: '**', component: Error404Component
-      }
-
-    ]),
     NoopAnimationsModule
   ],
   providers: [],

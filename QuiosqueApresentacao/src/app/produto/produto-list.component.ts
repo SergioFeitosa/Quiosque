@@ -101,7 +101,7 @@ export class ProdutoListComponent implements OnInit {
       this.carrinho.releaseDate = new Date();
 
       this.carrinhoService.create(this.carrinho).subscribe(() => {
-        this.carrinhoService.showMessage('Produto colocado no carrinho');
+        this.carrinhoService.showMessage('Produto adicionado no carrinho');
       });
     });
 

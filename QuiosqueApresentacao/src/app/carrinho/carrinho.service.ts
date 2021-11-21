@@ -22,10 +22,10 @@ export class CarrinhoService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type':  'application/x-www-form-urlencoded',
+
       // tslint:disable-next-line:object-literal-key-quotes
-      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br/*',
-      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br',
+      'Access-Control-Allow-Headers': 'Authorization, X-Requested-With, Content-Type, Accept',
       'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
 
     })
@@ -49,7 +49,7 @@ export class CarrinhoService {
 
   update(carrinho: Carrinho): Observable<Carrinho>{
     const url = `${this.baseUrl}/${carrinho.id}`;
-    return this.http.put<Carrinho>(url, carrinho);
+    return this.http.put<Carrinho>(url, carrinho, this.httpOptions);
 
   }
 
@@ -60,12 +60,12 @@ export class CarrinhoService {
 
   readById(carrinhoId: number): Observable<Carrinho> {
     const url = `${this.baseUrl}/${carrinhoId}`;
-    return this.http.get<Carrinho>(url);
+    return this.http.get<Carrinho>(url, this.httpOptions);
   }
 
   delete(carrinhoId: number): Observable<Carrinho> {
     const url = `${this.baseUrl}/${carrinhoId}`;
-    return this.http.delete<Carrinho>(url);
+    return this.http.delete<Carrinho>(url, this.httpOptions);
   }
 
 }

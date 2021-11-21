@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Injectable } from '@angular/core';
+import { Injectable, Type } from '@angular/core';
 import { Produto } from './produto';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -16,13 +16,20 @@ export class ProdutoService {
 
   baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/products';
 
+
+  headers: {'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'};
+
+
   httpOptions = {
     headers: new HttpHeaders({
 
       // tslint:disable-next-line:object-literal-key-quotes
       'Access-Control-Allow-Origin': 'https://www.sgpn.com.br',
-      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Headers': 'Authorization, X-Requested-With, Content-Type, Accept',
       'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
+
     })
 
   };
@@ -53,7 +60,7 @@ export class ProdutoService {
 
   readById(produtoId: number): Observable<Produto> {
     const url = `${this.baseUrl}/${produtoId}`;
-    return this.http.get<Produto>(url);
+    return this.http.get<Produto>(url, this.httpOptions);
   }
 
 }
