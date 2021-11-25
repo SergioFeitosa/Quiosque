@@ -13,26 +13,9 @@ export class ProdutoService {
 
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/products";
+  // baseUrl = 'http://localhost:8080/quiosqueBackend/products';
 
   baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/products';
-
-
-  headers: {'Content-Type': 'application/json',
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT'};
-
-
-  httpOptions = {
-    headers: new HttpHeaders({
-
-      // tslint:disable-next-line:object-literal-key-quotes
-      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br',
-      'Access-Control-Allow-Headers': 'Authorization, X-Requested-With, Content-Type, Accept',
-      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
-
-    })
-
-  };
 
   constructor(private snackBar: MatSnackBar,
               private http: HttpClient) {
@@ -54,13 +37,13 @@ export class ProdutoService {
   }
 
   read(): Observable<Produto[]> {
-    return this.http.get<Produto[]>(this.baseUrl, this.httpOptions);
+    return this.http.get<Produto[]>(this.baseUrl);
 
   }
 
   readById(produtoId: number): Observable<Produto> {
     const url = `${this.baseUrl}/${produtoId}`;
-    return this.http.get<Produto>(url, this.httpOptions);
+    return this.http.get<Produto>(url);
   }
 
 }

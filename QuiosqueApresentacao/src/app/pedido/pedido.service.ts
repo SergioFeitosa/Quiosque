@@ -11,6 +11,7 @@ export class PedidoService {
 
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/pedidos";
+  // baseUrl = 'http://localhost:8080/quiosqueBackend/orders';
 
   baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/orders';
 

@@ -15,21 +15,12 @@ export class CarrinhoService {
   constructor(private snackBar: MatSnackBar,
               private http: HttpClient) {}
 
+
   // tslint:disable-next-line:quotemark
-  // baseUrl = "http://localhost:3001/carrinhos";
+  // baseUrl = 'http://localhost:8080/quiosqueBackend/carts';
 
   baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/carts';
 
-  httpOptions = {
-    headers: new HttpHeaders({
-
-      // tslint:disable-next-line:object-literal-key-quotes
-      'Access-Control-Allow-Origin': 'https://www.sgpn.com.br',
-      'Access-Control-Allow-Headers': 'Authorization, X-Requested-With, Content-Type, Accept',
-      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
-
-    })
-  };
   // tslint:disable-next-line:variable-name
   private _listners = new Subject<any>();
 
@@ -43,29 +34,30 @@ export class CarrinhoService {
   }
 
   create(carrinho: Carrinho): Observable<Carrinho>{
-    return this.http.post<Carrinho>(this.baseUrl, carrinho, this.httpOptions);
+
+    return this.http.post<Carrinho>(this.baseUrl, carrinho);
 
   }
 
   update(carrinho: Carrinho): Observable<Carrinho>{
     const url = `${this.baseUrl}/${carrinho.id}`;
-    return this.http.put<Carrinho>(url, carrinho, this.httpOptions);
+    return this.http.put<Carrinho>(url, carrinho);
 
   }
 
   read(): Observable<Carrinho[]> {
-    return this.http.get<Carrinho[]>(this.baseUrl, this.httpOptions);
+    return this.http.get<Carrinho[]>(this.baseUrl);
 
   }
 
   readById(carrinhoId: number): Observable<Carrinho> {
     const url = `${this.baseUrl}/${carrinhoId}`;
-    return this.http.get<Carrinho>(url, this.httpOptions);
+    return this.http.get<Carrinho>(url);
   }
 
   delete(carrinhoId: number): Observable<Carrinho> {
     const url = `${this.baseUrl}/${carrinhoId}`;
-    return this.http.delete<Carrinho>(url, this.httpOptions);
+    return this.http.delete<Carrinho>(url);
   }
 
 }
