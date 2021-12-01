@@ -23,25 +23,25 @@
     <tbody>
       <tr *ngFor='let produto of filteredProdutos'>
         <td style='width: 5%'>
-          <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+          <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
             alt="..."
             width="50"
             height="50">
         </td>
-        <td style='width: 30%'>{{ produto.name }} </td>
-        <td style='width: 5%'>{{ produto.price }} </td>
-        <td style='width: 10%'>{{ produto.preparationTime }} </td>
+        <td style='width: 30%'>{{ produto.nome }} </td>
+        <td style='width: 5%'>{{ produto.preco }} </td>
+        <td style='width: 10%'>{{ produto.tempoPreparacao }} </td>
         <td style='width: 5%'>
-          <app-star [rating]="produto.rating"></app-star>
+          <app-star [rating]="produto.avaliacao"></app-star>
         </td>
         <td style='width: 10%' class="text-center">
           <button (click)="openPopup( produto.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img
+            <img src='/assets/images/lupa.jpg' class="figure-img
               img-fluid rounded" alt="..." width="50"
               height="25">
           </button>
           <button (click)="carrinhoCreate( produto.id )">
-            <img src='/quiosque/assets/images/carrinho.jpg'  class="figure-img img-fluid
+            <img src='/assets/images/carrinho.jpg'  class="figure-img img-fluid
               rounded" alt="..." width="50"
               height="25">
           </button>
@@ -63,20 +63,20 @@
     <tbody>
       <tr *ngFor='let produto of filteredProdutos'>
         <td style='width: 10%'>
-          <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+          <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
             alt="..."
             width="50"
             height="50">
         </td>
-        <td style='width: 30%'>{{ produto.name }} </td>
+        <td style='width: 30%'>{{ produto.nome }} </td>
         <td style='width: 10%' class="text-center">
           <button (click)="openPopup( produto.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img
+            <img src='/assets/images/lupa.jpg' class="figure-img
               img-fluid rounded" alt="..." width="50"
               height="25">
           </button>
           <button (click)="carrinhoCreate( produto.id )">
-            <img src='/quiosque/assets/images/carrinho.jpg'  class="figure-img img-fluid
+            <img src='/assets/images/carrinho.jpg'  class="figure-img img-fluid
               rounded" alt="..." width="50"
               height="25">
           </button>
@@ -101,29 +101,29 @@
         </button>
       </div>
       <div class="modal-body row">
-        Avaliação: <app-star [rating]="produto.rating"></app-star>
+        Avaliação: <app-star [rating]="produto.avaliacao"></app-star>
       </div>
       <div class="modal-body row">
-        <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+        <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
           alt="..."
           width="400"
           height="400">
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Nome:</span>
-        <span>{{ produto.name }}</span>
+        <span>{{ produto.nome }}</span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Descrição:</span>
-        <span> {{ produto.description }} </span>
+        <span> {{ produto.descricao }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Preço:</span>
-        <span>{{ produto.price }} </span>
+        <span>{{ produto.preco }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Tempo de Preparação:</span>
-        <span>{{ produto.preparationTime }} </span>
+        <span>{{ produto.tempoPreparacao }} </span>
       </div>
 
       <div class="modal-body">

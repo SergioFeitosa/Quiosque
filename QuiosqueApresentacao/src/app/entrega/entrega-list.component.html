@@ -29,7 +29,7 @@
     <tbody>
       <tr *ngFor='let entrega of filteredEntregas' class="cols">
         <td>
-          <img [src]='entrega.pedido.produto.imageUrl' class="figure-img
+          <img [src]='entrega.pedido.produto.imagemUrl' class="figure-img
             img-fluid
             rounded"
             alt="..."
@@ -37,22 +37,23 @@
             height="70">
         </td>
         <td style='color: red'>{{ entrega.pedido.quantidade }} </td>
-        <td>{{ entrega.pedido.produto.name }} </td>
+        <td>{{ entrega.pedido.produto.nome }} </td>
         <td style='color: red'>{{ entrega.pedido.observacao }} </td>
         <td>{{ entrega.pedido.telefone }} </td>
         <td>{{ entrega.pedido.local }} </td>
         <td>{{ entrega.pedido.isencao }} </td>
-        <td>{{ entrega.pedido.releaseDate | date:'hh:mm:ss' }} </td>
-        <td>{{ entrega.entregaDate | date:'hh:mm:ss' }} </td>
+        <td>{{ entrega.pedido.dataCriacao | date:'hh:mm:ss' }} </td>
+        <td>{{ entrega.dataCriacao | date:'hh:mm:ss' }} </td>
         <td>
           <button (click)="openPopup( entrega.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink="/entrega/update/{{ entrega.id }}"
-                  [disabled]=" (telefone == '99999999999' || telefone == '99999999996') ? false : true">
-            <img src='/quiosque/assets/images/guardasol.jpg' class="figure-img img-fluid
+            [disabled]="(telefone == '99999999999' || telefone == '99999999996')
+            ? false : true">
+            <img src='/assets/images/guardasol.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button></td>
@@ -72,25 +73,27 @@
     <tbody>
       <tr *ngFor='let entrega of filteredEntregas' class="cols">
         <td>
-          <img [src]='entrega.pedido.produto.imageUrl' class="figure-img
+          <img [src]='entrega.pedido.produto.imagemUrl' class="figure-img
             img-fluid
             rounded"
             alt="..."
             width="100"
             height="70">
         </td>
-        <td>{{ entrega.pedido.produto.name }} </td>
+        <td>{{ entrega.pedido.produto.nome }} </td>
         <td>
           <button (click)="openPopup( entrega.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink="/entrega/update/{{ entrega.id }}"
-                  [disabled]=" (telefone == '99999999999' || telefone == '99999999996') ? false : true">
-            <img src='/quiosque/assets/images/guardasol.jpg' class="figure-img img-fluid
+            [disabled]="(telefone == '99999999999' || telefone == '99999999996')
+            ? false : true">
+            <img src='/assets/images/guardasol.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25" height="25">
-          </button></td>
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -110,10 +113,10 @@
         </button>
       </div>
       <div class="modal-body row">
-        Avaliação: <app-star [rating]="produto.rating"></app-star>
+        Avaliação: <app-star [rating]="produto.avaliacao"></app-star>
       </div>
       <div class="modal-body row">
-        <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+        <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
           alt="..."
           width="400"
           height="400">
@@ -124,7 +127,7 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Nome:</span>
-        <span>{{ produto.name }}</span>
+        <span>{{ produto.nome }}</span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Observação:</span>
@@ -132,26 +135,26 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Descrição:</span>
-        <span> {{ produto.description }} </span>
+        <span> {{ produto.descricao }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Preço:</span>
-        <span>{{ produto.price }} </span>
+        <span>{{ produto.preco }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Tempo de Preparação:</span>
-        <span>{{ produto.preparationTime }} </span>
+        <span>{{ produto.tempoPreparacao }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Horário do Pedido:</span>
-        <span>{{ pedido.releaseDate  | date:'hh:mm:ss' }} </span>
+        <span>{{ pedido.dataCriacao | date:'hh:mm:ss' }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Horário da Entrega:</span>
-        <span>{{ entrega.entregaDate  | date:'hh:mm:ss'  }} </span>
+        <span>{{ entrega.dataCriacao | date:'hh:mm:ss' }} </span>
       </div>
 
-    <div class="modal-body">
+      <div class="modal-body">
         <p>Os ingredientes encontrados na refeição são:</p>
         <ul>
           <li>alho</li>

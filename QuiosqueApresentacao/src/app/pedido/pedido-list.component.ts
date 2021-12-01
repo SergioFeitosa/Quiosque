@@ -60,7 +60,7 @@ export class PedidoListComponent implements OnInit {
       this.pedidoService.read().subscribe(pedidos => {
         this.pedidos = pedidos;
         this.filteredPedidos = this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
+          .filter((pedido: Pedido) => pedido.enviado !== true);
       });
 
       this.updateSubscription = interval(5000).subscribe(
@@ -69,7 +69,7 @@ export class PedidoListComponent implements OnInit {
           this.pedidoService.read().subscribe(pedidos => {
             this.pedidos = pedidos;
             this.filteredPedidos = this.pedidos
-              .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
+              .filter((pedido: Pedido) => pedido.enviado !== true);
           });
         });
 
@@ -77,8 +77,8 @@ export class PedidoListComponent implements OnInit {
 
       this.pedidoService.read().subscribe(pedidos => {
         this.pedidos = pedidos;
-        this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone === environment.telefone)
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true);
+        this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone - environment.telefone === 0)
+          .filter((pedido: Pedido) => pedido.enviado !== true);
       });
     }
 
@@ -96,16 +96,16 @@ export class PedidoListComponent implements OnInit {
 
       this.filteredPedidos =
         this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true)
-          .filter((pedido: Pedido) => pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+          .filter((pedido: Pedido) => pedido.enviado !== true)
+          .filter((pedido: Pedido) => pedido.produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
     } else {
 
       this.filteredPedidos =
         this.pedidos
-          .filter((pedido: Pedido) => pedido.enviadoEntrega !== true)
-          .filter((pedido: Pedido) => pedido.telefone === environment.telefone)
-          .filter((pedido: Pedido) => pedido.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+          .filter((pedido: Pedido) => pedido.enviado !== true)
+          .filter((pedido: Pedido) => pedido.telefone - environment.telefone === 0)
+          .filter((pedido: Pedido) => pedido.produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
     }
   }
@@ -118,13 +118,15 @@ export class PedidoListComponent implements OnInit {
     this.pedidoService.readById(pedidoId).subscribe(pedido => {
       this.pedido = pedido;
 
-      if (this.pedido.enviadoEntrega !== true) {
+      if (this.pedido.enviado !== true) {
 
-        this.pedido.enviadoEntrega = true;
+        this.pedido.enviado = true;
         this.atualizarPedido(pedido);
 
         this.entrega.pedido = pedido;
-        this.entrega.entregaDate = null;
+        this.entrega.dataCriacao = null;
+        this.entrega.observacao = this.pedido.observacao;
+        this.entrega.quantidade = this.pedido.quantidade;
 
         this.entregaService.create(this.entrega).subscribe(() => {
           this.entregaService.showMessage('Entrega solicitada');

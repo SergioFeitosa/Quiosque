@@ -5,44 +5,48 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import com.sunnycoast.carrinho.model.Cart;
+import com.sunnycoast.pedido.model.Pedido;
 
 import lombok.Data;
 
 @Data
 
 @Entity
-public class Product {
-    
+public class Produto {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "produto_id")
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String nome;
 
     @Column(nullable = false)
-    private String description;
+    private String descricao;
 
     @Column(nullable = false)
-    private String category;
+    private String categoria;
 
     @Column(nullable = false)
-    private String code;
+    private String codigo;
 
     @Column(nullable = false)
-    private Float price;
+    private Float preco;
 
     @Column(nullable = false)
-    private String imageUrl;
+    private String imagemUrl;
 
     @Column(nullable = false)
-    private String preparationTime;
+    private String tempoPreparacao;
 
     @Column(nullable = false)
-    private Float rating;
+    private Float avaliacao;
 
     @Column(nullable = false)
-    private String releaseDate;
-
+    private String dataCriacao;
 
 }

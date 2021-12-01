@@ -2,9 +2,9 @@ import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from './produto.service';
 import { Component, OnInit } from '@angular/core';
 import { Produto } from './produto';
-import { environment } from 'src/environments/environment';
 import { CarrinhoService } from '../carrinho/carrinho.service';
 import { Carrinho } from '../carrinho/carrinho';
+import { environment } from 'src/environments/environment';
 @Component({
   templateUrl: './produto-list.component.html',
 })
@@ -47,7 +47,7 @@ export class ProdutoListComponent implements OnInit {
 
     this.produtoService.read().subscribe(products => {
       this.produtos = products.filter((produto: Produto) =>
-        produto.category.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
+        produto.categoria.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
       this.filteredProdutos = this.produtos;
     });
 
@@ -62,7 +62,7 @@ export class ProdutoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredProdutos =
-      this.produtos.filter((produto: Produto) => produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+      this.produtos.filter((produto: Produto) => produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
   // tslint:disable-next-line:quotemark
@@ -86,19 +86,21 @@ export class ProdutoListComponent implements OnInit {
     this.displayStyle = 'none';
   }
 
-
   carrinhoCreate(produtoId: number): void {
 
     // tslint:disable-next-line:no-unused-expression
     this.produtoService.readById(produtoId).subscribe(product => {
       this.produto = product;
-      this.carrinho.produto = this.produto;
-      this.carrinho.quantidade = 1;
-      this.carrinho.telefone = environment.telefone;
-      this.carrinho.local = environment.local;
-      this.carrinho.observacao = '';
+
+      this.carrinho.enviado = false;
       this.carrinho.isencao = false;
-      this.carrinho.releaseDate = new Date();
+      this.carrinho.local = 'mesa0001';
+      this.carrinho.observacao = 'teste obs';
+      this.carrinho.quantidade = 1;
+      this.carrinho.dataCriacao = new Date();
+      this.carrinho.telefone = environment.telefone;
+
+      this.carrinho.produto = this.produto;
 
       this.carrinhoService.create(this.carrinho).subscribe(() => {
         this.carrinhoService.showMessage('Produto adicionado no carrinho');

@@ -3,11 +3,14 @@ package com.sunnycoast.produto.controller;
 import java.util.List;
 import java.util.Optional;
 
-import com.sunnycoast.produto.model.Product;
-import com.sunnycoast.produto.repository.ProductRepository;
+import com.sunnycoast.produto.model.Produto;
+import com.sunnycoast.produto.model.Produto;
+import com.sunnycoast.produto.model.Produto;
+import com.sunnycoast.produto.repository.ProdutoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,42 +27,43 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping(value="/products")
-public class ProductController {
+@RequestMapping(value="/produtos")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+public class ProdutoController {
 
     @Autowired
-    private ProductRepository productRepository;
+    private ProdutoRepository produtoRepository;
 
     @GetMapping
-    public List<Product> listar() {
-        return productRepository.findAll();
+    public List<Produto> listar() {
+        return produtoRepository.findAll();
     }
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product adicionar(@RequestBody Product produto) {
-        return productRepository.save(produto); 
+    public Produto adicionar(@RequestBody Produto produto) {
+        return produtoRepository.save(produto); 
     }
     
     @GetMapping(path = "/{id}")
-    public Optional<Product> consultar(@PathVariable("id") Long id) {
-        return productRepository.findById(id);
+    public Optional<Produto> consultar(@PathVariable("id") Long id) {
+        return produtoRepository.findById(id);
     }
  
     @DeleteMapping(path = "/{id}")
     public void deletar(@PathVariable("id") Long id) {
-      productRepository.deleteById(id);
+      produtoRepository.deleteById(id);
     }
     @PutMapping(path = "/{id}")
-    public Product alterar(@RequestBody Product newProduct, @PathVariable Long id) {
-        return productRepository.findById(id)
+    public Produto alterar(@RequestBody Produto newProduto, @PathVariable Long id) {
+        return produtoRepository.findById(id)
       .map(produto -> {
-        produto.setName(newProduct.getName());
-        return productRepository.save(produto);
+        produto.setNome(newProduto.getNome());
+        return produtoRepository.save(produto);
       })
       .orElseGet(() -> {
-        newProduct.setId(id);
-        return productRepository.save(newProduct);
+        newProduto.setId(id);
+        return produtoRepository.save(newProduto);
       });
     }
  

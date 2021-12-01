@@ -5,6 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import com.sunnycoast.pedido.model.Pedido;
 
 import lombok.Data;
 
@@ -15,29 +19,21 @@ public class Delivery {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="delivery_id")
     private Long id;
 
     @Column(nullable = false)
     private Long quantidade;
 
-    @Column(nullable = false)
-    private Long telefone;
-
-    @Column(nullable = false)
-    private String local;
-
-    @Column(nullable = false)
+    @Column
     private String observacao;
 
-    @Column(nullable = false)
-    private String isencao;
+    @Column
+    private String dataCriacao;
 
-    @Column(nullable = false)
-    private String enviado;
+    @OneToOne
+    @JoinColumn(name = "pedido_id")
+    private Pedido pedido;
 
-    @Column(nullable = false)
-    private String releaseDate;
-
-    private Long productId;
 
 }

@@ -86,7 +86,7 @@ export class NavBarComponent implements OnInit {
 
           this.conta.pedido = pedido;
           this.conta.quantidade = 1;
-          this.conta.valorProdutoUnitario =  pedido.produto.price;
+          this.conta.valorProdutoUnitario =  pedido.produto.preco;
           this.conta.valorProdutoTotal = this.conta.valorProdutoUnitario * this.conta.quantidade;
           this.contaValorTotal = this.contaValorTotal + this.conta.valorProdutoTotal;
           this.contas.push(this.conta);

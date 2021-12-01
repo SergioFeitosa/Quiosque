@@ -3,11 +3,12 @@ package com.sunnycoast.pedido.controller;
 import java.util.List;
 import java.util.Optional;
 
-import com.sunnycoast.pedido.model.Orders;
+import com.sunnycoast.pedido.model.Pedido;
 import com.sunnycoast.pedido.repository.OrderRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,25 +25,26 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping(value="/orders")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping(value="/pedidos")
 public class OrderController {
 
     @Autowired
     private OrderRepository orderRepository;
 
     @GetMapping
-    public List<Orders> listar() {
+    public List<Pedido> listar() {
         return orderRepository.findAll();
     }
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Orders adicionar(@RequestBody Orders pedido) {
+    public Pedido adicionar(@RequestBody Pedido pedido) {
         return orderRepository.save(pedido); 
     }
     
     @GetMapping(path = "/{id}")
-    public Optional<Orders> consultar(@PathVariable("id") Long id) {
+    public Optional<Pedido> consultar(@PathVariable("id") Long id) {
         return orderRepository.findById(id);
     }
  
@@ -51,11 +53,12 @@ public class OrderController {
       orderRepository.deleteById(id);
     }
     @PutMapping(path = "/{id}")
-    public Orders alterar(@RequestBody Orders newOrder, @PathVariable Long id) {
+    public Pedido alterar(@RequestBody Pedido newOrder, @PathVariable Long id) {
         return orderRepository.findById(id)
       .map(pedido -> {
         pedido.setQuantidade(newOrder.getQuantidade());
         pedido.setObservacao(newOrder.getObservacao());
+        pedido.setEnviado(newOrder.isEnviado());
         return orderRepository.save(pedido);
       })
       .orElseGet(() -> {

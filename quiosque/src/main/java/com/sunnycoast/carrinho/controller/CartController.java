@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import com.sunnycoast.carrinho.model.Cart;
-
 import com.sunnycoast.carrinho.service.CartService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,8 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "/carts")
 public class CartController {
+
 
   @Autowired
   private CartService cartService;
@@ -52,8 +54,8 @@ public class CartController {
   }
 
   @PutMapping(path = "/{id}")
-  public Cart alterar(@RequestBody Cart newCart, @PathVariable Long id) {
-    return cartService.alterar(newCart, id);
+  public Cart alterar(@RequestBody Cart newCarrinho, @PathVariable Long id) {
+    return cartService.alterar(newCarrinho, id);
   }
 
 }

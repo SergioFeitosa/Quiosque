@@ -28,7 +28,7 @@
     <tbody>
       <tr *ngFor='let pedido of filteredPedidos; let i= index'
           [ngStyle]="{backgroundColor: i > 2 ? 'transparent' : 'yellow' }">
-        <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
+        <img [src]='pedido.produto.imagemUrl' class="figure-img img-fluid
           rounded"
           alt="..."
           width="100"
@@ -53,19 +53,19 @@
         <td>{{ pedido.releaseDate | date:'hh:mm:ss'}} </td>
         <td class="text-center">
           <button (click)="openPopup( pedido.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="entregaCreate( pedido.id )"
                   [disabled]=" (telefone == '99999999999' || telefone == '99999999998') ? false : true">
-            <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
@@ -89,7 +89,7 @@
           [ngStyle]="{backgroundColor: i > 2 ? 'transparent' : 'yellow' }">
 
         <td>
-          <img [src]='pedido.produto.imageUrl' class="figure-img img-fluid
+          <img [src]='pedido.produto.imagemUrl' class="figure-img img-fluid
             rounded"
             alt="..."
             width="100"
@@ -98,19 +98,19 @@
         <td>{{ pedido.produto.name }} </td>
         <td class="text-center">
           <button (click)="openPopup( pedido.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="entregaCreate( pedido.id )"
                   [disabled]=" (telefone == '99999999999' || telefone == '99999999998') ? false : true">
-            <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
@@ -136,11 +136,11 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Avaliação:</span>
-        <span><app-star [rating]="produto.rating"></app-star></span>
+        <span><app-star [rating]="produto.avaliacao"></app-star></span>
 
       </div>
       <div class="modal-body row">
-        <img [src]='produto.imageUrl' class="figure-img img-fluid rounded"
+        <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
           alt="..."
           width="400"
           height="400">
@@ -152,7 +152,7 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Nome:</span>
-        <span>{{ produto.name }}</span>
+        <span>{{ produto.nome }}</span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Observação:</span>
@@ -161,15 +161,15 @@
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Descrição:</span>
-        <span> {{ produto.description }} </span>
+        <span> {{ produto.descricao }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Preço:</span>
-        <span>{{ produto.price }} </span>
+        <span>{{ produto.preco }} </span>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Tempo de Preparação:</span>
-        <span>{{ produto.preparationTime }} </span>
+        <span>{{ produto.tempoPreparacao }} </span>
       </div>
 
       <div class="modal-body">

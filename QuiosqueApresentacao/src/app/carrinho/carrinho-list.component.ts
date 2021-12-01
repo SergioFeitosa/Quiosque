@@ -56,7 +56,7 @@ export class CarrinhoListComponent implements OnInit {
       this.carrinhoService.read().subscribe(carrinhos => {
         this.carrinhos = carrinhos;
         this.filteredCarrinhos = this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+          .filter((carrinho: Carrinho) => carrinho.enviado !== true);
       });
 
       this.updateSubscription = interval(5000).subscribe(
@@ -65,7 +65,7 @@ export class CarrinhoListComponent implements OnInit {
           this.carrinhoService.read().subscribe(carrinhos => {
             this.carrinhos = carrinhos;
             this.filteredCarrinhos = this.carrinhos
-              .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+              .filter((carrinho: Carrinho) => carrinho.enviado !== true);
           });
       });
     } else {
@@ -73,8 +73,8 @@ export class CarrinhoListComponent implements OnInit {
       this.carrinhoService.read().subscribe(carrinhos => {
         this.carrinhos = carrinhos;
         this.filteredCarrinhos = this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true);
+          .filter((carrinho: Carrinho) => environment.telefone - carrinho.telefone === 0)
+          .filter((carrinho: Carrinho) => carrinho.enviado !== true);
 
       });
     }
@@ -92,16 +92,16 @@ export class CarrinhoListComponent implements OnInit {
 
       this.filteredCarrinhos =
         this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
-          .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+          .filter((carrinho: Carrinho) => carrinho.enviado !== true)
+          .filter((carrinho: Carrinho) => carrinho.produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
     } else {
 
       this.filteredCarrinhos =
         this.carrinhos
-          .filter((carrinho: Carrinho) => carrinho.enviadoPedido !== true)
-          .filter((carrinho: Carrinho) => carrinho.telefone === environment.telefone)
-          .filter((carrinho: Carrinho) => carrinho.produto.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+          .filter((carrinho: Carrinho) => carrinho.enviado !== true)
+          .filter((carrinho: Carrinho) => environment.telefone - carrinho.telefone === 0)
+          .filter((carrinho: Carrinho) => carrinho.produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
     }
   }
@@ -138,20 +138,21 @@ export class CarrinhoListComponent implements OnInit {
     this.carrinhoService.readById(carrinhoId).subscribe(carrinho => {
       this.carrinho = carrinho;
 
-      if (this.carrinho.enviadoPedido !== true) {
+      if (this.carrinho.enviado !== true) {
 
-        this.carrinho.enviadoPedido = true;
+        this.carrinho.enviado = true;
         this.atualizarCarrinho(carrinho);
 
 
-        this.pedido.produto = this.carrinho.produto;
         this.pedido.telefone = this.carrinho.telefone;
         this.pedido.local = this.carrinho.local;
         this.pedido.quantidade = this.carrinho.quantidade;
         this.pedido.observacao = this.carrinho.observacao;
         this.pedido.isencao = this.carrinho.isencao;
-        this.pedido.releaseDate = this.carrinho.releaseDate;
-        this.pedido.enviadoEntrega = false;
+        this.pedido.dataCriacao = this.carrinho.dataCriacao;
+        this.pedido.enviado = false;
+
+        this.pedido.produto = this.carrinho.produto;
 
         this.pedidoService.create(this.pedido).subscribe(() => {
           this.pedidoService.showMessage('Pedido solicitado');

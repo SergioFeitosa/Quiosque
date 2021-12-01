@@ -5,16 +5,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.sunnycoast.produto.model.Produto;
 
 import lombok.Data;
 
 @Data
 
 @Entity
+@Table(name = "cart")
 public class Cart {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="cart_id")
     private Long id;
 
     @Column(nullable = false)
@@ -23,10 +30,10 @@ public class Cart {
     @Column(nullable = false)
     private Long telefone;
 
-    @Column(nullable = false)
+    @Column
     private String local;
 
-    @Column(nullable = false)
+    @Column
     private String observacao;
 
     @Column(nullable = false)
@@ -36,8 +43,9 @@ public class Cart {
     private boolean enviado;
 
     @Column(nullable = false)
-    private String releaseDate;
+    private String dataCriacao;
 
-    private Long productId;
-
+    @OneToOne
+    @JoinColumn(name = "produto_id")
+    private Produto produto;
 }

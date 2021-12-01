@@ -8,6 +8,7 @@ import com.sunnycoast.entrega.repository.DeliveryRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value="/deliveries")
 public class DeliveryController {
 
@@ -56,6 +58,7 @@ public class DeliveryController {
       .map(entrega -> {
         entrega.setQuantidade(newDelivery.getQuantidade());
         entrega.setObservacao(newDelivery.getObservacao());
+        entrega.setDataCriacao(newDelivery.getDataCriacao());
         return deliveryRepository.save(entrega);
       })
       .orElseGet(() -> {
