@@ -14,19 +14,29 @@ export class ProdutoService {
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/produtos";
 
-  baseUrl = 'http://localhost:8080/produtos';
+  // baseUrl = 'http://localhost:8080/quiosqueBackend/produtos';
+
+  // baseUrl = 'http://localhost:8080/produtos';
+
+  // baseUrl = 'https://sgpn.com.br/quiosqueBackend/produtos';
+
+  baseUrl = 'https://sgpn.com.br/produtos';
 
   // baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/products';
 
-  constructor(private snackBar: MatSnackBar,
-              private http: HttpClient) {
+
+  produtos: Observable<Produto[]>;
+
+  constructor(
+    private snackBar: MatSnackBar,
+    private http: HttpClient) {
 
   }
 
-    // tslint:disable-next-line:typedef
-    create(produto: Produto): Observable<Produto> {
-      return this.http.post<Produto>(this.baseUrl, produto);
-    }
+  // tslint:disable-next-line:typedef
+  create(produto: Produto): Observable<Produto> {
+    return this.http.post<Produto>(this.baseUrl, produto);
+  }
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, '', {

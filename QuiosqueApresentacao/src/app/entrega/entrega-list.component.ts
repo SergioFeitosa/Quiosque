@@ -55,7 +55,7 @@ export class EntregaListComponent implements OnInit {
 
       this.entregaService.read().subscribe(entregas => {
         this.entregas = entregas;
-        this.filteredEntregas = this.entregas.filter((entrega: Entrega) => entrega.pedido.telefone === environment.telefone);
+        this.filteredEntregas = this.entregas.filter((entrega: Entrega) => entrega.pedido.telefone - environment.telefone === 0);
 
       });
 
@@ -79,7 +79,7 @@ export class EntregaListComponent implements OnInit {
 
       this.filteredEntregas =
         this.entregas
-          .filter((entrega: Entrega) => entrega.pedido.telefone === environment.telefone)
+          .filter((entrega: Entrega) => entrega.pedido.telefone - environment.telefone === 0)
           .filter((entrega: Entrega) => entrega.pedido.produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
 
     }

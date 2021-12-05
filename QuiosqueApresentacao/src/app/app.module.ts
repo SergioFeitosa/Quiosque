@@ -33,6 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { MatButtonModule } from '@angular/material/button';
+
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -61,6 +64,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CarrinhoReadComponent,
     CarrinhoUpdateComponent,
     CarrinhoDeleteComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -70,9 +74,11 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     ModalModule,
     MatSnackBarModule,
     NgxMaskModule.forRoot(),
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatButtonModule,
+    NgMaterialModule,
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

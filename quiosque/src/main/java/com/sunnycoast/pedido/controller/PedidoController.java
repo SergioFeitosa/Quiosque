@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.sunnycoast.pedido.model.Pedido;
-import com.sunnycoast.pedido.repository.OrderRepository;
+import com.sunnycoast.pedido.service.PedidoService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,45 +27,33 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value="/pedidos")
-public class OrderController {
+public class PedidoController {
 
     @Autowired
-    private OrderRepository orderRepository;
+    private PedidoService pedidoService;
 
     @GetMapping
     public List<Pedido> listar() {
-        return orderRepository.findAll();
+        return pedidoService.listar();
     }
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Pedido adicionar(@RequestBody Pedido pedido) {
-        return orderRepository.save(pedido); 
+        return pedidoService.adicionar(pedido); 
     }
     
     @GetMapping(path = "/{id}")
     public Optional<Pedido> consultar(@PathVariable("id") Long id) {
-        return orderRepository.findById(id);
+        return pedidoService.consultar(id);
     }
  
     @DeleteMapping(path = "/{id}")
     public void deletar(@PathVariable("id") Long id) {
-      orderRepository.deleteById(id);
+      pedidoService.deletar(id);
     }
     @PutMapping(path = "/{id}")
-    public Pedido alterar(@RequestBody Pedido newOrder, @PathVariable Long id) {
-        return orderRepository.findById(id)
-      .map(pedido -> {
-        pedido.setQuantidade(newOrder.getQuantidade());
-        pedido.setObservacao(newOrder.getObservacao());
-        pedido.setEnviado(newOrder.isEnviado());
-        return orderRepository.save(pedido);
-      })
-      .orElseGet(() -> {
-        newOrder.setId(id);
-        return orderRepository.save(newOrder);
-      });
+    public Pedido alterar(@RequestBody Pedido newPedido, @PathVariable Long id) {
+        return pedidoService.alterar(newPedido, id);
     }
- 
-    
 }

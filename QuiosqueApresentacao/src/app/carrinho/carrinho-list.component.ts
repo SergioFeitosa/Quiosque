@@ -123,6 +123,10 @@ export class CarrinhoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   closePopup() {
     this.displayStyle = 'none';
+
+    this.atualizarCarrinho(this.carrinho);
+
+
     // tslint:disable-next-line:prefer-const
     let currentUrl = this.router.url;
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
@@ -165,7 +169,7 @@ export class CarrinhoListComponent implements OnInit {
   // tslint:disable-next-line:typedef
   atualizarCarrinho(carrinho: Carrinho) {
     this.carrinhoService.update(carrinho).subscribe(() => {
-      // this.carrinhoService.showMessage('Carrinho Atualizado');
+      this.carrinhoService.showMessage('Carrinho Atualizado');
     });
   }
 }

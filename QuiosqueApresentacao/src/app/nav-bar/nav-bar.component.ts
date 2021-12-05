@@ -7,11 +7,11 @@ import { environment } from 'src/environments/environment';
 import { Conta } from '../conta/conta';
 import { ProdutoService } from '../produto/produto.service';
 import { Produto } from '../produto/produto';
-
-
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.css']
+
 })
 export class NavBarComponent implements OnInit {
 
@@ -76,7 +76,7 @@ export class NavBarComponent implements OnInit {
 
     this.pedidoService.read().subscribe(pedidos => {
       this.pedidos = pedidos;
-      this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone === environment.telefone);
+      this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone - environment.telefone === 0);
 
       this.contaValorTotal = 0;
 

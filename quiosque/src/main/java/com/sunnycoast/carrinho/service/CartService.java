@@ -34,9 +34,6 @@ public class CartService {
   }
 
   public Cart adicionar(@RequestBody Cart cart) {
-
-
-
     return cartRepository.save(cart);
   }
 

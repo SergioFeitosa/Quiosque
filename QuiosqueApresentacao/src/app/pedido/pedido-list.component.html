@@ -39,7 +39,7 @@
                    [disabled]=" i < 3 && (pedido.telefone != '99999999999' && pedido.telefone != '99999999998') ? true : false">
         </td>
 
-        <td>{{ pedido.produto.name }} </td>
+        <td>{{ pedido.produto.nome }} </td>
         <td>{{ pedido.telefone }} </td>
         <td>{{ pedido.local }} </td>
 
@@ -50,22 +50,24 @@
           </td>
 
         <td>{{ pedido.isencao }} </td>
-        <td>{{ pedido.releaseDate | date:'hh:mm:ss'}} </td>
+        <td>{{ pedido.dataCriacao | date:'hh:mm:ss'}} </td>
         <td class="text-center">
-          <button (click)="openPopup( pedido.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
+          <button (click)="openPopup( pedido.id )"
+                  [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
+            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
-              height="25">
+              height="25"
+              >
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
+            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="entregaCreate( pedido.id )"
                   [disabled]=" (telefone == '99999999999' || telefone == '99999999998') ? false : true">
-            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+            <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
@@ -95,22 +97,24 @@
             width="100"
             height="70">
         </td>
-        <td>{{ pedido.produto.name }} </td>
+        <td>{{ pedido.produto.nome }} </td>
         <td class="text-center">
-          <button (click)="openPopup( pedido.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
+          <button (click)="openPopup( pedido.id )"
+                  [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
+            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
-              height="25">
+              height="25"
+              >
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
+            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="entregaCreate( pedido.id )"
                   [disabled]=" (telefone == '99999999999' || telefone == '99999999998') ? false : true">
-            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
+            <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
@@ -148,7 +152,8 @@
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Quantidade:</span>
         <input [(ngModel)]="pedido.quantidade" type="text" style='color: red; width: 50%'  mask='000'
-        (blur)="atualizarPedido(pedido)" class="nav-link">
+        (blur)="atualizarPedido(pedido)" class="nav-link"
+        >
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Nome:</span>

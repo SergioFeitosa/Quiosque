@@ -30,10 +30,19 @@ const routes: Routes = [
         path: 'cardapioPrincipal', component: CardapioPrincipalComponent
       },
       {
-        path: 'produto/:categoryId', component: ProdutoListComponent
+        path: 'carrinho', component: CarrinhoListComponent
       },
       {
-        path: 'carrinho', component: CarrinhoListComponent
+        path: 'pedido', component: PedidoListComponent
+      },
+      {
+        path: 'entrega', component: EntregaListComponent
+      },
+      {
+        path: 'produto/**', component: ProdutoListComponent
+      },
+      {
+        path: 'produto/:categoryId', component: ProdutoListComponent
       },
       {
         path: 'carrinho/:id', component: CarrinhoListComponent
@@ -48,9 +57,6 @@ const routes: Routes = [
         path: 'carrinho/delete/:id', component: CarrinhoDeleteComponent
       },
       {
-        path: 'pedido', component: PedidoListComponent
-      },
-      {
         path: 'pedido/:id', component: PedidoListComponent
       },
       {
@@ -61,9 +67,6 @@ const routes: Routes = [
       },
       {
         path: 'pedido/delete/:id', component: PedidoDeleteComponent
-      },
-      {
-        path: 'entrega', component: EntregaListComponent
       },
       {
         path: 'entrega/update/:id', component: EntregaUpdateComponent
@@ -81,7 +84,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

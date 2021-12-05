@@ -19,7 +19,7 @@
             class="nav-link">Cardapio</a>
         </li>
         <li class="nav-item w-25">
-          <a [routerLink]="'carrinho'" routerLinkActive="active"
+          <a [routerLink]="['/carrinho']" routerLinkActive="active"
             class="nav-link">Carrinho</a>
         </li>
         <li class="nav-item w-25">
@@ -38,6 +38,9 @@
     </div>
   </nav>
 </div>
+<div>
+  <mat-card>Simple card</mat-card>
+</div>
 
 <div
   class="modal" tabindex="-1"
@@ -52,18 +55,17 @@
             0.5rem; width: 40%">
             Minha Conta
           </h4>
-          <button type="button" class="btn btn-danger"
+          <button type="button" class="btn-fab btn-primary"
             style="border: 1px solid black; font-size: 15px; padding: 0.5rem
             0.5rem; width: 30%"
             (click)="closePopup()">
-            Fechar
+            Pedir a Conta
           </button>
-          <button type="button" class="btn btn-danger"
-            style="border: 1px solid black; font-size: 15px; padding: 0.5rem
-            0.5rem; width: 20%"
+          <button mat-mini-fab color="warn"
             (click)="closePopup()">
-            Sair
+            X
           </button>
+
         </div>
         <table class="table table-bordered table-striped">
           <thead>

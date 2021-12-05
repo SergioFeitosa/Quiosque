@@ -19,13 +19,19 @@ export class CarrinhoService {
   constructor(private snackBar: MatSnackBar,
               private http: HttpClient) {}
 
-
   // tslint:disable-next-line:quotemark
-  // baseUrl = 'http://localhost:3001/carrinhos';
+  // baseUrl = "http://localhost:3001/carts";
 
-  baseUrl = 'http://localhost:8080/carts';
+  // baseUrl = 'http://localhost:8080/quiosqueBackend/carts';
+
+  // baseUrl = 'http://localhost:8080/carts';
+
+  // baseUrl = 'https://sgpn.com.br/quiosqueBackend/carts';
+
+  baseUrl = 'https://sgpn.com.br/carts';
 
   // baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/carts';
+
 
   // tslint:disable-next-line:variable-name
   private _listners = new Subject<any>();
@@ -41,6 +47,8 @@ export class CarrinhoService {
 
   create(carrinho: Carrinho): Observable<Carrinho>{
 
+    console.log('teste gravacao carrinho' + carrinho.id + ' ' + carrinho.produto.nome);
+
     return this.http.post<Carrinho>(this.baseUrl, carrinho);
 
   }
@@ -52,7 +60,6 @@ export class CarrinhoService {
   }
 
   read(): Observable<Carrinho[]> {
-
     return this.http.get<Carrinho[]>(this.baseUrl);
   }
 

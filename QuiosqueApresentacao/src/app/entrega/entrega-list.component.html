@@ -46,14 +46,14 @@
         <td>{{ entrega.dataCriacao | date:'hh:mm:ss' }} </td>
         <td>
           <button (click)="openPopup( entrega.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink="/entrega/update/{{ entrega.id }}"
-            [disabled]="(telefone == '99999999999' || telefone == '99999999996')
+            [disabled]="((telefone == '99999999999' || telefone == '99999999996') && entrega.dataCriacao == null)
             ? false : true">
-            <img src='/assets/images/guardasol.jpg' class="figure-img img-fluid
+            <img src='/quiosque/assets/images/guardasol.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button></td>
@@ -83,14 +83,14 @@
         <td>{{ entrega.pedido.produto.nome }} </td>
         <td>
           <button (click)="openPopup( entrega.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink="/entrega/update/{{ entrega.id }}"
-            [disabled]="(telefone == '99999999999' || telefone == '99999999996')
+            [disabled]="((telefone == '99999999999' || telefone == '99999999996') && entrega.dataCriacao == null)
             ? false : true">
-            <img src='/assets/images/guardasol.jpg' class="figure-img img-fluid
+            <img src='/quiosque/assets/images/guardasol.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25" height="25">
           </button>
         </td>

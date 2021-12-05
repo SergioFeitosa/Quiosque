@@ -45,8 +45,8 @@ export class ProdutoListComponent implements OnInit {
 
     this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
 
-    this.produtoService.read().subscribe(products => {
-      this.produtos = products.filter((produto: Produto) =>
+    this.produtoService.read().subscribe(produtos => {
+      this.produtos = produtos.filter((produto: Produto) =>
         produto.categoria.toLocaleLowerCase() === this._categoryId.toLocaleLowerCase());
       this.filteredProdutos = this.produtos;
     });
@@ -62,7 +62,8 @@ export class ProdutoListComponent implements OnInit {
     this._filterBy = value;
 
     this.filteredProdutos =
-      this.produtos.filter((produto: Produto) => produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+      this.produtos.filter((produto: Produto) =>
+      produto.nome.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
   }
 
   // tslint:disable-next-line:quotemark
