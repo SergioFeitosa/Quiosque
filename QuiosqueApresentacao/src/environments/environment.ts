@@ -8,7 +8,12 @@ export const environment = {
   telefone: 0,
   codigo: 123,
   local: 'mesa001',
-  modulo: ''
+  modulo: '',
+  fundoColoridoCardapio: false,
+  fundoColoridoPedido: false,
+  fundoColoridoCozinha: false,
+  fundoColoridoEntrega: false,
+  fundoColoridoConta: false
 
 };
 

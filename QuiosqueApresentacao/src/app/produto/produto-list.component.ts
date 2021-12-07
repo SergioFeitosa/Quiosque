@@ -41,7 +41,13 @@ export class ProdutoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.modulo = 'Produto';
+    this.modulo = 'Cardápio';
+
+    environment.fundoColoridoCardapio = true;
+    environment.fundoColoridoPedido = false;
+    environment.fundoColoridoCozinha = false;
+    environment.fundoColoridoEntrega = false;
+    environment.fundoColoridoConta = false;
 
     this._categoryId = this.activatedRoute.snapshot.paramMap.get('categoryId');
 
@@ -95,7 +101,7 @@ export class ProdutoListComponent implements OnInit {
 
       this.carrinho.enviado = false;
       this.carrinho.isencao = false;
-      this.carrinho.local = 'mesa0001';
+      this.carrinho.local = environment.local;
       this.carrinho.observacao = 'teste obs';
       this.carrinho.quantidade = 1;
       this.carrinho.dataCriacao = new Date();
@@ -104,7 +110,7 @@ export class ProdutoListComponent implements OnInit {
       this.carrinho.produto = this.produto;
 
       this.carrinhoService.create(this.carrinho).subscribe(() => {
-        this.carrinhoService.showMessage('Produto adicionado no carrinho');
+        this.carrinhoService.showMessage('Produto adicionado no pedido');
       });
     });
 

@@ -17,6 +17,8 @@ export class EntregaListComponent implements OnInit {
   telefone: number;
   modulo: string;
 
+  fundoColoridoEntrega: boolean;
+
   // tslint:disable-next-line:variable-name
   _categoryId: string;
 
@@ -43,6 +45,12 @@ export class EntregaListComponent implements OnInit {
 
     this.telefone = +environment.telefone;
     this.modulo = 'Entrega';
+
+    environment.fundoColoridoCardapio = false;
+    environment.fundoColoridoPedido = false;
+    environment.fundoColoridoCozinha = false;
+    environment.fundoColoridoEntrega = true;
+    environment.fundoColoridoConta = false;
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999996) {
 

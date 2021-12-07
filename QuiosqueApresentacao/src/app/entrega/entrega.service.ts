@@ -12,13 +12,13 @@ export class EntregaService {
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/deliveries";
 
-  // baseUrl = 'http://localhost:8080/quiosqueBackend/deliveries';
+  baseUrl = 'http://localhost:8080/quiosqueBackend/deliveries';
 
   // baseUrl = 'http://localhost:8080/deliveries';
 
   // baseUrl = 'https://sgpn.com.br/quiosqueBackend/deliveries';
 
-  baseUrl = 'https://sgpn.com.br/deliveries';
+  // baseUrl = 'https://sgpn.com.br/deliveries';
 
   // baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/deliveries';
 

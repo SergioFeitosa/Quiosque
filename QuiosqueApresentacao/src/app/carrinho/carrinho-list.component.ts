@@ -17,6 +17,7 @@ export class CarrinhoListComponent implements OnInit {
   private updateSubscription: Subscription;
 
   modulo: string;
+  fundoColoridoPedido: boolean;
 
   // tslint:disable-next-line:variable-name
   _categoryId: string;
@@ -49,7 +50,13 @@ export class CarrinhoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.modulo = 'Carrinho';
+    this.modulo = 'Pedido';
+
+    environment.fundoColoridoCardapio = false;
+    environment.fundoColoridoPedido = true;
+    environment.fundoColoridoCozinha = false;
+    environment.fundoColoridoEntrega = false;
+    environment.fundoColoridoConta = false;
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999997) {
 

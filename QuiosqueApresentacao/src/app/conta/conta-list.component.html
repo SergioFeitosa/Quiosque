@@ -1,32 +1,134 @@
-<div class='form-group row'>
 
-  <label class='col-sm-2 col-form-label'>Filter By:</label>
+<app-caminho-menu></app-caminho-menu>
+<br>
+<div class="mobile"  style='background-color: aquamarine; text-align-last: center;'>
+  <span style='font-weight: bolder;'>Módulo: {{ modulo }} </span>
+  <span> </span>
+</div>
 
-  <div class='col-sm-10'>
-    <input [(ngModel)]='filter' class='form-control'>
+<div
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgb(249, 255, 166);">
+      <div class="table-responsive desktop">
+        <div class="modal-header">
+          <h4 class="modal-title"
+            style="font-size: 15px; padding: 0.5rem
+            0.5rem; width: 40%">
+            Minha Conta
+          </h4>
+          <button type="button" class="btn-fab btn-primary"
+            style="border: 1px solid black; font-size: 15px; padding: 0.5rem
+            0.5rem; width: 30%"
+            (click)="closePopup()">
+            Pedir a Conta
+          </button>
+          <button mat-mini-fab color="warn"
+            (click)="closePopup()">
+            X
+          </button>
+
+        </div>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="table-primary">
+              <th style="border: 1px solid black; font-size: 16px;"> qtde
+              </th>
+              <th style="border: 1px solid black; font-size: 16px;"> nome
+                &nbsp;&nbsp;</th>
+              <th style="border: 1px solid black; font-size: 16px;"> unitário
+                &nbsp;&nbsp;</th>
+              <th style="border: 1px solid black; font-size: 16px;"> total
+                prod
+              </th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor='let conta of contas'>
+              <td style="border: 1px solid black; font-size: 16px;">{{
+                conta.quantidade }}
+                &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; font-size: 16px;">{{
+                conta.pedido.produto.nome }} &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; font-size: 16px;">{{
+                conta.valorProdutoUnitario
+                | currency:'R$' }} &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; font-size: 16px;;">{{
+                conta.valorProdutoTotal |
+                currency:'R$' }} &nbsp;&nbsp;</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="table-primary">
+              <td colspan="3" style="border: 1px solid black; text-align:
+                right;"> TOTAL &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; text-align: right;">{{
+                contaValorTotal | currency:'R$' }} &nbsp;&nbsp;</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="table-responsive mobile">
+        <div class="modal-header">
+          <h4 class="modal-title"
+            style="font-size: 10px; padding: 0.5rem
+            0.5rem; width: 40%">
+            Minha Conta
+          </h4>
+          <button type="button" class="btn btn-danger"
+            style="border: 1px solid black; font-size: 10px; padding: 0.5rem
+            0.5rem; width: 30%"
+            (click)="closePopup()">
+            Fechar
+          </button>
+          <button type="button" class="btn btn-danger"
+            style="border: 1px solid black; font-size: 10px; padding: 0.5rem
+            0.5rem; width: 20%"
+            (click)="closePopup()">
+            Sair
+          </button>
+        </div>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr class="table-primary">
+              <th style="border: 1px solid black; font-size: 10px;"> qtde
+              </th>
+              <th style="border: 1px solid black; font-size: 10px;"> nome
+                &nbsp;&nbsp;</th>
+              <th style="border: 1px solid black; font-size: 10px;"> unitário
+                &nbsp;&nbsp;</th>
+              <th style="border: 1px solid black; font-size: 10px;"> total
+                prod
+              </th>
+            </tr>
+
+          </thead>
+          <tbody>
+            <tr *ngFor='let conta of contas'>
+              <td style="border: 1px solid black; font-size: 10px;">{{
+                conta.quantidade }}
+                &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; font-size: 10px;">{{
+                conta.pedido.produto.nome }} &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; font-size: 10px;">{{
+                conta.valorProdutoUnitario
+                | currency:'R$' }} &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; font-size: 10px;;">{{
+                conta.valorProdutoTotal |
+                currency:'R$' }} &nbsp;&nbsp;</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="table-primary">
+              <td colspan="3" style="border: 1px solid black; text-align:
+                right;"> TOTAL &nbsp;&nbsp;</td>
+              <td style="border: 1px solid black; text-align: right;">{{
+                contaValorTotal | currency:'R$' }} &nbsp;&nbsp;</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th> Produto</th>
-      <th> Nome</th>
-      <th> Observacao</th>
-      <th> Isencao</th>
-      <th> Hora</th>
-      <th> Ações </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor='let conta of filteredContas'>
-      <td> <img [src]= 'conta.pedido.produto.imageUrl' width="100" height="100"> </td>
-      <td>{{ conta.pedido.produto.name }} </td>
-      <td>{{ conta.pedido.observacao }} </td>
-      <td>{{ conta.pedido.isencao }} </td>
-      <td>{{ conta.pedido.releaseDate | date:'hh:mm:ss' }} </td>
-      <td> <button [routerLink]="['/atendentecls']">
-          <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid rounded" alt="..." width="100" height="100">
-        </button></td>
-    </tr>
-  </tbody>
-</table>

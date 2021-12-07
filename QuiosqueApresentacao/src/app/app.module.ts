@@ -1,3 +1,4 @@
+import { NgMaterialModule } from './ng-material/ng-material.module';
 import { CarrinhoListComponent } from './carrinho/carrinho-list.component';
 import { CarrinhoUpdateComponent } from './carrinho/carrinho-update.component';
 import { CarrinhoReadComponent } from './carrinho/carrinho-read.component';
@@ -34,8 +35,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CaminhoMenuComponent } from './caminho-menu/caminho-menu.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -64,6 +67,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CarrinhoReadComponent,
     CarrinhoUpdateComponent,
     CarrinhoDeleteComponent,
+    CaminhoMenuComponent,
 
   ],
   imports: [
@@ -77,6 +81,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     NoopAnimationsModule,
     MatButtonModule,
     NgMaterialModule,
+    MatGridListModule,
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { CardapioPrincipalService } from './cardapio-principal.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
 
 @Component({
   selector: 'app-cardapio-principal',
@@ -24,13 +25,23 @@ export class CardapioPrincipalComponent implements OnInit {
   element7: HTMLElement;
   element8: HTMLElement;
 
-  constructor(private cardapioPrincipalService: CardapioPrincipalService) {
+  constructor(private cardapioPrincipalService: CardapioPrincipalService,
+              private caminhoMenuService: CaminhoMenuComponent
+    ) {
   }
 
 
   ngOnInit(): void {
 
     this.modulo = 'Cardápio';
+
+    environment.fundoColoridoCardapio = true;
+    environment.fundoColoridoPedido = false;
+    environment.fundoColoridoCozinha = false;
+    environment.fundoColoridoEntrega = false;
+    environment.fundoColoridoConta = false;
+
+    this.caminhoMenuService.ngOnInit();
 
     if (environment.telefone > 0 && environment.codigo > 0) {
       this.telefone = environment.telefone;

@@ -72,7 +72,10 @@ const routes: Routes = [
         path: 'entrega/update/:id', component: EntregaUpdateComponent
       },
       {
-        path: 'conta', component: ContaListComponent
+        path: 'conta', component: ContaListComponent,
+        data: {
+          alwaysRefresh: true
+       }
       },
       {
         path: 'fechamento', component: FechamentoListComponent

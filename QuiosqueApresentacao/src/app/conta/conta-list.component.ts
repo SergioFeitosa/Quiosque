@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ContaService } from './conta.service';
 import { Conta } from './conta';
@@ -6,7 +7,6 @@ import { environment } from 'src/environments/environment';
 import { Pedido } from '../pedido/pedido';
 import { Produto } from '../produto/produto';
 import { PedidoService } from '../pedido/pedido.service';
-import { ProdutoService } from '../produto/produto.service';
 
 @Component({
   templateUrl: './conta-list.component.html',
@@ -15,8 +15,23 @@ import { ProdutoService } from '../produto/produto.service';
 export class ContaListComponent implements OnInit {
 
 
-  filteredContas: Pedido[] = [];
+  filteredPedidos: Pedido[] = [];
   pedidos: Pedido[] = [];
+  telefone: number;
+  codigo: number;
+  produto: Produto;
+
+  modulo: string;
+
+  // tslint:disable-next-line:quotemark
+  // tslint:disable-next-line:member-ordering
+  displayStyle = 'none';
+
+  contas: Conta[] = [];
+
+  contaValorTotal: number;
+
+  filteredContas: Pedido[] = [];
   // tslint:disable-next-line:variable-name
   conta = {} as Conta;
 
@@ -30,7 +45,7 @@ export class ContaListComponent implements OnInit {
   _filterBy: string;
 
   constructor(private pedidoService: PedidoService,
-              private produtoService: ProdutoService,
+              private router: Router,
               private contaService: ContaService,
               private activatedRoute: ActivatedRoute) {
 
@@ -38,10 +53,24 @@ export class ContaListComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+
+    this.telefone = +environment.telefone;
+    this.modulo = 'Conta';
+
+    environment.fundoColoridoCardapio = false;
+    environment.fundoColoridoPedido = false;
+    environment.fundoColoridoCozinha = false;
+    environment.fundoColoridoEntrega = false;
+    environment.fundoColoridoConta = true;
+
     this.pedidoService.read().subscribe(pedidos => {
       this.pedidos = pedidos;
       this.filteredContas = this.pedidos.filter((pedido: Pedido) => pedido.telefone === environment.telefone);
     });
+    this.displayStyle = 'block';
+    this.openPopup();
+
   }
 
   // tslint:disable-next-line:typedef
@@ -74,4 +103,39 @@ export class ContaListComponent implements OnInit {
       );
     });
   }
+
+
+  // tslint:disable-next-line:typedef
+  openPopup(): void {
+
+
+    this.pedidoService.read().subscribe(pedidos => {
+      this.pedidos = pedidos;
+      this.filteredPedidos = this.pedidos.filter((pedido: Pedido) => pedido.telefone - environment.telefone === 0);
+
+      this.contaValorTotal = 0;
+
+      for (const pedido of this.filteredPedidos) {
+
+          this.conta = new Conta();
+
+          this.conta.pedido = pedido;
+          this.conta.quantidade = 1;
+          this.conta.valorProdutoUnitario =  pedido.produto.preco;
+          this.conta.valorProdutoTotal = this.conta.valorProdutoUnitario * this.conta.quantidade;
+          this.contaValorTotal = this.contaValorTotal + this.conta.valorProdutoTotal;
+          this.contas.push(this.conta);
+      }
+    });
+    this.displayStyle = 'block';
+  }
+
+  // tslint:disable-next-line:typedef
+  closePopup() {
+
+    this.contas = [];
+    this.displayStyle = 'none';
+  }
+
+
 }

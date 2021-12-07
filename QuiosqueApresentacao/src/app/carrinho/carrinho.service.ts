@@ -22,13 +22,13 @@ export class CarrinhoService {
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/carts";
 
-  // baseUrl = 'http://localhost:8080/quiosqueBackend/carts';
+  baseUrl = 'http://localhost:8080/quiosqueBackend/carts';
 
   // baseUrl = 'http://localhost:8080/carts';
 
   // baseUrl = 'https://sgpn.com.br/quiosqueBackend/carts';
 
-  baseUrl = 'https://sgpn.com.br/carts';
+  // baseUrl = 'https://sgpn.com.br/carts';
 
   // baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/carts';
 

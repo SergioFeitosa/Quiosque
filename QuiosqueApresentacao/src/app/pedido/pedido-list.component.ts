@@ -53,7 +53,14 @@ export class PedidoListComponent implements OnInit {
   ngOnInit(): void {
 
     this.telefone = +environment.telefone;
-    this.modulo = 'Pedido';
+    this.modulo = 'Cozinha';
+
+    environment.fundoColoridoCardapio = false;
+    environment.fundoColoridoPedido = false;
+    environment.fundoColoridoCozinha = true;
+    environment.fundoColoridoEntrega = false;
+    environment.fundoColoridoConta = false;
+
 
     if (+environment.telefone === 99999999999 || +environment.telefone === 99999999998) {
 

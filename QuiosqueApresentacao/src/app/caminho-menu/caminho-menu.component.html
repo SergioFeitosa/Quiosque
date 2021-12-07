@@ -1,0 +1,225 @@
+
+<div class="container mt-4 desktop">
+  <mat-grid-list cols="5" rowHeight="10em">
+    <mat-grid-tile>
+      <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoCardapio ?
+          'aquamarine' : ''}">
+          <mat-card-title-group>
+            <mat-card-title>Cardápio</mat-card-title>
+            <mat-card-subtitle>Menu</mat-card-subtitle>
+            <img mat-card-sm-image src="/assets/images/pratododia.jpg">
+          </mat-card-title-group>
+          <mat-card-content style='font-size: xx-small;'>
+            {{' Selecione a categoria clicando na imagem.
+            Selecione o produto clicando no carrinho.
+            Vá ao carrinho especificar seu produto'}}
+            <br>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a [routerLink]="['/carrinho']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoPedido ?
+          'aquamarine' : ''}">
+          <mat-card-title-group>
+            <mat-card-title>Pedido</mat-card-title>
+            <mat-card-subtitle>Order</mat-card-subtitle>
+            <img mat-card-sm-image src="/assets/images/carrinho-small.jpg">
+          </mat-card-title-group>
+          <mat-card-content style='font-size: xx-small;'>
+            {{' Defina a quantidade e observações sobre o produto.
+            Vá ao pedido para acompanhá-lo.
+            '}}
+            <br>
+            <br>
+          </mat-card-content>
+        </mat-card>
+      </a>
+
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a [routerLink]="['/pedido']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoCozinha ?
+          'aquamarine' : ''}">
+          <mat-card-title-group>
+            <mat-card-title>Cozinha</mat-card-title>
+            <mat-card-subtitle>Cook</mat-card-subtitle>
+            <img mat-card-sm-image src="/assets/images/cozinheiro.jpg">
+          </mat-card-title-group>
+          <mat-card-content style='font-size: xx-small;'>
+            {{' Acompanhe a preparação do(s) seu(s) pedido.
+            Os pratos ainda podem ser alterados ou excluídos.
+            Por fim siga seu pedido na entrega
+            '}}
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a [routerLink]="['/entrega']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoEntrega ?
+          'aquamarine' : ''}">
+          <mat-card-title-group>
+            <mat-card-title>Entrega</mat-card-title>
+            <mat-card-subtitle>Delivery</mat-card-subtitle>
+            <img mat-card-sm-image
+              src="/assets/images/garcon.jpg">
+          </mat-card-title-group>
+          <mat-card-content style='font-size: xx-small;'>
+            {{' Aqui voce tem detalhes sobre o pedido
+            '}}
+            <br>
+            <br>
+            <br>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <a [routerLink]="['/conta']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card
+          [ngStyle]="{'background-color':fundoColoridoConta ? 'aquamarine' :
+          ''}">
+          <mat-card-title-group>
+            <mat-card-title>Conta</mat-card-title>
+            <mat-card-subtitle>Ticket</mat-card-subtitle>
+            <img mat-card-sm-image src="/assets/images/conta.jpg">
+          </mat-card-title-group>
+          <mat-card-content style='font-size: xx-small;'>
+            {{' Acompanhe os gastos e confira os valores.
+            Solicite o fechamento da sua conta.
+            '}}
+            <br>
+            <br>
+          </mat-card-content>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
+<div class="container mt-4 mobile">
+  <div class="content">
+    <mat-grid-list cols="5" rowHeight="4em">
+      <mat-grid-tile>
+        <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
+          class="nav-link">
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title style='font-size: xx-small;'>
+                <img src="/assets/images/pratododia-small.jpg"
+                  style="max-width: 4em; max-height: 4em;">
+              </mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content style='font-size: 0.2em;'>
+              {{' Acompanhe a preparação do(s) seu(s) pratos ou bebidas.
+              Os pratos ainda não iniciados o
+              seu preparo podem ser alterados ou excluídos.
+              Por fim siga seu pedido na entrega
+              '}}
+              <br>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a [routerLink]="['/carrinho']" routerLinkActive="active"
+          class="nav-link">
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title style='font-size: xx-small;'>
+                <img src="/assets/images/carrinho.jpg"
+                  style="max-width: 4em; max-height: 4em;">
+              </mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content style='font-size: 0.2em;'>
+              {{' Acompanhe a preparação do(s) seu(s) pratos ou bebidas.
+              Os pratos ainda não iniciados o
+              seu preparo podem ser alterados ou excluídos.
+              Por fim siga seu pedido na entrega
+              '}}
+              <br>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a [routerLink]="['/pedido']" routerLinkActive="active"
+          class="nav-link">
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title style='font-size: xx-small;'>
+                <img src="/assets/images/cozinheiro.jpg"
+                  style="max-width: 4em; max-height: 4em;">
+              </mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content style='font-size: 0.2em;'>
+              {{' Acompanhe a preparação do(s) seu(s) pratos ou bebidas.
+              Os pratos ainda não iniciados o
+              seu preparo podem ser alterados ou excluídos.
+              Por fim siga seu pedido na entrega
+              '}}
+              <br>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a [routerLink]="['/entrega']" routerLinkActive="active"
+          class="nav-link">
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title style='font-size: xx-small;'>
+                <img src="/assets/images/garcon.jpg"
+                  style="max-width: 4em; max-height: 4em;">
+              </mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content style='font-size: 0.2em;'>
+              {{' Aqui voce tem detalhes sobre o pedido
+              '}}
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a [routerLink]="['/conta']" routerLinkActive="active"
+          class="nav-link">
+          <mat-card>
+            <mat-card-title-group>
+              <mat-card-title style='font-size: xx-small;'>
+                <img src="/assets/images/conta.jpg"
+                  style="max-width: 4em; max-height: 4em;">
+              </mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content style='font-size: 0.2em;'>
+              {{' Conta.
+              '}}
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </mat-card-content>
+          </mat-card>
+        </a>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

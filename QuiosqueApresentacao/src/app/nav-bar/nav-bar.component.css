@@ -29,3 +29,22 @@ section {
   justify-content: center;
   width: 120px;
 }
+
+.coluna{
+  float: right;
+  width: 20%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+}
