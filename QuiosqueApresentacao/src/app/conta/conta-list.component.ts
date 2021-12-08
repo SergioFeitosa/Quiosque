@@ -132,9 +132,23 @@ export class ContaListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   closePopup() {
-
     this.contas = [];
     this.displayStyle = 'none';
+  }
+
+  // tslint:disable-next-line:typedef
+  pagamentoCartao() {
+    this.contaService.showMessage('Pagamento Cartão');
+  }
+
+  // tslint:disable-next-line:typedef
+  pagamentoPix() {
+    this.contaService.showMessage('Pagamento Pix');
+  }
+
+  // tslint:disable-next-line:typedef
+  pagamentoDinheiro() {
+    this.contaService.showMessage('Pagamento Dinheiro');
   }
 
 

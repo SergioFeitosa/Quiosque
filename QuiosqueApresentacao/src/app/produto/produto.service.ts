@@ -14,13 +14,13 @@ export class ProdutoService {
   // tslint:disable-next-line:quotemark
   // baseUrl = "http://localhost:3001/produtos";
 
-  baseUrl = 'http://localhost:8080/quiosqueBackend/produtos';
+  // baseUrl = 'http://localhost:8080/quiosqueBackend/produtos';
 
   // baseUrl = 'http://localhost:8080/produtos';
 
   // baseUrl = 'https://sgpn.com.br/quiosqueBackend/produtos';
 
-  // baseUrl = 'https://sgpn.com.br/produtos';
+  baseUrl = 'https://sgpn.com.br/produtos';
 
   // baseUrl = 'https://springboot-postgresheroku.herokuapp.com/api/v1/products';
 

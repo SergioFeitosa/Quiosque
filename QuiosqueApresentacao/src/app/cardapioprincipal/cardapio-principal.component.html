@@ -5,7 +5,7 @@
 
 <div class="mobile"  style='background-color: aquamarine; text-align-last: center;'>
   <span style='font-weight: bolder;'>Módulo: {{ modulo }} </span>
-  <span> </span>
+  <br>
 </div>
 
 <div class="row">
@@ -19,6 +19,7 @@
     <div class="row desktop" >
       <div class='row col-sm-12 mb-1'>
         <div class='col-sm-2'>
+          <span style='font-weight: bolder;'>local: {{ param1 }} </span>
           <input [(ngModel)]='telefone'
                  class='form-control id="floatingInput" '
                  placeholder="Telefone"

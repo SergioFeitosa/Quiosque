@@ -2,7 +2,8 @@ import { CardapioPrincipalService } from './cardapio-principal.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
-
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { HttpParams } from '@angular/common/http';
 @Component({
   selector: 'app-cardapio-principal',
   templateUrl: './cardapio-principal.component.html',
@@ -11,6 +12,8 @@ import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
 export class CardapioPrincipalComponent implements OnInit {
 
   modulo: string;
+
+  param1: string;
 
   // tslint:disable-next-line:no-inferrable-types
   buttonDisabled: boolean;
@@ -26,7 +29,8 @@ export class CardapioPrincipalComponent implements OnInit {
   element8: HTMLElement;
 
   constructor(private cardapioPrincipalService: CardapioPrincipalService,
-              private caminhoMenuService: CaminhoMenuComponent
+              private caminhoMenuService: CaminhoMenuComponent,
+              private activatedRoute: ActivatedRoute
     ) {
   }
 
@@ -34,6 +38,18 @@ export class CardapioPrincipalComponent implements OnInit {
   ngOnInit(): void {
 
     this.modulo = 'Cardápio';
+
+    // tslint:disable-next-line:no-string-literal
+    // this.param1 = this.activatedRoute.snapshot.paramMap.get('param1');
+
+
+    this.param1 = this.activatedRoute.snapshot.queryParamMap.get('param1');
+
+    if (this.activatedRoute.snapshot.queryParamMap.get('param1')) {
+      environment.local = this.param1;
+    } else {
+      this.param1 = environment.local;
+    }
 
     environment.fundoColoridoCardapio = true;
     environment.fundoColoridoPedido = false;
