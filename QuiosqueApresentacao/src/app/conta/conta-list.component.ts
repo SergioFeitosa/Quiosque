@@ -22,10 +22,12 @@ export class ContaListComponent implements OnInit {
   produto: Produto;
 
   modulo: string;
+  local: string;
 
   // tslint:disable-next-line:quotemark
   // tslint:disable-next-line:member-ordering
   displayStyle = 'none';
+  displayStylePix = 'none';
 
   contas: Conta[] = [];
 
@@ -57,6 +59,7 @@ export class ContaListComponent implements OnInit {
 
     this.telefone = +environment.telefone;
     this.modulo = 'Conta';
+    this.local = environment.local;
 
     environment.fundoColoridoCardapio = false;
     environment.fundoColoridoPedido = false;
@@ -138,17 +141,23 @@ export class ContaListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   pagamentoCartao() {
-    this.contaService.showMessage('Pagamento Cartão');
+    this.contaService.showMessage('Aguarde o atendente');
   }
 
   // tslint:disable-next-line:typedef
   pagamentoPix() {
     this.contaService.showMessage('Pagamento Pix');
+    this.displayStylePix = 'block';
+  }
+
+  // tslint:disable-next-line:typedef
+  closePagamentoPix() {
+    this.displayStylePix = 'none';
   }
 
   // tslint:disable-next-line:typedef
   pagamentoDinheiro() {
-    this.contaService.showMessage('Pagamento Dinheiro');
+    this.contaService.showMessage('Aguarde o atendente');
   }
 
 

@@ -18,6 +18,7 @@ export class PedidoListComponent implements OnInit {
   private updateSubscription: Subscription;
 
   modulo: string;
+  local: string;
   telefone: number;
   // tslint:disable-next-line:variable-name
   _categoryId: string;
@@ -54,6 +55,7 @@ export class PedidoListComponent implements OnInit {
 
     this.telefone = +environment.telefone;
     this.modulo = 'Cozinha';
+    this.local = environment.local;
 
     environment.fundoColoridoCardapio = false;
     environment.fundoColoridoPedido = false;

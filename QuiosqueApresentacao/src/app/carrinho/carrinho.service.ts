@@ -46,9 +46,6 @@ export class CarrinhoService {
   }
 
   create(carrinho: Carrinho): Observable<Carrinho>{
-
-    console.log('teste gravacao carrinho' + carrinho.id + ' ' + carrinho.produto.nome);
-
     return this.http.post<Carrinho>(this.baseUrl, carrinho);
 
   }

@@ -1,8 +1,10 @@
 
 <app-caminho-menu></app-caminho-menu>
 <br>
-<div class="mobile"  style='background-color: aquamarine; text-align-last: center;'>
+<div class="mobile" style='background-color: aquamarine; text-align-last:
+  center;'>
   <span style='font-weight: bolder;'>Módulo: {{ modulo }} </span>
+  <span style='font-weight: bolder;'>Local: {{ local }} </span>
   <span> </span>
 </div>
 
@@ -12,7 +14,7 @@
     <div class="modal-content" style="background-color: rgb(249, 255, 166);">
       <div class="table-responsive desktop">
         <div class="modal-header">
-          <button type="button" class="btn-fab btn-primary"
+          <button type="button" class="btn-fab btn-primary" 
             style="border: 1px solid black; font-size: 15px; padding: 0.5rem
             0.5rem; width: 30%"
             (click)="pagamentoCartao()">
@@ -24,10 +26,10 @@
             (click)="pagamentoPix()">
             Pagamento Pix
           </button>
-          <button type="button" class="btn-fab btn-primary"
+          <button type="button" class="btn-fab btn-primary" 
             style="border: 1px solid black; font-size: 15px; padding: 0.5rem
             0.5rem; width: 30%"
-            (click)="pagamentoPix()">
+            (click)="pagamentoDinheiro()">
             Pagamento Dinheiro
           </button>
 
@@ -74,7 +76,7 @@
       </div>
       <div class="table-responsive mobile">
         <div class="modal-header">
-          <button type="button" class="btn-fab btn-primary"
+          <button type="button" class="btn-fab btn-primary" 
             style="border: 1px solid black; font-size: 15px; padding: 0.5rem
             0.5rem; width: 30%"
             (click)="pagamentoCartao()">
@@ -86,10 +88,10 @@
             (click)="pagamentoPix()">
             Pagamento Pix
           </button>
-          <button type="button" class="btn-fab btn-primary"
+          <button type="button" class="btn-fab btn-primary" 
             style="border: 1px solid black; font-size: 15px; padding: 0.5rem
             0.5rem; width: 30%"
-            (click)="pagamentoPix()">
+            (click)="pagamentoDinheiro()">
             Pagamento Dinheiro
           </button>
         </div>
@@ -132,6 +134,36 @@
             </tr>
           </tfoot>
         </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div
+  class="modal" tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStylePix}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="background-color: rgb(249, 255, 166);">
+      <div class="modal-header">
+        <h4 class="modal-title"
+          style="font-size: 15px; padding: 0.5rem
+          0.5rem; width: 40%">
+          Pagamento Pix
+        </h4>
+        <button type="button" class="btn-fab btn-primary"
+          style="border: 1px solid black; font-size: 15px; padding: 0.5rem
+          0.5rem; width: 30%"
+          (click)="closePagamentoPix()">
+          Fechar
+        </button>
+      </div>
+      <div>
+        <img src='/quiosque/assets/images/qrcode-conta.jpg' class="figure-img img-fluid
+        rounded" alt="..." width="400"
+        height="400"
+        >
       </div>
     </div>
   </div>

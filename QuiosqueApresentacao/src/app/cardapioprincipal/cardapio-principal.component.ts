@@ -1,9 +1,10 @@
-import { CardapioPrincipalService } from './cardapio-principal.service';
+import { TelefoneConteudo } from './../telefone/telefone-conteudo';
+import { TelefoneValidacaoService } from './../telefone/telefone-validacao/telefone-validacao.service';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { HttpParams } from '@angular/common/http';
+import { TelefoneValidacao } from '../telefone/telefone-validacao';
 @Component({
   selector: 'app-cardapio-principal',
   templateUrl: './cardapio-principal.component.html',
@@ -12,8 +13,13 @@ import { HttpParams } from '@angular/common/http';
 export class CardapioPrincipalComponent implements OnInit {
 
   modulo: string;
-
+  codigoGerado: number;
   param1: string;
+
+  rows: TelefoneConteudo[] = [];
+
+  telefoneConteudo = {} as TelefoneConteudo;
+  telefoneValidacao = {} as TelefoneValidacao;
 
   // tslint:disable-next-line:no-inferrable-types
   buttonDisabled: boolean;
@@ -28,9 +34,9 @@ export class CardapioPrincipalComponent implements OnInit {
   element7: HTMLElement;
   element8: HTMLElement;
 
-  constructor(private cardapioPrincipalService: CardapioPrincipalService,
+  constructor(private telefoneValidacaoService: TelefoneValidacaoService,
               private caminhoMenuService: CaminhoMenuComponent,
-              private activatedRoute: ActivatedRoute
+              private activatedRoute: ActivatedRoute,
     ) {
   }
 
@@ -90,9 +96,12 @@ export class CardapioPrincipalComponent implements OnInit {
 
   validarTelefone(): void {
 
+    console.log('validar telefone ' + this.telefone );
+
     if (this.telefone > 0) {
+      console.log('validar telefone dentro' );
       environment.telefone = this.telefone;
-      this.enviarCodigo();
+      this.enviarCodigo(Number, Number);
     }
 
   }
@@ -107,11 +116,34 @@ export class CardapioPrincipalComponent implements OnInit {
 
   }
 
-  enviarCodigo(): void {
+  enviarCodigo(telefone, codigo): void {
     // tslint:disable-next-line:comment-format
     //const telefone = this.navForm.get('telefone').value;
-    const codigoGerado = Math.random() * this.telefone;
-    this.cardapioPrincipalService.enviarCodigo(this.telefone.toString(), codigoGerado.toString());
+    console.log('enviar codigo xxxx' );
+    this.codigoGerado = Math.random() * (9999 - 1) + 1;
+
+    console.log('enviarCodigo yyyyy' );
+    console.log('enviarCodigo 333yyyy' );
+
+
+    this.telefoneValidacao.from = 'youthful-sole';
+    this.telefoneValidacao.to = +telefone;
+
+    this.telefoneConteudo.type = 'text';
+    this.telefoneConteudo.text = +codigo;
+
+    this.rows.push(this.telefoneConteudo);
+    this.telefoneValidacao.contents = this.rows ;
+
+    environment.codigo = +codigo;
+
+    this.telefoneValidacaoService.create(this.telefoneValidacao).subscribe(() => {
+      this.telefoneValidacaoService.showMessage('Codigo Enviado');
+    });
+
+    console.log('chamando create ' + this.telefoneValidacao );
+
+    this.telefoneValidacaoService.create(this.telefoneValidacao);
   }
 
 

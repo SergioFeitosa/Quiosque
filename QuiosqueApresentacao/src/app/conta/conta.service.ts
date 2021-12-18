@@ -13,18 +13,20 @@ export class ContaService {
   // tslint:disable-next-line:quotemark
   baseUrl = "http://localhost:3001/contas";
 
-  constructor(private snackBar: MatSnackBar,
-              private http: HttpClient) {}
+  constructor(
+    private snackBar: MatSnackBar,
+    private http: HttpClient) { }
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, '', {
       duration: 3000,
       horizontalPosition: 'right',
-      verticalPosition: 'top'
+      verticalPosition: 'top',
+      panelClass: ['custom-css-class']
     });
   }
 
-  create(conta: Conta): Observable<Conta>{
+  create(conta: Conta): Observable<Conta> {
     return this.http.post<Conta>(this.baseUrl, conta);
 
   }

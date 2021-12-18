@@ -1,3 +1,4 @@
+import { TelefoneValidacaoComponent } from './telefone/telefone-validacao/telefone-validacao.component';
 import { NgMaterialModule } from './ng-material/ng-material.module';
 import { CarrinhoListComponent } from './carrinho/carrinho-list.component';
 import { CarrinhoUpdateComponent } from './carrinho/carrinho-update.component';
@@ -68,7 +69,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CarrinhoUpdateComponent,
     CarrinhoDeleteComponent,
     CaminhoMenuComponent,
-
+    TelefoneValidacaoComponent
   ],
   imports: [
     BrowserModule,

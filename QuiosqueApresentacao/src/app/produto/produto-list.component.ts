@@ -102,7 +102,7 @@ export class ProdutoListComponent implements OnInit {
       this.carrinho.enviado = false;
       this.carrinho.isencao = false;
       this.carrinho.local = environment.local;
-      this.carrinho.observacao = 'teste obs';
+      this.carrinho.observacao = '';
       this.carrinho.quantidade = 1;
       this.carrinho.dataCriacao = new Date();
       this.carrinho.telefone = environment.telefone;
