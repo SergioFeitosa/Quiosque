@@ -21,10 +21,8 @@
         <th style='width: 5%'> Imagem</th>
         <th style='width: 5%'> Quantidade</th>
         <th style='width: 25%'> Produto</th>
-        <th style='width: 10%'> Telefone</th>
-        <th style='width: 5%'> Local</th>
         <th style='width: 20%'> Observacao</th>
-        <th style='width: 5%'> Isencao</th>
+        <th style='width: 5%'> Local</th>
         <th style='width: 5%'> Hora</th>
         <th style='width: 20%' class="text-center"> Ações </th>
       </tr>
@@ -41,27 +39,25 @@
           (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
       </td>
         <td>{{ carrinho.produto.nome }} </td>
-        <td>{{ carrinho.telefone }} </td>
-        <td>{{ carrinho.local }} </td>
 
         <td><input [(ngModel)]="carrinho.observacao" type="text" style='color: red'
             (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
         </td>
 
-        <td>{{ carrinho.isencao }} </td>
+        <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
         <td  class="text-center">
           <button (click)="openPopup( carrinho.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img
+            <img src='/assets/images/lupa.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/quiosque/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
         </td>
@@ -95,15 +91,15 @@
         <td style='width: 30%; font-size: 10px;'>{{ carrinho.produto.nome }} </td>
         <td class="text-center"  style='width: 10%; font-size: 10px;'>
           <button (click)="openPopup( carrinho.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/quiosque/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
+            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
         </td>

@@ -27,7 +27,6 @@ import { StarComponent } from './star/star.component';
 import { ProdutoListComponent } from './produto/produto-list.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,6 +39,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CaminhoMenuComponent } from './caminho-menu/caminho-menu.component';
+import { NgModule } from '@angular/core';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -85,6 +85,6 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     MatGridListModule,
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

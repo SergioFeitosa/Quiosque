@@ -58,20 +58,20 @@
         <td class="text-center">
           <button (click)="openPopup( pedido.id )"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25"
               >
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="entregaCreate( pedido.id )"
                   [disabled]=" (telefone == '99999999999' || telefone == '99999999998') ? false : true">
-            <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>
@@ -105,20 +105,20 @@
         <td class="text-center">
           <button (click)="openPopup( pedido.id )"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img img-fluid
+            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25"
               >
           </button>
           <button routerLink="/pedido/delete/{{ pedido.id }}"
                   [disabled]=" i < 3 && (telefone != '99999999999' && telefone != '99999999998') ? true : false">
-            <img src='/quiosque/assets/images/botao-cancelar.jpg' class="figure-img
+            <img src='/assets/images/botao-cancelar.jpg' class="figure-img
               img-fluid rounded" alt="..." width="25"
               height="25">
           </button>
           <button (click)="entregaCreate( pedido.id )"
                   [disabled]=" (telefone == '99999999999' || telefone == '99999999998') ? false : true">
-            <img src='/quiosque/assets/images/garcon.jpg' class="figure-img img-fluid
+            <img src='/assets/images/garcon.jpg' class="figure-img img-fluid
               rounded" alt="..." width="25"
               height="25">
           </button>

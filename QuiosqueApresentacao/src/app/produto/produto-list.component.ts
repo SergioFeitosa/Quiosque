@@ -43,6 +43,8 @@ export class ProdutoListComponent implements OnInit {
 
     this.modulo = 'Cardápio';
 
+    this.carrinho.quantidade = 1;
+
     environment.fundoColoridoCardapio = true;
     environment.fundoColoridoPedido = false;
     environment.fundoColoridoCozinha = false;
@@ -58,6 +60,23 @@ export class ProdutoListComponent implements OnInit {
     });
 
   }
+
+
+  // tslint:disable-next-line:typedef
+  minus(){
+    if (this.carrinho.quantidade !== 1) {
+      this.carrinho.quantidade--;
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  plus(){
+    if (this.carrinho.quantidade !== 10) {
+      this.carrinho.quantidade++;
+    }
+  }
+
+
 
   // tslint:disable-next-line:typedef
   get filter() {
@@ -102,8 +121,6 @@ export class ProdutoListComponent implements OnInit {
       this.carrinho.enviado = false;
       this.carrinho.isencao = false;
       this.carrinho.local = environment.local;
-      this.carrinho.observacao = '';
-      this.carrinho.quantidade = 1;
       this.carrinho.dataCriacao = new Date();
       this.carrinho.telefone = environment.telefone;
 

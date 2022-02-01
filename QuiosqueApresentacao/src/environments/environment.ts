@@ -9,7 +9,7 @@ export const environment = {
   codigo: 123,
   local: 'mesa001',
   modulo: '',
-  fundoColoridoCardapio: false,
+  fundoColoridoCardapio: true,
   fundoColoridoPedido: false,
   fundoColoridoCozinha: false,
   fundoColoridoEntrega: false,

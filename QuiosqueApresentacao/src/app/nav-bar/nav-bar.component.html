@@ -5,11 +5,17 @@
       <a [routerLink]="['/cardapioPrincipal']" class="navbar-brand">Quiosque
         NuButikin</a>
     </div>
+    <button (click)="openPopup()">
+      <img src='/assets/images/ajuda.jpg' alt="..." width="25"
+        height="28">
+    </button>
+
+    <!--
+
     <button class="navbar-toggler" type="button"
       (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
     </button>
-
 
     <div class="collapse navbar-collapse"
       [ngClass]="{ 'show': navbarOpen }">
@@ -36,5 +42,52 @@
         </li>
       </ul>
     </div>
+    -->
   </nav>
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Ajuda</h4>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup()">
+          Fechar
+        </button>
+      </div>
+      <div class="modal-body">
+        <img mat-card-md-image src="/assets/images/menu.jpg" alt="Cardápio">
+      </div>
+
+      <div class="modal-body">
+        <p>No cardápio você encontra os pratos da casa:</p>
+        <ul>
+          <li>alho</li>
+          <li>cebola</li>
+          <li>coentro</li>
+          <li>maionese</li>
+          <li>manjericão</li>
+        </ul>
+      </div>
+      <div class="modal-body">
+        <img mat-card-md-image src="/assets/images/carrinho.jpg" alt="Cardápio">
+      </div>
+
+      <div class="modal-body">
+        <p>No pedido você confere e acompanha o status do seu pedido:</p>
+        <ul>
+          <li>pendente</li>
+          <li>fila de preparação</li>
+          <li>em preparação</li>
+          <li>fila de entrega</li>
+          <li>entregue</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

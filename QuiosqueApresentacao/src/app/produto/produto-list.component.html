@@ -2,7 +2,8 @@
 <app-caminho-menu></app-caminho-menu>
 <br>
 
-<div class="mobile" style='background-color: aquamarine; text-align-last: center;'>
+<div class="mobile" style='background-color: aquamarine; text-align-last:
+  center;'>
   <span style='font-weight: bolder;'>Módulo: {{ modulo }} </span>
 </div>
 
@@ -26,7 +27,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let produto of filteredProdutos'>
+      <tr *ngFor='let produto of filteredProdutos' (click)="openPopup(
+        produto.id )">
         <td style='width: 5%'>
           <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
             alt="..."
@@ -40,13 +42,8 @@
           <app-star [rating]="produto.avaliacao"></app-star>
         </td>
         <td style='width: 10%' class="text-center">
-          <button (click)="openPopup( produto.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="50"
-              height="25">
-          </button>
           <button (click)="carrinhoCreate( produto.id )">
-            <img src='/quiosque/assets/images/carrinho.jpg'  class="figure-img img-fluid
+            <img src='/assets/images/carrinho.jpg' class="figure-img img-fluid
               rounded" alt="..." width="50"
               height="25">
           </button>
@@ -62,11 +59,11 @@
       <tr>
         <th style='width: 10%'> Imagem</th>
         <th style='width: 30%'> Nome</th>
-        <th style='width: 10%' class="text-center"> Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let produto of filteredProdutos'>
+      <tr *ngFor='let produto of filteredProdutos' (click)="openPopup(
+        produto.id )">
         <td style='width: 10%'>
           <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
             alt="..."
@@ -74,18 +71,6 @@
             height="50">
         </td>
         <td style='width: 30%'>{{ produto.nome }} </td>
-        <td style='width: 10%' class="text-center">
-          <button (click)="openPopup( produto.id )">
-            <img src='/quiosque/assets/images/lupa.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="50"
-              height="25">
-          </button>
-          <button (click)="carrinhoCreate( produto.id )">
-            <img src='/quiosque/assets/images/carrinho.jpg'  class="figure-img img-fluid
-              rounded" alt="..." width="50"
-              height="25">
-          </button>
-        </td>
       </tr>
     </tbody>
   </table>
@@ -97,13 +82,18 @@
   role="dialog"
   [ngStyle]="{'display': displayStyle}">
   <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Detalhes do Produto</h4>
+    <div class="modal-content" style='background-color:rgb(246, 253, 232)'>
+      <div class="modal-header" style='background-color:rgb(225, 240, 252)'>
+        <button (click)="carrinhoCreate( produto.id )">
+          <img src='/assets/images/carrinho.jpg' class="figure-img img-fluid
+            rounded" alt="..." width="50"
+            height="25">
+        </button>
         <button type="button" class="btn btn-danger"
           (click)="closePopup()">
           Fechar
         </button>
+
       </div>
       <div class="modal-body row">
         Avaliação: <app-star [rating]="produto.avaliacao"></app-star>
@@ -122,24 +112,72 @@
         <span style='font-weight: bolder;'>Descrição:</span>
         <span> {{ produto.descricao }} </span>
       </div>
+      <div class="modal-body">
+        <div class="row">
+          <span class="col-4" style='font-weight: bolder; color:blue'>Preço
+            Unitário:</span>
+          <span class="col-8" style='font-weight: bolder; color:blue'>Preço
+            Total:</span>
+        </div>
+        <div class="row">
+          <span class="col-4"> {{ produto.preco }} </span>
+          <span class="col-8">{{ produto.preco * carrinho.quantidade }}</span>
+        </div>
+      </div>
+
       <div class="modal-body row">
-        <span style='font-weight: bolder;'>Preço:</span>
-        <span>{{ produto.preco }} </span>
+        <span style='font-weight: bolder; color:blue'>Quantidade:</span>
+        <a style="width: 2em; margin-top: 0.5em" (click)="minus()"><i
+            class="fa
+            fa-minus" style="color:red"></i></a>
+        <input style="width: 3em;" [(ngModel)]='carrinho.quantidade'
+          class='form-control'>
+        <a style="width: 2em; margin-top: 0.5em" (click)="plus()"><i
+            class="fa
+            fa-plus" style="color:red"></i></a>
+      </div>
+      <div class="modal-body row">
+        <div class='form-group row container'>
+          <span style='font-weight: bolder; color:blue'>Observações:</span>
+          <div>
+            <textarea [(ngModel)]='carrinho.observacao'
+              class='form-control'></textarea>
+          </div>
+        </div>
       </div>
       <div class="modal-body row">
         <span style='font-weight: bolder;'>Tempo de Preparação:</span>
         <span>{{ produto.tempoPreparacao }} </span>
       </div>
 
-      <div class="modal-body">
-        <p>Os ingredientes encontrados na refeição são:</p>
-        <ul>
-          <li>alho</li>
-          <li>cebola</li>
-          <li>coentro</li>
-          <li>maionese</li>
-          <li>manjericão</li>
-        </ul>
+      <div class="modal-body row">
+        <span style='font-weight: bolder;'>Os ingredientes encontrados
+          na
+          refeição são:</span>
+        <div>
+          <ul>
+            <li>alho</li>
+            <li>cebola</li>
+            <li>coentro</li>
+            <li>maionese</li>
+            <li>manjericão</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-content" style='background-color:rgb(225, 240,
+        252)'>
+        <div class="modal-header">
+          <button (click)="carrinhoCreate( produto.id )">
+            <img src='/assets/images/carrinho.jpg' class="figure-img
+              img-fluid
+              rounded" alt="..." width="50"
+              height="25">
+          </button>
+          <button type="button" class="btn btn-danger"
+            (click)="closePopup()">
+            Fechar
+          </button>
+        </div>
       </div>
     </div>
   </div>

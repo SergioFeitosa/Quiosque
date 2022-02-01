@@ -20,9 +20,11 @@ export class NavBarComponent implements OnInit {
   telefone: number;
   codigo: number;
 
+  displayStyle: string;
+
   constructor(
     private navBarService: NavBarService,
-    ) { }
+  ) { }
 
   ngOnInit(): void {
   }
@@ -36,9 +38,28 @@ export class NavBarComponent implements OnInit {
 
   }
 
-// tslint:disable-next-line:typedef
+  // tslint:disable-next-line:typedef
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
   }
+
+  // tslint:disable-next-line:typedef
+  Ajuda() {
+    this.navbarOpen = !this.navbarOpen;
+  }
+
+  // tslint:disable-next-line:typedef
+  openPopup(): void {
+    // tslint:disable-next-line:no-unused-expression
+    this.displayStyle = 'block';
+  }
+
+  // tslint:disable-next-line:typedef
+  closePopup() {
+    this.displayStyle = 'none';
+    // tslint:disable-next-line:prefer-const
+
+  }
+
 }
 

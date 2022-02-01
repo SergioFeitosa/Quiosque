@@ -105,9 +105,50 @@
   </mat-grid-list>
 </div>
 
-
 <div class="container mt-4 mobile">
   <div class="content">
+    <mat-grid-list cols="2" rowHeight="10em">
+      <mat-grid-tile>
+        <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card class="example-card" style="border: 2px solid rgb(77, 40, 146);">
+          <mat-card-header>
+            <mat-card-title style="font-size: small; margin-left: 1.2em;">Cardápio</mat-card-title>
+            <mat-card-subtitle  style="font-size: small; margin-left: 1.7em;">Menu</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-md-image src="/assets/images/menu.jpg" alt="Cardápio">
+        </mat-card>
+        </a>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <a [routerLink]="['/carrinho']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card class="example-card"  style="border: 2px solid rgb(77, 40, 146);">
+          <mat-card-header>
+            <mat-card-title style="font-size: small; margin-left: 1.2em;">Pedido</mat-card-title>
+            <mat-card-subtitle style="font-size: small; margin-left: 1.6em;">Order</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-md-image src="/assets/images/cozinheiro.jpg"
+            alt="Pedido">
+        </mat-card>
+        </a>
+      </mat-grid-tile>
+      <!--
+      <mat-grid-tile>
+        <a [routerLink]="['/entrega']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title style="font-size: small; margin-left: 1.7em;">Ajuda</mat-card-title>
+            <mat-card-subtitle style="font-size: small; margin-left: 2em;">Help</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-md-image src="/assets/images/cozinheiro.jpg"
+            alt="Pedido">
+        </mat-card>
+        </a>
+      </mat-grid-tile>
+      -->
+      <!--
     <mat-grid-list cols="5" rowHeight="4em">
       <mat-grid-tile>
         <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
@@ -151,7 +192,7 @@
           </mat-card>
         </a>
       </mat-grid-tile>
-      <mat-grid-tile>
+<!--      <mat-grid-tile>
         <a [routerLink]="['/pedido']" routerLinkActive="active"
           class="nav-link">
           <mat-card>
@@ -220,6 +261,7 @@
           </mat-card>
         </a>
       </mat-grid-tile>
+    -->
     </mat-grid-list>
   </div>
 </div>
