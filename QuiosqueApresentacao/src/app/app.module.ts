@@ -41,6 +41,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CaminhoMenuComponent } from './caminho-menu/caminho-menu.component';
 import { NgModule } from '@angular/core';
 import { LoginComponent } from './login/login.component';
+import { MatIconModule } from '@angular/material/icon';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -85,6 +86,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     MatButtonModule,
     NgMaterialModule,
     MatGridListModule,
+    MatIconModule,
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
