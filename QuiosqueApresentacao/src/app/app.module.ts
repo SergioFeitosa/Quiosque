@@ -40,6 +40,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { CaminhoMenuComponent } from './caminho-menu/caminho-menu.component';
 import { NgModule } from '@angular/core';
+import { LoginComponent } from './login/login.component';
 
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -69,7 +70,8 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
     CarrinhoUpdateComponent,
     CarrinhoDeleteComponent,
     CaminhoMenuComponent,
-    TelefoneValidacaoComponent
+    TelefoneValidacaoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,15 @@
 
 <div class= 'container mt-4'>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="col-sm-3">
+    <div class="col-sm-11" style="margin-left: 20px">
       <a [routerLink]="['/cardapioPrincipal']" class="navbar-brand">Quiosque
         NuButikin</a>
     </div>
-    <button (click)="openPopup()">
-      <img src='/assets/images/ajuda.jpg' alt="..." width="25"
-        height="28">
+    <div style="background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;">
+      <button (click)="openPopup()" style="border: none; background: none;">
+        <img src='/assets/images/help.png' alt="..." width="25 " height="28">
     </button>
+  </div>
 
     <!--
 

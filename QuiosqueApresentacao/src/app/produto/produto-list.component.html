@@ -7,15 +7,17 @@
   <span style='font-weight: bolder;'>Módulo: {{ modulo }} </span>
 </div>
 
-<div class='form-group row container mt-5'>
-  <label class='col-sm-2 col-form-label'>Filter By:</label>
-  <div class='col-sm-10'>
-    <input [(ngModel)]='filter' class='form-control'>
-  </div>
-</div>
 
 <div class='table-responsive desktop'>
-  <table class="table table-bordered table-striped">
+
+  <div class='form-group row container mt-5'>
+    <label class='col-sm-2 col-form-label' style="width: 6em;">Filter By:</label>
+    <div class='col-sm-10'>
+      <input [(ngModel)]='filter' class='form-control' style="width: 15em;">
+    </div>
+  </div>
+
+  <table class="table table-bordered table-striped"  style="margin-top: 1em;">
     <thead>
       <tr>
         <th style='width: 5%'> Imagem</th>
@@ -27,8 +29,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let produto of filteredProdutos' (click)="openPopup(
-        produto.id )">
+      <tr *ngFor='let produto of filteredProdutos' (click)="openPopup(produto.id
+        )">
         <td style='width: 5%'>
           <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
             alt="..."
@@ -42,7 +44,7 @@
           <app-star [rating]="produto.avaliacao"></app-star>
         </td>
         <td style='width: 10%' class="text-center">
-          <button (click)="carrinhoCreate( produto.id )">
+          <button (click)="login ? carrinhoCreate( produto.id ) : openPopup2()">
             <img src='/assets/images/carrinho.jpg' class="figure-img img-fluid
               rounded" alt="..." width="50"
               height="25">
@@ -54,7 +56,13 @@
 </div>
 
 <div class='table-responsive mobile'>
-  <table class="table table-bordered table-striped">
+
+  <div class='form-group row container mt-5'>
+    <label class='col-sm-2 col-form-label' style="width: 6em;">Filter By:</label>
+    <input [(ngModel)]='filter' class='form-control' style="width: 10em;">
+  </div>
+
+  <table class="table table-bordered table-striped"  style="margin-top: 1.5em;">
     <thead>
       <tr>
         <th style='width: 10%'> Imagem</th>
@@ -62,9 +70,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let produto of filteredProdutos' (click)="openPopup(
-        produto.id )">
-        <td style='width: 10%'>
+      <tr *ngFor='let produto of filteredProdutos'
+        (click)="openPopup2(produto.id )">
+        <td style='padding-right: 0px;'>
           <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
             alt="..."
             width="50"
@@ -84,7 +92,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content" style='background-color:rgb(246, 253, 232)'>
       <div class="modal-header" style='background-color:rgb(225, 240, 252)'>
-        <button (click)="carrinhoCreate( produto.id )">
+        <button (click)="login ? carrinhoCreate( produto.id ) : openPopup2()">
           <img src='/assets/images/carrinho.jpg' class="figure-img img-fluid
             rounded" alt="..." width="50"
             height="25">
@@ -166,10 +174,9 @@
       </div>
       <div class="modal-content" style='background-color:rgb(225, 240,
         252)'>
-        <div class="modal-header">
-          <button (click)="carrinhoCreate( produto.id )">
-            <img src='/assets/images/carrinho.jpg' class="figure-img
-              img-fluid
+        <div class="modal-header" style='background-color:rgb(225, 240, 252)'>
+          <button (click)="login ? carrinhoCreate( produto.id ) : openPopup2()">
+            <img src='/assets/images/carrinho.jpg' class="figure-img img-fluid
               rounded" alt="..." width="50"
               height="25">
           </button>
@@ -182,3 +189,58 @@
     </div>
   </div>
 </div>
+
+
+<!-- login -->
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display': displayStyle2}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style='background-color:rgb(246, 253, 232)'>
+      <div class="modal-header" style='background-color:rgb(225, 240, 252)'>
+        <button type="button" class="btn btn-danger"
+          (click)="closePopup2()">
+          Fechar
+        </button>
+
+      </div>
+      <div class="modal-body row">
+        <div class='row col-sm-12 mb-1'>
+          <div class='col-sm-6'>
+            <input [(ngModel)]='telefone' class='form-control id="floatingInput"
+              '
+              placeholder="Telefone"
+              type="tel"
+              (blur)="validarTelefone()"
+              style='margin-left: 0.9em; width:100%; font-size: 15px;'>
+          </div>
+          <div class='col-sm-6'>
+            <span class="input-group-append">
+              <button (click)="validarTelefone()" class="btn" style='color:aqua'
+                type="button">
+                <i class="fa fa-arrow-circle-right fa-lg"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+        <div class='row col-sm-12'>
+          <div class='col-sm-6'>
+            <input [(ngModel)]='codigo' class='form-control id="floatingInput" '
+              placeholder="Código"
+              mask='0000'
+              style='margin-left: 0.9em; width: 100%; font-size: 15px;'>
+          </div>
+          <div class='col-sm-6'>
+            <span class="input-group-append">
+              <button (click)="validarCodigo()" class="btn" style='color:aqua'
+                type="button">
+                <i class="fa fa-arrow-circle-right fa-lg"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
