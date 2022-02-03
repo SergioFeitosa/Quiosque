@@ -19,6 +19,7 @@ export class NavBarComponent implements OnInit {
 
   telefone: number;
   codigo: number;
+  local: string;
 
   displayStyle: string;
 
@@ -27,6 +28,7 @@ export class NavBarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.local = environment.local;
   }
 
 

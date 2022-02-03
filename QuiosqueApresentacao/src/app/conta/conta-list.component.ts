@@ -21,8 +21,8 @@ export class ContaListComponent implements OnInit {
   codigo: number;
   produto: Produto;
 
-  modulo: string;
-  local: string;
+  // modulo: string;
+  // local: string;
 
   // tslint:disable-next-line:quotemark
   // tslint:disable-next-line:member-ordering
@@ -58,8 +58,8 @@ export class ContaListComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
 
     this.telefone = +environment.telefone;
-    this.modulo = 'Conta';
-    this.local = environment.local;
+    // this.modulo = 'Conta';
+    // this.local = environment.local;
 
     environment.fundoColoridoCardapio = false;
     environment.fundoColoridoPedido = false;

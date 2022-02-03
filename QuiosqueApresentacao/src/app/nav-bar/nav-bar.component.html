@@ -1,51 +1,46 @@
 
-<div class= 'container mt-4'>
+<div class= 'container mt-4 desktop mobile'>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="col-sm-11" style="margin-left: 20px">
-      <a [routerLink]="['/cardapioPrincipal']" class="navbar-brand">Quiosque
-        NuButikin</a>
+    <div class="col-sm-11" style="margin-left: 10px;">
+      <a [routerLink]="['/cardapioPrincipal']" class="navbar-brand" style="font-size: 15px;">Quiosque
+        NuButikin
+      </a>
+      <span style="color: white;"> {{local}} </span>
     </div>
     <div>
+      <a [routerLink]="['/conta']" routerLinkActive="active">
+          <button style="border: none; background: none; margin-right: 5px;">
+            <img src="/assets/images/paid-icon.png" alt="paid-icon">
+          </button>
+      </a>
       <button (click)="openPopup()" style="border: none; background: none;">
         <img src="/assets/images/help_icon.png" alt="help-icon">
-    </button>
-  </div>
-
-    <!--
-
-    <button class="navbar-toggler" type="button"
-      (click)="toggleNavbar()">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse"
-      [ngClass]="{ 'show': navbarOpen }">
-      <ul class="navbar-nav mr-auto w-75">
-        <li class="nav-item w-25">
-          <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
-            class="nav-link">Cardapio</a>
-        </li>
-        <li class="nav-item w-25">
-          <a [routerLink]="['/carrinho']" routerLinkActive="active"
-            class="nav-link">Pedido</a>
-        </li>
-        <li class="nav-item w-25">
-          <a [routerLink]="['/pedido']" routerLinkActive="active"
-            class="nav-link">Cozinha</a>
-        </li>
-        <li class="nav-item w-25">
-          <a [routerLink]="['/entrega']" routerLinkActive="active"
-            class="nav-link">Entrega</a>
-        </li>
-        <li class="nav-item w-20">
-          <a [routerLink]="['/conta']" routerLinkActive="active"
-            class="nav-link">Minha Conta</a>
-        </li>
-      </ul>
+      </button>
     </div>
-    -->
   </nav>
 </div>
+
+<div class= 'container mt-4 mobile-pequeno'>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="col-sm-11" style="margin-left: 10px;">
+      <a [routerLink]="['/cardapioPrincipal']" class="navbar-brand" style="font-size: 15px;">Quiosque
+        NuButikin
+      </a>
+      <span style="color: white; display: block;"> {{local}} </span>
+    </div>
+    <div>
+      <a [routerLink]="['/conta']" routerLinkActive="active">
+          <button style="border: none; background: none; margin-right: 5px;">
+            <img src="/assets/images/paid-icon.png" alt="paid-icon">
+          </button>
+      </a>
+      <button (click)="openPopup()" style="border: none; background: none;">
+        <img src="/assets/images/help_icon.png" alt="help-icon">
+      </button>
+    </div>
+  </nav>
+</div>
+
 
 <div
   class="modal"

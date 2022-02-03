@@ -15,8 +15,8 @@ import { PedidoService } from '../pedido/pedido.service';
 export class EntregaListComponent implements OnInit {
 
   telefone: number;
-  modulo: string;
-  local: string;
+  // modulo: string;
+  // local: string;
 
   fundoColoridoEntrega: boolean;
 
@@ -45,8 +45,8 @@ export class EntregaListComponent implements OnInit {
   ngOnInit(): void {
 
     this.telefone = +environment.telefone;
-    this.modulo = 'Entrega';
-    this.local = environment.local;
+    // this.modulo = 'Entrega';
+    // this.local = environment.local;
 
     environment.fundoColoridoCardapio = false;
     environment.fundoColoridoPedido = false;

@@ -16,8 +16,8 @@ export class CarrinhoListComponent implements OnInit {
 
   private updateSubscription: Subscription;
 
-  modulo: string;
-  local: string;
+  // modulo: string;
+  // local: string;
   fundoColoridoPedido: boolean;
 
   // tslint:disable-next-line:variable-name
@@ -51,8 +51,8 @@ export class CarrinhoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.modulo = 'Pedido';
-    this.local = environment.local;
+    // this.modulo = 'Pedido';
+    // this.local = environment.local;
 
     environment.fundoColoridoCardapio = false;
     environment.fundoColoridoPedido = true;

@@ -59,7 +59,7 @@ export class ProdutoListComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.modulo = 'Cardápio';
+    // this.modulo = 'Cardápio';
 
     this.carrinho.quantidade = 1;
 
@@ -167,6 +167,7 @@ export class ProdutoListComponent implements OnInit {
       });
     });
 
+    this.closePopup();
   }
 
   validarTelefone(): void {

@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 
 export class CardapioPrincipalComponent implements OnInit {
 
-  modulo: string;
+  // modulo: string;
 
   // tslint:disable-next-line:no-inferrable-types
   buttonDisabled: boolean;
@@ -31,7 +31,7 @@ export class CardapioPrincipalComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.modulo = 'Cardápio';
+    // this.modulo = 'Cardápio';
 
     if (environment.telefone > 0 && environment.codigo > 0) {
       this.telefone = environment.telefone;
