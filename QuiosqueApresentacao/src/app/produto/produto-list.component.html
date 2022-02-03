@@ -58,7 +58,39 @@
   </table>
 </div>
 
-<div class='table-responsive mobile mobile-pequeno'>
+<div class='table-responsive mobile'>
+
+  <div class='form-group row container mt-5'>
+    <label class='col-sm-2 col-form-label' style="width: 6em;">Filter By:</label>
+    <input [(ngModel)]='filter' class='form-control' style="width: 9em;">
+  </div>
+
+  <table class="table table-bordered table-striped"  style="margin-top: 1em; ">
+    <thead>
+      <tr>
+        <th style='width: 7%;'> Imagem</th>
+        <th style='width: 20%'> Nome</th>
+        <th style='width: 5%'> Preço</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let produto of filteredProdutos'
+        (click)="openPopup(produto.id )">
+        <td style='padding-right: 0px;'>
+          <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
+            alt="..."
+            width="70"
+            height="70"
+            style="margin: 0;">
+        </td>
+        <td style='width: 1%; font-size: 12px;'>{{ produto.nome }} </td>
+        <td style='width: 1%; font-size: 12px;'>R$ {{ produto.preco }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='table-responsive mobile-pequeno'>
 
   <div class='form-group row container mt-5'>
     <label class='col-sm-2 col-form-label' style="width: 6em;">Filter By:</label>
