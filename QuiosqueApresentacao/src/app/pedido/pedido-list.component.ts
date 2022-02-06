@@ -20,6 +20,7 @@ export class PedidoListComponent implements OnInit {
   modulo: string;
   local: string;
   telefone: number;
+  login: boolean;
   // tslint:disable-next-line:variable-name
   _categoryId: string;
 

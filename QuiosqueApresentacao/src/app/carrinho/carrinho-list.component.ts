@@ -16,6 +16,8 @@ export class CarrinhoListComponent implements OnInit {
 
   private updateSubscription: Subscription;
 
+  login: boolean;
+
   // modulo: string;
   // local: string;
   fundoColoridoPedido: boolean;
@@ -54,6 +56,8 @@ export class CarrinhoListComponent implements OnInit {
     // this.modulo = 'Pedido';
     // this.local = environment.local;
 
+    this.carrinho.quantidade = 1;
+
     environment.fundoColoridoCardapio = false;
     environment.fundoColoridoPedido = true;
     environment.fundoColoridoCozinha = false;
@@ -89,6 +93,28 @@ export class CarrinhoListComponent implements OnInit {
     }
   }
 
+    // tslint:disable-next-line:typedef
+    minus() {
+
+      console.log('passei minus');
+      if (this.carrinho.quantidade !== 1) {
+        console.log('passei minus2');
+        this.carrinho.quantidade--;
+        console.log('passei minus3 == ' + this.carrinho.quantidade);
+        this.atualizarCarrinho(this.carrinho);
+      }
+    }
+
+    // tslint:disable-next-line:typedef
+    plus() {
+      console.log('passei plus');
+      if (this.carrinho.quantidade !== 10) {
+        console.log('passei plus2');
+        this.carrinho.quantidade++;
+        console.log('passei plus3 == ' + this.carrinho.quantidade);
+        this.atualizarCarrinho(this.carrinho);
+      }
+    }
   // tslint:disable-next-line:typedef
   get filter() {
     return this._filterBy;
@@ -181,5 +207,7 @@ export class CarrinhoListComponent implements OnInit {
       this.carrinhoService.showMessage('Carrinho Atualizado');
     });
   }
+
+
 }
 

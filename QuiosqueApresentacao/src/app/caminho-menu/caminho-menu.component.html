@@ -1,22 +1,18 @@
 
-<div class="container mt-4 desktop">
-  <mat-grid-list cols="5" rowHeight="10em">
+<!-- DESKTOP -->
+
+<div class="container desktop">
+  <mat-grid-list cols="4" rowHeight="10em">
     <mat-grid-tile>
       <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
         class="nav-link">
         <mat-card [ngStyle]="{'background-color':fundoColoridoCardapio ?
-          'aquamarine' : ''}">
+          'aquamarine' : ''}" style="border: 1px solid rgb(77, 40, 146); width: 15em;">
+          <mat-card-title>Cardápio</mat-card-title>
+          <mat-card-subtitle>Menu</mat-card-subtitle>
           <mat-card-title-group>
-            <mat-card-title>Cardápio</mat-card-title>
-            <mat-card-subtitle>Menu</mat-card-subtitle>
-            <img mat-card-sm-image src='/assets/images/pratododia.jpg'>
+            <mat-icon>menu_book</mat-icon>
           </mat-card-title-group>
-          <mat-card-content style='font-size: xx-small;'>
-            {{' Selecione a categoria clicando na imagem.
-            Selecione o produto clicando no carrinho.
-            Vá ao carrinho especificar seu produto'}}
-            <br>
-          </mat-card-content>
         </mat-card>
       </a>
     </mat-grid-tile>
@@ -24,39 +20,25 @@
       <a [routerLink]="['/carrinho']" routerLinkActive="active"
         class="nav-link">
         <mat-card [ngStyle]="{'background-color':fundoColoridoPedido ?
-          'aquamarine' : ''}">
+          'aquamarine' : ''}" style="border: 1px solid rgb(77, 40, 146); width: 15em;">
+          <mat-card-title>Pedido</mat-card-title>
+          <mat-card-subtitle>Order</mat-card-subtitle>
           <mat-card-title-group>
-            <mat-card-title>Pedido</mat-card-title>
-            <mat-card-subtitle>Order</mat-card-subtitle>
-            <img mat-card-sm-image src='/assets/images/carrinho-small.jpg'>
+            <mat-icon>shopping_cart</mat-icon>
           </mat-card-title-group>
-          <mat-card-content style='font-size: xx-small;'>
-            {{' Defina a quantidade e observações sobre o produto.
-            Vá ao pedido para acompanhá-lo.
-            '}}
-            <br>
-            <br>
-          </mat-card-content>
         </mat-card>
       </a>
-
     </mat-grid-tile>
     <mat-grid-tile>
       <a [routerLink]="['/pedido']" routerLinkActive="active"
         class="nav-link">
         <mat-card [ngStyle]="{'background-color':fundoColoridoCozinha ?
-          'aquamarine' : ''}">
+          'aquamarine' : ''}" style="border: 1px solid rgb(77, 40, 146); width: 15em;">
+          <mat-card-title>Cozinha</mat-card-title>
+          <mat-card-subtitle>Cook</mat-card-subtitle>
           <mat-card-title-group>
-            <mat-card-title>Cozinha</mat-card-title>
-            <mat-card-subtitle>Cook</mat-card-subtitle>
-            <img mat-card-sm-image src='/assets/images/cozinheiro.jpg'>
+            <mat-icon>restaurant_menu</mat-icon>
           </mat-card-title-group>
-          <mat-card-content style='font-size: xx-small;'>
-            {{' Acompanhe a preparação do(s) seu(s) pedido.
-            Os pratos ainda podem ser alterados ou excluídos.
-            Por fim siga seu pedido na entrega
-            '}}
-          </mat-card-content>
         </mat-card>
       </a>
     </mat-grid-tile>
@@ -64,24 +46,16 @@
       <a [routerLink]="['/entrega']" routerLinkActive="active"
         class="nav-link">
         <mat-card [ngStyle]="{'background-color':fundoColoridoEntrega ?
-          'aquamarine' : ''}">
+          'aquamarine' : ''}" style="border: 1px solid rgb(77, 40, 146); width: 15em;">
+          <mat-card-title>Entrega</mat-card-title>
+          <mat-card-subtitle>Delivery</mat-card-subtitle>
           <mat-card-title-group>
-            <mat-card-title>Entrega</mat-card-title>
-            <mat-card-subtitle>Delivery</mat-card-subtitle>
-            <img mat-card-sm-image
-              src='/assets/images/garcon.jpg'>
+            <mat-icon>room_service</mat-icon>
           </mat-card-title-group>
-          <mat-card-content style='font-size: xx-small;'>
-            {{' Aqui voce tem detalhes sobre o pedido
-            '}}
-            <br>
-            <br>
-            <br>
-          </mat-card-content>
         </mat-card>
       </a>
     </mat-grid-tile>
-    <mat-grid-tile>
+    <!-- <mat-grid-tile>
       <a [routerLink]="['/conta']" routerLinkActive="active"
         class="nav-link">
         <mat-card
@@ -101,9 +75,131 @@
           </mat-card-content>
         </mat-card>
       </a>
+    </mat-grid-tile> -->
+  </mat-grid-list>
+</div>
+
+<!-- LAPTOP  -->
+
+<div class="container laptop" >
+  <mat-grid-list cols="4">
+    <mat-grid-tile  gutterSize="1em" >
+      <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoCardapio ?
+          'aquamarine' : ''}" style="border: 1px solid rgb(77, 40, 146); width: 10em;">
+          <mat-card-title>Cardápio</mat-card-title>
+          <mat-card-subtitle>Menu</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>menu_book</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile  gutterSize="1em">
+      <a [routerLink]="['/carrinho']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoPedido ?
+          'aquamarine' : ''}"  style="border: 1px solid rgb(77, 40, 146); width: 10em;">
+          <mat-card-title>Pedido</mat-card-title>
+          <mat-card-subtitle>Order</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>shopping_cart</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+
+    </mat-grid-tile>
+    <mat-grid-tile  gutterSize="1em">
+      <a [routerLink]="['/pedido']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoCozinha ?
+          'aquamarine' : ''}"  style="border: 1px solid rgb(77, 40, 146); width: 10em;">
+          <mat-card-title>Cozinha</mat-card-title>
+          <mat-card-subtitle>Cook</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>restaurant_menu</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+
+    <mat-grid-tile  gutterSize="1em">
+      <a [routerLink]="['/entrega']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoEntrega ?
+          'aquamarine' : ''}"   style="border: 1px solid rgb(77, 40, 146); width: 10em;">
+          <mat-card-title>Entrega</mat-card-title>
+          <mat-card-subtitle>Delivery</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>room_service</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+
+<!-- TABLET -->
+
+<div class="container tablet" >
+  <mat-grid-list cols="4" rowHeight="10em">
+    <mat-grid-tile  >
+      <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoCardapio ?
+          'aquamarine' : ''}" style="border: 1px solid rgb(77, 40, 146);  width: 6.5em;">
+          <mat-card-title style="font-size: larger;">Cardápio</mat-card-title>
+          <mat-card-subtitle>Menu</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>menu_book</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile >
+      <a [routerLink]="['/carrinho']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoPedido ?
+          'aquamarine' : ''}"  style="border: 1px solid rgb(77, 40, 146);  width: 6.5em;">
+          <mat-card-title style="font-size: larger;">Pedido</mat-card-title>
+          <mat-card-subtitle>Order</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>shopping_cart</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile >
+      <a [routerLink]="['/pedido']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoCozinha ?
+          'aquamarine' : ''}"  style="border: 1px solid rgb(77, 40, 146); width: 6.5em;">
+          <mat-card-title style="font-size: larger;">Cozinha</mat-card-title>
+          <mat-card-subtitle>Cook</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>restaurant_menu</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+    <mat-grid-tile >
+      <a [routerLink]="['/entrega']" routerLinkActive="active"
+        class="nav-link">
+        <mat-card [ngStyle]="{'background-color':fundoColoridoEntrega ?
+          'aquamarine' : ''}"   style="border: 1px solid rgb(77, 40, 146); width: 6.5em;">
+          <mat-card-title style="font-size: larger;">Entrega</mat-card-title>
+          <mat-card-subtitle>Delivery</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>room_service</mat-icon>
+          </mat-card-title-group>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<!-- MOBILE -->
 
 <div class="container mt-4 mobile">
   <div class="content">
@@ -111,160 +207,32 @@
       <mat-grid-tile>
         <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
         class="nav-link">
-        <mat-card class="example-card" style="border: 2px solid rgb(77, 40, 146);" >
-          <mat-card-header>
-            <mat-card-title style="font-size: small; margin-left: 1.2em;">Cardápio</mat-card-title>
-            <mat-card-subtitle  style="font-size: small; margin-left: 1.7em;">Menu</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-md-image src='/assets/images/menu.jpg' alt="Cardápio">
+        <mat-card class="example-card" style="border: 2px solid rgb(77, 40, 146); width: 8em;" >
+          <mat-card-title>Cardápio</mat-card-title>
+          <mat-card-subtitle>Menu</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>menu_book</mat-icon>
+          </mat-card-title-group>
         </mat-card>
         </a>
       </mat-grid-tile>
       <mat-grid-tile>
         <a [routerLink]="['/carrinho']" routerLinkActive="active"
         class="nav-link">
-        <mat-card class="example-card"  style="border: 2px solid rgb(77, 40, 146);">
-          <mat-card-header>
-            <mat-card-title style="font-size: small; margin-left: 1.2em;">Pedido</mat-card-title>
-            <mat-card-subtitle style="font-size: small; margin-left: 1.6em;">Order</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-md-image src='/assets/images/cozinheiro.jpg'
-            alt="Pedido">
+        <mat-card class="example-card"  style="border: 2px solid rgb(77, 40, 146); width: 8em;">
+          <mat-card-title>Pedido</mat-card-title>
+          <mat-card-subtitle>Order</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>shopping_cart</mat-icon>
+          </mat-card-title-group>
         </mat-card>
         </a>
       </mat-grid-tile>
-      <!--
-      <mat-grid-tile>
-        <a [routerLink]="['/entrega']" routerLinkActive="active"
-        class="nav-link">
-        <mat-card class="example-card">
-          <mat-card-header>
-            <mat-card-title style="font-size: small; margin-left: 1.7em;">Ajuda</mat-card-title>
-            <mat-card-subtitle style="font-size: small; margin-left: 2em;">Help</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-md-image src='/assets/images/cozinheiro.jpg'
-            alt="Pedido">
-        </mat-card>
-        </a>
-      </mat-grid-tile>
-      -->
-      <!--
-    <mat-grid-list cols="5" rowHeight="4em">
-      <mat-grid-tile>
-        <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
-          class="nav-link">
-          <mat-card>
-            <mat-card-title-group>
-              <mat-card-title style='font-size: xx-small;'>
-                <img src='/assets/images/pratododia-small.jpg'
-                  style="max-width: 4em; max-height: 4em;">
-              </mat-card-title>
-            </mat-card-title-group>
-            <mat-card-content style='font-size: 0.2em;'>
-              {{' Acompanhe a preparação do(s) seu(s) pratos ou bebidas.
-              Os pratos ainda não iniciados o
-              seu preparo podem ser alterados ou excluídos.
-              Por fim siga seu pedido na entrega
-              '}}
-              <br>
-            </mat-card-content>
-          </mat-card>
-        </a>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <a [routerLink]="['/carrinho']" routerLinkActive="active"
-          class="nav-link">
-          <mat-card>
-            <mat-card-title-group>
-              <mat-card-title style='font-size: xx-small;'>
-                <img src='/assets/images/carrinho.jpg'
-                  style="max-width: 4em; max-height: 4em;">
-              </mat-card-title>
-            </mat-card-title-group>
-            <mat-card-content style='font-size: 0.2em;'>
-              {{' Acompanhe a preparação do(s) seu(s) pratos ou bebidas.
-              Os pratos ainda não iniciados o
-              seu preparo podem ser alterados ou excluídos.
-              Por fim siga seu pedido na entrega
-              '}}
-              <br>
-            </mat-card-content>
-          </mat-card>
-        </a>
-      </mat-grid-tile>
-<!--      <mat-grid-tile>
-        <a [routerLink]="['/pedido']" routerLinkActive="active"
-          class="nav-link">
-          <mat-card>
-            <mat-card-title-group>
-              <mat-card-title style='font-size: xx-small;'>
-                <img src='/assets/images/cozinheiro.jpg'
-                  style="max-width: 4em; max-height: 4em;">
-              </mat-card-title>
-            </mat-card-title-group>
-            <mat-card-content style='font-size: 0.2em;'>
-              {{' Acompanhe a preparação do(s) seu(s) pratos ou bebidas.
-              Os pratos ainda não iniciados o
-              seu preparo podem ser alterados ou excluídos.
-              Por fim siga seu pedido na entrega
-              '}}
-              <br>
-            </mat-card-content>
-          </mat-card>
-        </a>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <a [routerLink]="['/entrega']" routerLinkActive="active"
-          class="nav-link">
-          <mat-card>
-            <mat-card-title-group>
-              <mat-card-title style='font-size: xx-small;'>
-                <img src='/assets/images/garcon.jpg'
-                  style="max-width: 4em; max-height: 4em;">
-              </mat-card-title>
-            </mat-card-title-group>
-            <mat-card-content style='font-size: 0.2em;'>
-              {{' Aqui voce tem detalhes sobre o pedido
-              '}}
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-            </mat-card-content>
-          </mat-card>
-        </a>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <a [routerLink]="['/conta']" routerLinkActive="active"
-          class="nav-link">
-          <mat-card>
-            <mat-card-title-group>
-              <mat-card-title style='font-size: xx-small;'>
-                <img src='/assets/images/conta.jpg'
-                  style="max-width: 4em; max-height: 4em;">
-              </mat-card-title>
-            </mat-card-title-group>
-            <mat-card-content style='font-size: 0.2em;'>
-              {{' Conta.
-              '}}
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-            </mat-card-content>
-          </mat-card>
-        </a>
-      </mat-grid-tile>
-    -->
     </mat-grid-list>
   </div>
 </div>
+
+<!-- MOBILE-PEQUENO -->
 
 <div class="container mt-4 mobile-pequeno">
   <div class="content">
@@ -272,25 +240,24 @@
       <mat-grid-tile>
         <a [routerLink]="['/cardapioPrincipal']" routerLinkActive="active"
         class="nav-link">
-        <mat-card class="example-card" style="border: 2px solid rgb(77, 40, 146); padding: 0;" >
-          <mat-card-header>
-            <mat-card-title style="font-size: small; margin-left: 1.2em;">Cardápio</mat-card-title>
-            <mat-card-subtitle  style="font-size: small; margin-left: 1.2em;">Menu</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-md-image src='/assets/images/menu.jpg' alt="Cardápio">
+        <mat-card class="example-card" style="border: 2px solid rgb(77, 40, 146); padding: 0; width: 7em;" >
+          <mat-card-title style="margin-left: 0.2em;">Cardápio</mat-card-title>
+          <mat-card-subtitle style="margin-left: 0.5em;">Menu</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>menu_book</mat-icon>
+          </mat-card-title-group>
         </mat-card>
         </a>
       </mat-grid-tile>
       <mat-grid-tile>
         <a [routerLink]="['/carrinho']" routerLinkActive="active"
         class="nav-link">
-        <mat-card class="example-card"  style="border: 2px solid rgb(77, 40, 146);  padding: 0;">
-          <mat-card-header>
-            <mat-card-title style="font-size: small; margin-left: 1.2em;">Pedido</mat-card-title>
-            <mat-card-subtitle style="font-size: small; margin-left: 1.6em;">Order</mat-card-subtitle>
-          </mat-card-header>
-          <img mat-card-md-image src='/assets/images/cozinheiro.jpg'
-            alt="Pedido">
+        <mat-card class="example-card"  style="border: 2px solid rgb(77, 40, 146);  padding: 0; width: 7em; ">
+          <mat-card-title style="margin-left: 0.2em;">Pedido</mat-card-title>
+          <mat-card-subtitle style="margin-left: 0.5em;">Order</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-icon>shopping_cart</mat-icon>
+          </mat-card-title-group>
         </mat-card>
         </a>
       </mat-grid-tile>
