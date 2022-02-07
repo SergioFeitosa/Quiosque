@@ -63,7 +63,7 @@ export class ProdutoListComponent implements OnInit {
 
     this.carrinho.quantidade = 1;
 
-    this.telefone = environment.telefone;
+    //this.telefone = environment.telefone;
     this.login = environment.login;
 
     environment.fundoColoridoCardapio = true;
@@ -176,7 +176,6 @@ export class ProdutoListComponent implements OnInit {
       environment.telefone = this.telefone;
       this.enviarCodigo();
     }
-
   }
 
   validarCodigo(): void {
@@ -188,8 +187,8 @@ export class ProdutoListComponent implements OnInit {
       this.closePopup2();
       environment.login = true;
       this.login = environment.login;
+      window.alert("Logged in");
     }
-
   }
 
   enviarCodigo(): void {

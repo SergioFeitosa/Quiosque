@@ -198,6 +198,8 @@ export class CarrinhoListComponent implements OnInit {
         });
       }
     });
+
+    this.closePopup();
   }
 
 
