@@ -19,12 +19,12 @@
   <thead>
       <tr>
         <th style='width: 5%'> Imagem</th>
+        <th style='width: 25%'> Prato</th>
         <th style='width: 5%'> Quantidade</th>
-        <th style='width: 25%'> Produto</th>
         <th style='width: 10%'> Observacao</th>
         <th style='width: 5%'> Local</th>
         <th style='width: 5%'> Hora</th>
-        <!-- <th style='width: 20%' class="text-center"> Ações </th> -->
+        <th style='width: 20%' class="text-center"> Status </th>
       </tr>
     </thead>
     <tbody>
@@ -36,8 +36,9 @@
             height="70"
             style="margin-top: 1em;">
         </td>
+        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline;">Mais infomações.</small></td>
+        <!--
         <td>
-          <span style='font-weight: bolder; color:blue'>Quantidade:</span>
           <div style='display: flex; justify-content: center; align-items: center; margin-top: 0.3em'>
             <a style="width: 2em; margin-left: 0.5em; " (click)="minus()"><i
               class="fa
@@ -49,15 +50,25 @@
                 fa-plus" style="color:red"></i></a>
           </div>
       </td>
-        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline;">Mais infomações.</small></td>
+      -->
 
-        <td><input [(ngModel)]="carrinho.observacao" type="text" style=' max-width: 65%;'
+      <td style="color:red">{{ carrinho.quantidade }} </td>
+      <td style="color:red">{{ carrinho.observacao }} </td>
+<!--
+        <td><textarea [(ngModel)]="carrinho.observacao" type="text" style=' max-width: 65%;'
             (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+            </textarea>
         </td>
-
+  -->
         <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
-        
+
+        <td  class="text-center">
+          <p style="margin: 0"><small style="font-size: 0.8em; ">Pendente</small></p>
+          <p style="margin: 0"><small style="font-size: 0.8em; ">Confirmado</small></p>
+          <p style="margin: 0"><small style="font-size: 0.8em; ">Cozinha</small></p>
+          <p style="margin: 0"><small style="font-size: 0.8em; ">Entrega</small></p>
+          </td>
         <!-- <td  class="text-center">
           <button (click)="openPopup( carrinho.id )">
             <img src='/assets/images/lupa.jpg' class="figure-img
@@ -112,7 +123,7 @@
 
         <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
-        
+
         <!-- <td  class="text-center">
           <button (click)="openPopup( carrinho.id )">
             <img src='/assets/images/lupa.jpg' class="figure-img
@@ -167,7 +178,7 @@
 
         <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
-        
+
         <!-- <td  class="text-center">
           <button (click)="openPopup( carrinho.id )">
             <img src='/assets/images/lupa.jpg' class="figure-img
@@ -213,7 +224,7 @@
             (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
         </td>
         <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline; width: 30%;">Mais infomações.</small></td>
-        
+
        <!--  <td class="text-center"  style='width: 10%; font-size: 10px;'>
           <button (click)="openPopup( carrinho.id )">
             <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
@@ -258,7 +269,7 @@
             (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
         </td>
         <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline; width: 30%;">Mais infomações.</small></td>
-        
+
         <!-- <td class="text-center"  style='width: 10%; font-size: 10px;'>
           <button (click)="openPopup( carrinho.id )">
             <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
@@ -415,7 +426,8 @@
           <span style='font-weight: bolder; color:blue'>Observações:</span>
           <div>
             <textarea [(ngModel)]='carrinho.observacao'
-              class='form-control'></textarea>
+              class='form-control'
+              (ngModelChange)="atualizarCarrinho(carrinho)"></textarea>
           </div>
         </div>
       </div>

@@ -63,7 +63,7 @@ export class ProdutoListComponent implements OnInit {
 
     this.carrinho.quantidade = 1;
 
-    //this.telefone = environment.telefone;
+    // this.telefone = environment.telefone;
     this.login = environment.login;
 
     environment.fundoColoridoCardapio = true;
@@ -138,8 +138,13 @@ export class ProdutoListComponent implements OnInit {
   displayStyle2 = 'none';
 
   // tslint:disable-next-line:typedef
-  openPopup2(): void {
+  openPopup2(produtoId: number): void {
 
+    // tslint:disable-next-line:no-unused-expression
+    this.produtoService.readById(produtoId).subscribe(product => {
+      this.produto = product;
+
+    });
     this.displayStyle2 = 'block';
   }
 
@@ -178,16 +183,26 @@ export class ProdutoListComponent implements OnInit {
     }
   }
 
-  validarCodigo(): void {
+  validarCodigo(produtoId: number): void {
+
+    // tslint:disable-next-line:no-unused-expression
+    this.produtoService.readById(produtoId).subscribe(product => {
+      this.produto = product;
+
+    });
 
     if (environment.codigo > 0) {
       environment.codigo = this.codigo;
       // tslint:disable-next-line:semicolon
       // this.updateClassDisabled();
+      this.carrinhoCreate(produtoId);
       this.closePopup2();
       environment.login = true;
       this.login = environment.login;
-      window.alert("Logged in");
+      // window.alert('Logged in');
+      this.closePopup();
+
+
     }
   }
 
