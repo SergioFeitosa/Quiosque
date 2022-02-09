@@ -131,6 +131,7 @@ export class PedidoListComponent implements OnInit {
       if (this.pedido.enviado !== true) {
 
         this.pedido.enviado = true;
+        this.pedido.status = 'Preparação';
         this.atualizarPedido(pedido);
 
         this.entrega.pedido = pedido;

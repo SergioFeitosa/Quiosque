@@ -10,6 +10,6 @@ export interface Carrinho {
   isencao: boolean;
   enviado: boolean;
   dataCriacao: Date;
-
+  status: string;
   produto: Produto;
 }

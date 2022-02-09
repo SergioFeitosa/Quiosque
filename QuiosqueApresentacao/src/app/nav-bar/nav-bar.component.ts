@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { Conta } from '../conta/conta';
 import { ProdutoService } from '../produto/produto.service';
 import { Produto } from '../produto/produto';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',

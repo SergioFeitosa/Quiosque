@@ -45,6 +45,9 @@ public class Cart {
     @Column(nullable = false)
     private String dataCriacao;
 
+    @Column(nullable = false)
+    private String status;
+
     @OneToOne
     @JoinColumn(name = "produto_id")
     private Produto produto;

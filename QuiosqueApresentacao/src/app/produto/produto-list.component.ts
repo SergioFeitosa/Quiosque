@@ -164,6 +164,7 @@ export class ProdutoListComponent implements OnInit {
       this.carrinho.local = environment.local;
       this.carrinho.dataCriacao = new Date();
       this.carrinho.telefone = environment.telefone;
+      this.carrinho.status = 'Pendente';
 
       this.carrinho.produto = this.produto;
 

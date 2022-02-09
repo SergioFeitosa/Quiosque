@@ -55,7 +55,7 @@ export class CarrinhoListComponent implements OnInit {
 
     // this.modulo = 'Pedido';
     // this.local = environment.local;
-
+    console.log('primeiro log');
     this.carrinho.quantidade = 1;
 
     environment.fundoColoridoCardapio = false;
@@ -91,6 +91,7 @@ export class CarrinhoListComponent implements OnInit {
 
       });
     }
+    console.log('ultimo log');
   }
 
     // tslint:disable-next-line:typedef
@@ -180,6 +181,7 @@ export class CarrinhoListComponent implements OnInit {
       if (this.carrinho.enviado !== true) {
 
         this.carrinho.enviado = true;
+        this.carrinho.status = 'Confirmado';
         this.atualizarCarrinho(carrinho);
 
 
@@ -190,6 +192,7 @@ export class CarrinhoListComponent implements OnInit {
         this.pedido.isencao = this.carrinho.isencao;
         this.pedido.dataCriacao = this.carrinho.dataCriacao;
         this.pedido.enviado = false;
+        this.pedido.status = 'Confirmado';
 
         this.pedido.produto = this.carrinho.produto;
 

@@ -6,7 +6,6 @@
   <span style='font-weight: bolder;'>Local: {{ local }} </span>
   <span> </span>
 </div> -->
-
 <div class='form-group row container mt-5' style='margin-bottom: 1em;'>
   <label class='col-sm-2 col-form-label' style="width: 6em;">Filter By:</label>
   <input [(ngModel)]='filter' class='form-control' style="width: 15em;">
@@ -16,10 +15,10 @@
 
 <div class='table-responsive desktop'>
   <table class="table table-bordered table-striped">
-  <thead>
+    <thead>
       <tr>
-        <th style='width: 5%'> Imagem</th>
-        <th style='width: 25%'> Prato</th>
+        <th style='width: 5%'> </th>
+        <th style='width: 25%'> Item </th>
         <th style='width: 5%'> Quantidade</th>
         <th style='width: 10%'> Observacao</th>
         <th style='width: 5%'> Local</th>
@@ -28,62 +27,31 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup( carrinho.id )" style="cursor: pointer;">
+      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup(
+        carrinho.id )" style="cursor: pointer;">
         <td>
-            <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid rounded"
+          <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid
+            rounded"
             alt="..."
             width="100"
             height="70"
             style="margin-top: 1em;">
         </td>
-        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline;">Mais infomações.</small></td>
-        <!--
-        <td>
-          <div style='display: flex; justify-content: center; align-items: center; margin-top: 0.3em'>
-            <a style="width: 2em; margin-left: 0.5em; " (click)="minus()"><i
-              class="fa
-              fa-minus" style="color:red"></i></a>
-              <input style="width: 3em;" [(ngModel)]='carrinho.quantidade'
-              class='form-control'>
-              <a style="width: 2em; margin-left: 0.5em" (click)="plus()"><i
-                class="fa
-                fa-plus" style="color:red"></i></a>
-          </div>
-      </td>
-      -->
-
-      <td style="color:red">{{ carrinho.quantidade }} </td>
-      <td style="color:red">{{ carrinho.observacao }} </td>
-<!--
-        <td><textarea [(ngModel)]="carrinho.observacao" type="text" style=' max-width: 65%;'
-            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
-            </textarea>
-        </td>
-  -->
+        <td><p>{{ carrinho.produto.nome }}</p></td>
+        <td style="color:red">{{ carrinho.quantidade }} </td>
+        <td style="color:red">{{ carrinho.observacao }} </td>
         <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
-
-        <td  class="text-center">
-          <p style="margin: 0"><small style="font-size: 0.8em; ">Pendente</small></p>
-          <p style="margin: 0"><small style="font-size: 0.8em; ">Confirmado</small></p>
-          <p style="margin: 0"><small style="font-size: 0.8em; ">Cozinha</small></p>
-          <p style="margin: 0"><small style="font-size: 0.8em; ">Entrega</small></p>
-          </td>
-        <!-- <td  class="text-center">
-          <button (click)="openPopup( carrinho.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-        </td> -->
+        <td class="text-center">
+          <p style="margin: 0"><small style="font-size: 0.8em;">{{
+              carrinho.status }}</small></p>
+          <p style="margin: 0"><small style="font-size: 0.8em; color:#bdbdbd">{{
+              carrinho.status }}</small></p>
+          <p style="margin: 0"><small style="font-size: 0.8em; color:#bdbdbd">{{
+              carrinho.status }}</small></p>
+          <p style="margin: 0"><small style="font-size: 0.8em; color:#bdbdbd">{{
+              carrinho.status }}</small></p>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -93,52 +61,36 @@
 
 <div class='table-responsive laptop'>
   <table class="table table-bordered table-striped">
-  <thead>
+    <thead>
       <tr>
-        <th style='width: 5%'> Imagem</th>
+        <th style='width: 5%'> </th>
+        <th style='width: 25%'> Item </th>
         <th style='width: 5%'> Quantidade</th>
-        <th style='width: 25%'> Produto</th>
         <th style='width: 10%'> Observacao</th>
         <th style='width: 5%'> Local</th>
         <th style='width: 5%'> Hora</th>
-       <!--  <th style='width: 20%' class="text-center"> Ações </th> -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup( carrinho.id )" style="cursor: pointer;">
+      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup(
+        carrinho.id )" style="cursor: pointer;">
         <td>
-            <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid rounded"
+          <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid
+            rounded"
             alt="..."
             width="100"
             height="70">
         </td>
-        <td><input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 60px;  font-size: 14px;'
-          (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
-      </td>
-        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline;">Mais infomações.</small></td>
-
-        <td><input [(ngModel)]="carrinho.observacao" type="text" style=' max-width: 65%;'
-            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+        <td><p>{{ carrinho.produto.nome }}</p></td>
+        <td>
+          {{ carrinho.quantidade }}
+        </td>
+        <td>
+          {{ carrinho.observacao }}
         </td>
 
         <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
-
-        <!-- <td  class="text-center">
-          <button (click)="openPopup( carrinho.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-        </td> -->
       </tr>
     </tbody>
   </table>
@@ -148,52 +100,36 @@
 
 <div class='table-responsive tablet'>
   <table class="table table-bordered table-striped">
-  <thead>
+    <thead>
       <tr>
-        <th style='width: 5%'> Imagem</th>
+        <th style='width: 5%'> </th>
+        <th style='width: 25%'> Item </th>
         <th style='width: 5%'> Quantidade</th>
-        <th style='width: 25%'> Produto</th>
         <th style='width: 10%'> Observacao</th>
         <th style='width: 5%'> Local</th>
         <th style='width: 5%'> Hora</th>
-        <!-- <th style='width: 20%' class="text-center"> Ações </th> -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup( carrinho.id )" style="cursor: pointer;">
+      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup(
+        carrinho.id )" style="cursor: pointer;">
         <td>
-            <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid rounded"
+          <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid
+            rounded"
             alt="..."
             width="100"
             height="70">
         </td>
-        <td><input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 60px;  font-size: 14px;'
-          (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
-      </td>
-        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline;">Mais infomações.</small></td>
-
-        <td><input [(ngModel)]="carrinho.observacao" type="text" style=' max-width: 65%;'
-            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+        <td><p>{{ carrinho.produto.nome }}</p></td>
+        <td>
+          {{ carrinho.quantidade }}
+        </td>
+        <td>
+          {{ carrinho.observacao }}
         </td>
 
         <td>{{ carrinho.local }} </td>
         <td>{{ carrinho.dataCriacao | date:'hh:mm:ss'}} </td>
-
-        <!-- <td  class="text-center">
-          <button (click)="openPopup( carrinho.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img
-              img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-        </td> -->
       </tr>
     </tbody>
   </table>
@@ -203,42 +139,28 @@
 
 <div class='table-responsive mobile'>
   <table class="table table-bordered table-striped">
-  <thead>
+    <thead>
       <tr>
-        <th style='width: 10%; font-size: 10px;' > Imagem</th>
-        <th style='width: 10%; font-size: 10px;' > Qtde</th>
-        <th style='width: 30%; font-size: 10px;' > Nome</th>
+        <th style='width: 10%; font-size: 10px;'> </th>
+        <th style='width: 30%; font-size: 10px;'> Item </th>
+        <th style='width: 10%; font-size: 10px;'> Qtde</th>
         <!-- <th style='width: 10%; font-size: 10px;' class="text-center"> Ações </th> -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup( carrinho.id )" style="cursor: pointer;">
-        <td  style='width: 10%; font-size: 10px;'>
-            <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid rounded"
+      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup(
+        carrinho.id )" style="cursor: pointer;">
+        <td style='width: 10%; font-size: 10px;'>
+          <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid
+            rounded"
             alt="..."
             width="100"
             height="70">
         </td>
+        <td><p>{{ carrinho.produto.nome }}</p></td>
         <td>
-          <input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 60px;  font-size: 10px;'
-            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+          {{carrinho.quantidade}}
         </td>
-        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline; width: 30%;">Mais infomações.</small></td>
-
-       <!--  <td class="text-center"  style='width: 10%; font-size: 10px;'>
-          <button (click)="openPopup( carrinho.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-        </td> -->
       </tr>
     </tbody>
   </table>
@@ -248,117 +170,32 @@
 
 <div class='table-responsive mobile-pequeno'>
   <table class="table table-bordered table-striped">
-  <thead>
+    <thead>
       <tr>
-        <th style='width: 10%; font-size: 10px;' > Imagem</th>
-        <th style='width: 10%; font-size: 10px;' > Qtde</th>
-        <th style='width: 30%; font-size: 10px;' > Nome</th>
+        <th style='width: 10%; font-size: 10px;'> </th>
+        <th style='width: 30%; font-size: 10px;'> Item </th>
+        <th style='width: 10%; font-size: 10px;'> Qtde</th>
         <!-- <th style='width: 10%; font-size: 10px;' class="text-center"> Ações </th> -->
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup( carrinho.id )" style="cursor: pointer;">
-        <td  style='width: 10%; font-size: 10px;'>
-            <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid rounded"
+      <tr *ngFor='let carrinho of filteredCarrinhos' (click)="openPopup(
+        carrinho.id )" style="cursor: pointer;">
+        <td style='width: 10%; font-size: 10px;'>
+          <img [src]='carrinho.produto.imagemUrl' class="figure-img img-fluid
+            rounded"
             alt="..."
             width="100"
             height="70">
         </td>
+        <td><p>{{ carrinho.produto.nome }}</p></td>
         <td>
-          <input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 60px;  font-size: 10px;'
-            (ngModelChange)="atualizarCarrinho(carrinho)" class="nav-link">
+          {{carrinho.quantidade}}
         </td>
-        <td><p>{{ carrinho.produto.nome }}</p> <small style="font-size: 10px; text-decoration: underline; width: 30%;">Mais infomações.</small></td>
-
-        <!-- <td class="text-center"  style='width: 10%; font-size: 10px;'>
-          <button (click)="openPopup( carrinho.id )">
-            <img src='/assets/images/lupa.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
-            <img src='/assets/images/botao-cancelar.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-          <button (click)="pedidoCreate( carrinho.id );">
-            <img src='/assets/images/pedido.jpg' class="figure-img img-fluid rounded" alt="..." width="25"
-              height="25">
-          </button>
-        </td> -->
       </tr>
     </tbody>
   </table>
 </div>
-<!--
-<div
-  class="modal"
-  tabindex="-1"
-  role="dialog"
-  [ngStyle]="{'display': displayStyle}">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Detalhes do Produto</h4>
-        <button type="button" class="btn btn-danger"
-          (click)="closePopup()">
-          Fechar
-        </button>
-      </div>
-      <div class="modal-body row">
-        Avaliação: <app-star [rating]="produto.avaliacao"></app-star>
-
-      </div>
-      <div class="modal-body row">
-        <img [src]='produto.imagemUrl' class="figure-img img-fluid rounded"
-          alt="..."
-          width="400"
-          height="400">
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Quantidade:</span>
-        <input [(ngModel)]="carrinho.quantidade" type="text" style='color: red; width: 50%'  mask='000'
-        (blur)="atualizarCarrinho(carrinho)" class="nav-link">
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Nome:</span>
-        <span>{{ produto.nome }}</span>
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Observação:</span>
-        <input [(ngModel)]="carrinho.observacao" type="text" style='color: red; width: 100%'
-        (blur)="atualizarCarrinho(carrinho)" class="nav-link">
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Descrição:</span>
-        <span> {{ produto.descricao }} </span>
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Local:</span>
-        <span>{{ carrinho.local }} </span>
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Preço:</span>
-        <span>{{ produto.preco }} </span>
-      </div>
-      <div class="modal-body row">
-        <span style='font-weight: bolder;'>Tempo de Preparação:</span>
-        <span>{{ produto.tempoPreparacao }} </span>
-      </div>
-
-
-      <div class="modal-body">
-        <p>Os ingredientes encontrados na refeição são:</p>
-        <ul>
-          <li>alho</li>
-          <li>cebola</li>
-          <li>coentro</li>
-          <li>maionese</li>
-          <li>manjericão</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
--->
 
 <!-- Detalhes do produto/pedido -->
 <div
@@ -369,7 +206,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content" style='background-color:rgb(246, 253, 232)'>
       <div class="modal-header" style='background-color:rgb(225, 240, 252)'>
-        <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
+        <button routerLink="/carrinho/delete/{{ carrinho.id }}">
           Deletar
         </button>
         <button (click)="pedidoCreate( carrinho.id );">
@@ -453,7 +290,7 @@
       <div class="modal-content" style='background-color:rgb(225, 240,
         252)'>
         <div class="modal-header" style='background-color:rgb(225, 240, 252)'>
-          <button routerLink = "/carrinho/delete/{{ carrinho.id }}">
+          <button routerLink="/carrinho/delete/{{ carrinho.id }}">
             Deletar
           </button>
           <button (click)="pedidoCreate( carrinho.id );">

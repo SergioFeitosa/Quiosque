@@ -10,6 +10,7 @@ export interface Pedido {
   enviado: boolean;
   isencao: boolean;
   dataCriacao: Date;
+  status: string;
 
   produto: Produto;
 
