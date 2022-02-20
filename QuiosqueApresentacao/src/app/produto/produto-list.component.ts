@@ -6,11 +6,30 @@ import { CarrinhoService } from '../carrinho/carrinho.service';
 import { Carrinho } from '../carrinho/carrinho';
 import { environment } from 'src/environments/environment';
 import { LoginService } from '../login/login.service';
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Router } from '@angular/router';
+
+const config = {
+  apiKey: 'AIzaSyAc9T6jV7QRc2sZMeQ3wAFxO2u-SH7dS_A',
+  authDomain: 'quiosque-phone.firebaseapp.com',
+  projectId: 'quiosque-phone',
+  storageBucket: 'quiosque-phone.appspot.com',
+  messagingSenderId: '977420644755',
+  appId: '1:977420644755:web:d49bb641a0a9ea7cef3866'
+};
+
 @Component({
   templateUrl: './produto-list.component.html',
 })
 
 export class ProdutoListComponent implements OnInit {
+
+  phoneNumber: any;
+  reCaptchaVerifier: any;
 
   buttonDisabled: boolean;
   telefone: number;
@@ -52,7 +71,8 @@ export class ProdutoListComponent implements OnInit {
     private produtoService: ProdutoService,
     private carrinhoService: CarrinhoService,
     private loginService: LoginService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {
 
   }
@@ -60,6 +80,8 @@ export class ProdutoListComponent implements OnInit {
   ngOnInit(): void {
 
     // this.modulo = 'Cardápio';
+
+    firebase.initializeApp(config);
 
     this.carrinho.quantidade = 1;
 
@@ -80,6 +102,25 @@ export class ProdutoListComponent implements OnInit {
       this.filteredProdutos = this.produtos;
     });
 
+  }
+
+  // tslint:disable-next-line:typedef
+  getOTP() {
+    this.reCaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', { size: 'invisible' });
+
+    firebase.
+      auth().
+      signInWithPhoneNumber(this.phoneNumber, this.reCaptchaVerifier).
+      then((confirmationResult) => {
+        localStorage.setItem('verificationId',
+        JSON.stringify(confirmationResult.verificationId)),
+        this.router.navigate(['/code']);
+      }).catch((error) => {
+        alert(error.message),
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000);
+      });
   }
 
 
@@ -235,6 +276,7 @@ export class ProdutoListComponent implements OnInit {
     this.element7.removeAttribute('disabled');
     this.element8.removeAttribute('disabled');
   }
+
 
 
 }

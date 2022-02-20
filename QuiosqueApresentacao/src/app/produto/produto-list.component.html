@@ -313,6 +313,13 @@
               type="tel"
               (blur)="validarTelefone()"
               style='margin-left: 0.9em; width:100%; font-size: 15px;'>
+
+              <input type="text" name="phoneNumber" class="form-control"
+              placeholder="Enter Phone Number" [(ngModel)]="phoneNumber" min="10" max="15">
+              <button class="btn btn-success mt-4 signup" (click)="getOTP()">Get OTP</button>
+              <div id="sign-in-button"></div>
+
+
           </div>
         </div>
         <div class='row col-sm-12'>
